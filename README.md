@@ -1,2 +1,2 @@
-# Mask-Rabbit
-A Task Rabbit clone
+# MaskRabbit
+A TaskRabbit clone
