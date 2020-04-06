@@ -1,0 +1,2 @@
+class MaskerCategory < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class MaskerDay < ApplicationRecord
+end

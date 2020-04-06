@@ -1,0 +1,2 @@
+class Masker < ApplicationRecord
+end
