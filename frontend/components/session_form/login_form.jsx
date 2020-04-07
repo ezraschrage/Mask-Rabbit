@@ -8,7 +8,9 @@ class LoginForm extends React.Component {
             password: '',
             loginBool: false
         };
-        this.handleSubmitForm = this.handleSubmitForm.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.navigagteLoginForm = this.navigagteLoginForm.bind(this);
+        this.navigagteSignupForm = this.navigagteSignupForm.bind(this);
     }
 
     update(field) {
@@ -17,15 +19,20 @@ class LoginForm extends React.Component {
         });
     }
 
-    handleSubmitForm(e) {
+    handleSubmit(e) {
         e.preventDefault();
         let user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
 
-    handleSubmitLogin(e) {
+    navigagteLoginForm(e) {
         e.preventDefault();
         this.setState ({ [loginBool]: true })
+    }
+
+    navigagteSignupForm(e) {
+        e.preventDefault();
+        this.props.history.push("/signup")
     }
 
     renderErrors() {
@@ -43,7 +50,7 @@ class LoginForm extends React.Component {
     render() {
 
         const loginForm = () => {
-            <form onSubmit={this.handleSubmitForm} className="login-form-box">
+            <form onSubmit={this.handleSubmit} className="login-form-box">
                 <label>Email Address
                         <input type="text"
                         value={this.state.email}
@@ -65,10 +72,11 @@ class LoginForm extends React.Component {
         };
 
         const loginSplash = () => {
-            <h3>Log in or sign up with email</h3>
-            <form onSubmit={this.handleSubmitLogin} className="login-splash-box">
-                <button type="submit"></button>
-            </form>
+            <div>
+                <h3>Log in or sign up with email</h3>
+                <button onClick={this.navigagteLoginForm}>Log in</button>
+                <button onClick={this.navigagteSignupForm}>Sign up</button>
+            </div>
         };
 
 
@@ -76,7 +84,7 @@ class LoginForm extends React.Component {
 
         return (
             <div className="login-form-container">
-
+                {this.state.loginBool ? loginForm : loginSplash}
             </div>
         );
     }
