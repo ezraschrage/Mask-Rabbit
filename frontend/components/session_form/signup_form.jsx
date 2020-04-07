@@ -1,11 +1,14 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            firstName: '',
+            lastName: '',
+            zip: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -38,7 +41,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    This is the session form container
+                    Log in or sign up with email
           <br />
           Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
@@ -68,4 +71,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default SessionForm;
+export default SignupForm;
