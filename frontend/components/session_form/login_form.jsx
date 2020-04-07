@@ -6,8 +6,9 @@ class LoginForm extends React.Component {
         this.state = {
             email: '',
             password: '',
+            loginBool: false
         };
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmitForm = this.handleSubmitForm.bind(this);
     }
 
     update(field) {
@@ -16,10 +17,15 @@ class LoginForm extends React.Component {
         });
     }
 
-    handleSubmit(e) {
+    handleSubmitForm(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
+        let user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleSubmitLogin(e) {
+        e.preventDefault();
+        this.setState ({ [loginBool]: true })
     }
 
     renderErrors() {
@@ -35,34 +41,42 @@ class LoginForm extends React.Component {
     }
 
     render() {
+
+        const loginForm = () => {
+            <form onSubmit={this.handleSubmitForm} className="login-form-box">
+                <label>Email Address
+                        <input type="text"
+                        value={this.state.email}
+                        onChange={this.update('email')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <label>Password
+                        <input type="password"
+                        value={this.state.password}
+                        onChange={this.update('password')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <input className="session-submit" type="submit" value="Log In" />
+            </form>
+        };
+
+        const loginSplash = () => {
+            <h3>Log in or sign up with email</h3>
+            <form onSubmit={this.handleSubmitLogin} className="login-splash-box">
+                <button type="submit"></button>
+            </form>
+        };
+
+
+
+
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Log in or sign up with email
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <label>Email:
-              <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Password:
-              <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                    </div>
-                </form>
+
             </div>
         );
     }
