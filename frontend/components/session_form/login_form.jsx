@@ -40,8 +40,9 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <>
-            <div className="login-form-container">
+            <div className="session">
+            <div className="session-container">
+                <div className="logo"/>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     {this.renderErrors()}
                     <label>Email Address
@@ -69,7 +70,7 @@ class LoginForm extends React.Component {
                     />
                 </form>
             </div>
-            </>
+        </div>
         );
     }
 }

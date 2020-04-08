@@ -2,3 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.session {
+  background-image: image-url('P1000168_without_logo.jpg');
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.session-container {
+    display: flexbox;
+    background: white;
+    width: 500px;
+    padding: 24px 32px;
+    font: 20px black;
+    justify-content: center;
+}
+
+.logo {
+      background-image: image-url('TaskRabbit_Logo_horizontal_lockup.png');
+      display: block;
+      justify-content: center;
+      align-items: flex-start;
+      width: 700px;
+      height: 200px;
+      background-repeat: no-repeat;
+    //   padding: 0px;
+    //   margin: 0px 90px;
+    //   margin-bottom: 16px;
+}

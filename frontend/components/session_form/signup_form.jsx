@@ -44,7 +44,8 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
+            <div className="session">
+            <div className="session-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <br />
                     {this.renderErrors()}
@@ -98,6 +99,7 @@ class SignupForm extends React.Component {
                             value="Create Account" />
                     </div>
                 </form>
+            </div>
             </div>
         );
     }

@@ -21,13 +21,15 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="session">
+            <div className="session-container">
                 <h3>Log in or sign up with email</h3>
                 <Link to="/login/email">Log in</Link>
                 <Link to="/signup/password">Sign up</Link>
                 <button onClick={this.handleSubmit}>
                     Use a demo account 
                 </button>
+            </div>
             </div>
         );
     }
