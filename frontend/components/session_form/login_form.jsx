@@ -51,6 +51,7 @@ class LoginForm extends React.Component {
 
         const loginForm =
             <form onSubmit={this.handleSubmit} className="login-form-box">
+                {this.renderErrors()}
                 <label>Email Address
                         <input type="text"
                         value={this.state.email}
