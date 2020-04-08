@@ -6,7 +6,6 @@ class LoginForm extends React.Component {
         this.state = {
             email: '',
             password: '',
-            loginBool: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
