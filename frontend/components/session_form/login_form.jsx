@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
 
     navigagteLoginForm(e) {
         e.preventDefault();
-        this.setState ({ [loginBool]: true })
+        this.setState ({ loginBool: true })
     }
 
     navigagteSignupForm(e) {
@@ -49,7 +49,7 @@ class LoginForm extends React.Component {
 
     render() {
 
-        const loginForm = () => {
+        const loginForm =
             <form onSubmit={this.handleSubmit} className="login-form-box">
                 <label>Email Address
                         <input type="text"
@@ -69,23 +69,23 @@ class LoginForm extends React.Component {
                 <br />
                 <input className="session-submit" type="submit" value="Log In" />
             </form>
-        };
+        ;
 
-        const loginSplash = () => {
+        const loginSplash =
             <div>
                 <h3>Log in or sign up with email</h3>
                 <button onClick={this.navigagteLoginForm}>Log in</button>
                 <button onClick={this.navigagteSignupForm}>Sign up</button>
             </div>
-        };
+        ;
 
-        const display = this.state.loginBool ? loginForm : loginSplash;
-
+        const display = loginForm;
+        
 
         return (
             <>
             <div className="login-form-container">
-                {display}                
+                {display}
             </div>
             </>
         );

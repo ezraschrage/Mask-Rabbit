@@ -47,18 +47,39 @@ class SignupForm extends React.Component {
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>Email:
+                        <label>First Name
+              <input type="text"
+                                value={this.state.firstName}
+                                onChange={this.update('firstName')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br />
+                        <label>Last Name
+              <input type="text"
+                                value={this.state.lastName}
+                                onChange={this.update('lastName')}
+                                className="login-input"
+                            />
+                        </label>
+                        <label>Email Address
               <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="login-input"
                             />
                         </label>
-                        <br />
-                        <label>Password:
+                        <label>Password
               <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
+                                className="login-input"
+                            />
+                        </label>
+                        <label>Zip Code
+              <input type="password"
+                                value={this.state.zip}
+                                onChange={this.update('zip')}
                                 className="login-input"
                             />
                         </label>
