@@ -6,8 +6,8 @@ class SignupForm extends React.Component {
         this.state = {
             email: '',
             password: '',
-            firstName: '',
-            lastName: '',
+            first_name: '',
+            last_name: '',
             zip: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,16 +49,16 @@ class SignupForm extends React.Component {
                         <br />
                         <label>First Name
               <input type="text"
-                                value={this.state.firstName}
-                                onChange={this.update('firstName')}
+                                value={this.state.first_name}
+                                onChange={this.update('first_name')}
                                 className="login-input"
                             />
                         </label>
                         <br />
                         <label>Last Name
               <input type="text"
-                                value={this.state.lastName}
-                                onChange={this.update('lastName')}
+                                value={this.state.last_name}
+                                onChange={this.update('last_name')}
                                 className="login-input"
                             />
                         </label>

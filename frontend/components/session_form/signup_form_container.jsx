@@ -8,7 +8,13 @@ const mSTP = ({ errors }) => {
     return {
         errors: errors.session,
         formType: 'signup',
-        navLink: <Link to="/login">log in instead</Link>,
+        fill: {
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: '',
+            zipcode: ''
+        }
     };
 };
 
@@ -19,3 +25,17 @@ const mDTP = dispatch => {
 };
 
 export default connect(mSTP, mDTP)(SignupForm);
+
+// const mapStateToProps = ({ errors }) => {
+//     return {
+//         errors: errors.sessionErrors,
+//         formType: 'signup',
+//         fill: {
+//             first_name: '',
+//             last_name: '',
+//             email: '',
+//             password: '',
+//             zipcode: ''
+//         }
+//     };
+// };
