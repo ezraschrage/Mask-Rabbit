@@ -17,6 +17,11 @@ class SignupForm extends React.Component {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+
+    }
+
+    componentWillUnmount() {
+        return this.props.clearErrors();
     }
 
     handleSubmit(e) {
@@ -41,13 +46,13 @@ class SignupForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Log in or sign up with email
-          <br />
+                    <br />
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
                         <label>First Name
-              <input type="text"
+                            <input 
+                                type="text"
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
                                 className="login-input"
@@ -55,35 +60,42 @@ class SignupForm extends React.Component {
                         </label>
                         <br />
                         <label>Last Name
-              <input type="text"
+                            <input 
+                                type="text"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
                                 className="login-input"
                             />
                         </label>
                         <label>Email Address
-              <input type="text"
+                            <input 
+                                type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="login-input"
                             />
                         </label>
                         <label>Password
-              <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
+                            <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            className="login-input"
                             />
                         </label>
                         <label>Zip Code
-              <input type="password"
+                            <input 
+                                type="password"
                                 value={this.state.zip}
                                 onChange={this.update('zip')}
                                 className="login-input"
                             />
                         </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <input 
+                            className="session-submit" 
+                            type="submit" 
+                            value="Create Account" />
                     </div>
                 </form>
             </div>
