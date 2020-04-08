@@ -43,7 +43,6 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Log in or sign up with email
           <br />
-          Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
