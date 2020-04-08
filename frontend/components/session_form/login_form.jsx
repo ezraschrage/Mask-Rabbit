@@ -79,13 +79,15 @@ class LoginForm extends React.Component {
             </div>
         };
 
-
+        const display = this.state.loginBool ? loginForm : loginSplash;
 
 
         return (
+            <>
             <div className="login-form-container">
-                {this.state.loginBool ? loginForm : loginSplash}
+                {display}                
             </div>
+            </>
         );
     }
 }
