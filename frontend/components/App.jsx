@@ -8,7 +8,6 @@ import GreetingContainer from "./greeting/greeting_container";
 
 const App = () => (
     <div>
-        <h1>MaskRabbit</h1>
         <Switch>
             <AuthRoute exact path="/login" component={LoginPageContainer} />
             <AuthRoute exact path="/login/email" component={LoginFormContainer} />
