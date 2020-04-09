@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .session {
-  background-image: image-url('P1000168_without_logo.jpg');
+  background-image: image-url('Moving2.jpg');
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -12,16 +12,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  min-width: 300px;
 }
 
 .session-container {
-    display: flexbox;
+    display: block;
     background: white;
     width: 440px;
     padding: 24px 32px;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
-    color: #242a30;
     justify-content: center;
     top: 32px;
     position: absolute;
@@ -38,28 +37,61 @@
       width: 260px;
       height: 60px;
       background-repeat: no-repeat;
-
 }
 
+.session-container button {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 13px 25px;
+    border: 1px solid inherit;
+    margin: 0px 0px 20px;
+    color: #51af33;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.session-container button:hover {
+    background-color: #438e29;
+    color: white;
+}
+
+.session-container .dead-link {
+    color: white;
+    cursor: default;
+    pointer-events: none;
+}
 
 
 .Google {
     background-color: #d73d32;
+    // border: 10px black solid;
 }
 .Facebook {
     background-color: #3b5998;
 }
-.session-container button {
-    font-size: 17px;
-    cursor: pointer;
+
+.session-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.session-container .dead-link {
-    width: 100%;
-    color: white;
-    cursor: default;
-    font-family: "Proxima", Arial, Helvetica, sans-serif;
-    padding: 10px 25px;
-    border: 1px solid;
-    margin: 0px 0px 20px;
+.session-links button {
+    width: 200px;
 }
+
+.session-container .text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    margin-bottom: 24px;
+    color: gray;
+    // color:black;
+    font-weight: 100;
+}
+
+// #438e29 green filled in, second page hover
+// #51af33 border and font, second page color
