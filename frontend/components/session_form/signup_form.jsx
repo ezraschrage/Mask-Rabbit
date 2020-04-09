@@ -45,63 +45,54 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="session">
-            <div className="session-container-signup">
-                <div className="logo" />
-
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <br />
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <label>First Name
-                            <input 
-                                type="text"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Last Name
-                            <input 
-                                type="text"
-                                value={this.state.last_name}
-                                onChange={this.update('last_name')}
-                                className="login-input"
-                            />
-                        </label>
-                        <label>Email Address
-                            <input 
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                            />
-                        </label>
-                        <label>Password
-                            <input 
+                <div className="session-container">
+                    <div className="logo" />
+                    <form onSubmit={this.handleSubmit} className="form-box">
+                        <div className="errors">
+                            {this.renderErrors()}
+                        </div>
+                        <span className="text">First Name</span>
+                        <input 
+                            type="text"
+                            value={this.state.first_name}
+                            onChange={this.update('first_name')}
+                            className="login-input"
+                        />
+                        <span className="text">Last Name</span>
+                        <input 
+                            type="text"
+                            value={this.state.last_name}
+                            onChange={this.update('last_name')}
+                            className="login-input"
+                        />
+                        <span className="text">Email Address</span>
+                        <input 
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"
+                        />
+                        <span className="text">Password</span>
+                        <input 
                             type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             className="login-input"
-                            />
-                        </label>
-                        <label>Zip Code
-                            <input 
-                                type="password"
-                                value={this.state.zip}
-                                onChange={this.update('zip')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
+                        />
+                        <span className="text">Zip Code</span>
                         <input 
-                            className="session-submit" 
-                            type="submit" 
-                            value="Create Account" />
-                    </div>
-                </form>
-            </div>
+                            type="password"
+                            value={this.state.zip}
+                            onChange={this.update('zip')}
+                            className="login-input"
+                        />
+                        <button
+                            className="btn submit"
+                            type="submit"
+                        >Create Account
+                        </button>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -24,17 +24,17 @@ class LoginPage extends React.Component {
             <div className="session">
                 <div className="session-container splash">
                     <div className="logo" />
-                    <button className="dead-link Facebook">Facebook (coming soon!)</button>                
-                    <button className="dead-link Google">Google (coming soon!)</button>
-                    <button onClick={this.handleSubmit}>Use a demo account</button>
+                    <button className="dead-link btn Facebook">Facebook (coming soon!)</button>                
+                    <button className="dead-link btn Google">Google (coming soon!)</button>
+                    <button className="btn" onClick={this.handleSubmit}>Use a demo account</button>
                     <div className="text">or</div>
                     <div className="text">Log in or sign up with email</div>
                     <div className="session-links">
                         <Link to="/login/email">
-                            <button type="button">Log in</button>
+                            <button className="btn" type="button">Log in</button>
                         </Link>
                         <Link to="/signup/password">
-                            <button type="button">Sign up</button>
+                            <button className="btn" type="button">Sign up</button>
                         </Link>
                     </div>
                 </div>

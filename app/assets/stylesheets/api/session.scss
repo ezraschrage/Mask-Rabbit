@@ -39,16 +39,16 @@
       background-repeat: no-repeat;
 }
 
-.session-container button {
+.session-container .btn {
     font-size: 16px;
     cursor: pointer;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 13px 25px;
-    border: 1px solid inherit;
+    border: 1px solid #51af33;
     margin: 0px 0px 20px;
     color: #51af33;
-    transition: 0.3s;
+    transition: 0.2s;
     border-radius: 4px;
 }
 
@@ -66,10 +66,11 @@
 
 .Google {
     background-color: #d73d32;
-    // border: 10px black solid;
+    border-color: #d73d32;
 }
 .Facebook {
     background-color: #3b5998;
+    border-color: #3b5998;
 }
 
 .session-links {
@@ -78,20 +79,81 @@
     justify-content: space-between;
 }
 
-.session-links button {
-    width: 200px;
+.session-links .btn {
+    width: 210px;
 }
 
-.session-container .text {
+.splash .text {
     text-align: center;
     display: flex;
     justify-content: center;
     height: 25px;
     margin-bottom: 24px;
-    color: gray;
-    // color:black;
+    color: #b1b9c3;
     font-weight: 100;
 }
 
+.form-box .text {
+    text-align: left;
+    margin: 8px;
+    color: #b1b9c3;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form-box .input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #b1b9c3;
+    font-size: 16px;
+    margin-bottom: 10px; 
+    border-radius: 4px;
+}
+
+.form-box .btn {
+    margin-top: 10px;
+    background-color: #51af33;
+    color: white;
+}
+
+.form-box .btn:hover {
+    background-color: #438e29;
+    
+}
+
+// .input {
+//     display: flex;
+// }
 // #438e29 green filled in, second page hover
 // #51af33 border and font, second page color
+
+.errors {
+    color:red;
+    position: relative;
+    top: 15px;
+    text-align: center;
+}
+
+
+// .form-box {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// .form-box .input {
+//     width: 100%;
+//     padding: 10px 16px;
+//     border: 1px solid #b1b9c3;
+// }
+
+// .row {
+//     height: 86px;
+//     width: 100%;
+//     align-items: center;
+// }
