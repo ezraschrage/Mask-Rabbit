@@ -17,4 +17,16 @@ class Masker < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
+    has_many :masker_categories,
+        foreign_key: :masker_id,
+        class_name: :MaskerCategory
+
+    has_many :availability,
+        foreign_key: :masker_id,
+        class_name: :MaskerDay
+
+    has_many :categories,
+        through: :masker_categories,
+        source: :category
+
 end

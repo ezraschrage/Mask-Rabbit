@@ -18,7 +18,24 @@
 #
 class Task < ApplicationRecord
 
-    # validates :category_id, :length_of_task, :date,
+    validates :category_id, :length_of_task, :date, :per_hr, :user_id,
+        :masker_id, :description, :start_address, :vehicle_requirements,
+        presence: true
+    validates :length_of_task, :per_hr, numericality: { greater_than: 0 }
+
+    belongs_to :category,
+        foreign_key: :category_id,
+        class_name: :Category
+
+    belongs_to :masker,
+        foreign_key: :masker_id,
+        class_name: :Masker
+
+    belongs_to :user,
+        foreign_key: :user_id,
+        class_name: :User
+
+        
 
 
 end

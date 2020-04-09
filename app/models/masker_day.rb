@@ -17,5 +17,4 @@ class MaskerDay < ApplicationRecord
         foreign_key: :masker_id,
         class_name: :Masker
 
-
 end

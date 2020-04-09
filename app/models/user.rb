@@ -17,19 +17,24 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  validates :email, 
-    :password_digest, 
-    :session_token, 
-    :first_name, 
-    :last_name, 
-    :zip, 
-    presence: true
+  validates :email, :password_digest, :session_token, :first_name, :last_name, 
+    :zip, presence: true
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
   validates :zip, length: { is: 5 }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
 
   after_initialize :ensure_session_token
+
+  has_many :tasks,
+    foreign_key: :user_id,
+    class_name: :Task
+
+  has_one :masker_id,
+    foreign_key: :user_id,
+    class_name: :Masker
+
+  
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
