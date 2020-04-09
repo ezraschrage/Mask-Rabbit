@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className="session">
-            <div className="session-container">
+            <div className="session-container-login">
                 <div className="logo"/>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     {this.renderErrors()}

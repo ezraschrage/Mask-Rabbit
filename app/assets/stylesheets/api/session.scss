@@ -14,24 +14,35 @@
   background-size: cover;
 }
 
-.session-container {
+.session-container-login, .session-container-signup, .session-container-splash {
     display: flexbox;
     background: white;
-    width: 500px;
+    width: 440px;
     padding: 24px 32px;
     font: 20px black;
     justify-content: center;
+    top: 32px;
+    position: absolute;
 }
 
 .logo {
       background-image: image-url('TaskRabbit_Logo_horizontal_lockup.png');
+      background-size: 260px;
       display: block;
+      margin-left: auto;
+      margin-right: auto;
       justify-content: center;
       align-items: flex-start;
-      width: 700px;
-      height: 200px;
+      width: 260px;
+      height: 60px;
       background-repeat: no-repeat;
-    //   padding: 0px;
-    //   margin: 0px 90px;
-    //   margin-bottom: 16px;
+
+}
+
+// .session-container-signup {
+//     height: 685px;
+// }
+
+.session-container-splash button {
+    color: red;
 }
