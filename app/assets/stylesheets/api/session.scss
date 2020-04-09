@@ -1,3 +1,159 @@
 // Place all the styles related to the api/session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session {
+  background-image: image-url('Moving2.jpg');
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+}
+
+.session-container {
+    display: block;
+    background: white;
+    width: 440px;
+    padding: 24px 32px;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    top: 32px;
+    position: absolute;
+}
+
+.logo {
+      background-image: image-url('TaskRabbit_Logo_horizontal_lockup.png');
+      background-size: 260px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: flex-start;
+      width: 260px;
+      height: 60px;
+      background-repeat: no-repeat;
+}
+
+.session-container .btn {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 13px 25px;
+    border: 1px solid #51af33;
+    margin: 0px 0px 20px;
+    color: #51af33;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.session-container button:hover {
+    background-color: #438e29;
+    color: white;
+}
+
+.session-container .dead-link {
+    color: white;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+.Google {
+    background-color: #d73d32;
+    border-color: #d73d32;
+}
+.Facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.session-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.session-links .btn {
+    width: 210px;
+}
+
+.splash .text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    margin-bottom: 24px;
+    color: #b1b9c3;
+    font-weight: 100;
+}
+
+.form-box .text {
+    text-align: left;
+    margin: 8px;
+    color: #b1b9c3;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-box .input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #b1b9c3;
+    font-size: 16px;
+    margin-bottom: 10px; 
+    border-radius: 4px;
+}
+
+.form-box .btn {
+    margin-top: 10px;
+    background-color: #51af33;
+    color: white;
+}
+
+.form-box .btn:hover {
+    background-color: #438e29;
+    
+}
+
+// .input {
+//     display: flex;
+// }
+// #438e29 green filled in, second page hover
+// #51af33 border and font, second page color
+
+.errors {
+    color:red;
+    position: relative;
+    top: 12px;
+    text-align: center;
+    margin-bottom: 33px;
+}
+
+
+// .form-box {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// .form-box .input {
+//     width: 100%;
+//     padding: 10px 16px;
+//     border: 1px solid #b1b9c3;
+// }
+
+// .row {
+//     height: 86px;
+//     width: 100%;
+//     align-items: center;
+// }
