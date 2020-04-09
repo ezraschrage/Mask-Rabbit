@@ -104,7 +104,6 @@
 .form-box {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .form-box .input {
@@ -136,8 +135,9 @@
 .errors {
     color:red;
     position: relative;
-    top: 15px;
+    top: 12px;
     text-align: center;
+    margin-bottom: 33px;
 }
 
 

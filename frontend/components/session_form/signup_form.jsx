@@ -32,7 +32,7 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -47,44 +47,45 @@ class SignupForm extends React.Component {
             <div className="session">
                 <div className="session-container">
                     <div className="logo" />
+                    <div>
+                        {this.renderErrors()}
+                    </div>
                     <form onSubmit={this.handleSubmit} className="form-box">
-                        <div className="errors">
-                            {this.renderErrors()}
-                        </div>
+  
                         <span className="text">First Name</span>
                         <input 
                             type="text"
                             value={this.state.first_name}
                             onChange={this.update('first_name')}
-                            className="login-input"
+                            className="input"
                         />
                         <span className="text">Last Name</span>
                         <input 
                             type="text"
                             value={this.state.last_name}
                             onChange={this.update('last_name')}
-                            className="login-input"
+                            className="input"
                         />
                         <span className="text">Email Address</span>
                         <input 
                             type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
-                            className="login-input"
+                            className="input"
                         />
                         <span className="text">Password</span>
                         <input 
                             type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            className="login-input"
+                            className="input"
                         />
                         <span className="text">Zip Code</span>
                         <input 
                             type="password"
                             value={this.state.zip}
                             onChange={this.update('zip')}
-                            className="login-input"
+                            className="input"
                         />
                         <button
                             className="btn submit"
