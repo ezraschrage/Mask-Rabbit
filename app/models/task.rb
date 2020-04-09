@@ -17,4 +17,8 @@
 #  updated_at           :datetime         not null
 #
 class Task < ApplicationRecord
+
+    # validates :category_id, :length_of_task, :date, :
+
+
 end

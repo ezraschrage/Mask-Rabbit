@@ -9,4 +9,8 @@
 #  updated_at  :datetime         not null
 #
 class Category < ApplicationRecord
+    validates :name, :description, presence: true
+
+    has_many :masker_categories
+    has_many :tasks
 end

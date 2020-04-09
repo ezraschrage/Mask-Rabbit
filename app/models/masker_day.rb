@@ -10,4 +10,12 @@
 #  updated_at :datetime         not null
 #
 class MaskerDay < ApplicationRecord
+
+    validates :masker_id, :start_time, :end_time, presence: true
+
+    belongs_to :masker,
+        foreign_key: :masker_id,
+        class_name: :Masker
+
+
 end

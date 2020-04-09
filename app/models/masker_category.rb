@@ -10,4 +10,16 @@
 #  updated_at  :datetime         not null
 #
 class MaskerCategory < ApplicationRecord
+
+    validates :masker_id, :category_id, :base_rate, presence: true
+    validates :base_rate, numericality: { greater_than: 0 }
+
+    belongs_to :masker,
+        foreign_key: :masker_id,
+        class_name: :Masker
+
+    belongs_to :category,
+        foreign_key: :category_id,
+        class_name: :Category
+
 end
