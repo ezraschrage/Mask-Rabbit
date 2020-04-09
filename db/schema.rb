@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_174036) do
+ActiveRecord::Schema.define(version: 2020_04_09_152617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_174036) do
     t.integer "category_id", null: false
     t.integer "length_of_task", null: false
     t.datetime "date", null: false
-    t.integer "per_her", null: false
+    t.integer "per_hr", null: false
     t.integer "user_id", null: false
     t.integer "masker_id", null: false
     t.string "description", null: false

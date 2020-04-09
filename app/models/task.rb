@@ -6,7 +6,7 @@
 #  category_id          :integer          not null
 #  length_of_task       :integer          not null
 #  date                 :datetime         not null
-#  per_her              :integer          not null
+#  per_hr               :integer          not null
 #  user_id              :integer          not null
 #  masker_id            :integer          not null
 #  description          :string           not null
@@ -18,7 +18,7 @@
 #
 class Task < ApplicationRecord
 
-    # validates :category_id, :length_of_task, :date, :
+    # validates :category_id, :length_of_task, :date,
 
 
 end
