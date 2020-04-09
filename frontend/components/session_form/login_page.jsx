@@ -22,26 +22,21 @@ class LoginPage extends React.Component {
     render() {
         return (
             <div className="session">
-            <div className="session-container-splash">
-                <div className="logo" />
-                <div>Facebook (coming soon!)</div>
-                <div>Google (coming soon!</div>
-                <h3>Log in or sign up with email</h3>
-                <button onClick={this.handleSubmit}>Use a demo account</button>
-                <div className="session-links">
-                <Link to="/login/email">
-                    <button type="button">
-                            Log in
-                    </button>
-                </Link>
-                <Link to="/signup/password">
-                    <button type="button">
-                        Sign up
-                    </button>
-                
-                </Link>
+                <div className="session-container splash">
+                    <div className="logo" />
+                    <button className="dead-link Facebook">Facebook (coming soon!)</button>                
+                    <button className="dead-link Google">Google (coming soon!</button>
+                    <div>Log in or sign up with email</div>
+                    <button onClick={this.handleSubmit}>Use a demo account</button>
+                    <div className="session-links">
+                    <Link to="/login/email">
+                        <button type="button">Log in</button>
+                    </Link>
+                    <Link to="/signup/password">
+                        <button type="button">Sign up</button>
+                    </Link>
+                    </div>
                 </div>
-            </div>
             </div>
         );
     }

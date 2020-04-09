@@ -12,14 +12,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
-.session-container-login, .session-container-signup, .session-container-splash {
+.session-container {
     display: flexbox;
     background: white;
     width: 440px;
     padding: 24px 32px;
-    font: 20px black;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    color: #242a30;
     justify-content: center;
     top: 32px;
     position: absolute;
@@ -39,10 +41,25 @@
 
 }
 
-// .session-container-signup {
-//     height: 685px;
-// }
 
-.session-container-splash button {
-    color: red;
+
+.Google {
+    background-color: #d73d32;
+}
+.Facebook {
+    background-color: #3b5998;
+}
+.session-container button {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.session-container .dead-link {
+    width: 100%;
+    color: white;
+    cursor: default;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    padding: 10px 25px;
+    border: 1px solid;
+    margin: 0px 0px 20px;
 }
