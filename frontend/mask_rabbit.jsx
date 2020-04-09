@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
+    window.getState = store.getState
 
     const root = document.getElementById('root');
 
