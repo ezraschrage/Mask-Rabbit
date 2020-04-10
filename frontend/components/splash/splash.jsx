@@ -1,5 +1,6 @@
 import React from 'react';
-import NavContainer from '../nav/nav_container'
+import NavContainer from '../nav/nav_container';
+import CategoriesContainer from '../categories/categories_container';
 
 class Splash extends React.Component {
     constructor (props) {
@@ -26,6 +27,7 @@ class Splash extends React.Component {
                     <h2>Popular projects near you</h2>
                     <div className="categories images">
                         <p>Here is where the categoreis will go.</p>
+                        <CategoriesContainer />
                     </div>
                 </div>
             </div>

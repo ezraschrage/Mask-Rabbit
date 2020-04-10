@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import usersReducer from "./users_reducer";
-import categoriesReducer from "./categories_reducer";
+import users from "./users_reducer";
+import categories from "./categories_reducer";
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
-    categories: categoriesReducer
+    users,
+    categories
 });
 
 export default entitiesReducer;

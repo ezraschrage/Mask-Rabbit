@@ -8,6 +8,6 @@ export const receiveCategories = (categories) =>( {
 });
 
 export const fetchCategories = () => dispatch => (
-    CATEGORYUTIL.fetchCategories().then(() =>
+    CATEGORYUTIL.fetchCategories().then(categories =>
     dispatch(receiveCategories(categories)))
 );

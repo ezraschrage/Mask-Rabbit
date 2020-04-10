@@ -1,9 +1,10 @@
 import React from 'react';
+import CategoryItem from './categories_item';
 
 class Categories extends React.Component {
 
     componentDidMount() {
-        this.props.receiveCategories()
+        this.props.fetchCategories()
     }
 
     render () {
@@ -11,7 +12,8 @@ class Categories extends React.Component {
         return (
             <div className="category-container">
                 <ul>
-                    {categories.map(category => <CategoryItem category={category.id} />)}
+                    {categories.map(category => 
+                        <CategoryItem category={category} key={category.id}/>)}
                 </ul>
             </div>
         )
