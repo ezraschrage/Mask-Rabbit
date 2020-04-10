@@ -4,7 +4,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginPageContainer from './session_form/login_page_container';
-import NavContainer from "./nav/nav_container";
+// import NavContainer from "./nav/nav_container";
 import DashboardContainer from "./dashboard/dashboard_container";
 import SplashContainer from "./splash/splash_container";
 // Protected: Are you logged in? Go to this. Else to / page
