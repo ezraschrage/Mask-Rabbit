@@ -11,7 +11,22 @@ class Dashboard extends React.Component {
         return (
             <>
                 <NavContainer />
-                <p>Welcome to dash</p>
+                <div className="dashboard">
+                    <div className="dashboard search">
+                        <div className="dashboard search txt">
+                            <p className="txt large">Book your next task</p>
+                            <div className="dashboard search bar">
+                                <p>Here will go the search bar.</p>
+                            </div>
+                            <div className="categories container list">
+                                <div className="categories">
+                                    <p>List of categories here</p>
+                                    <button className="txt">See more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
 
         );
