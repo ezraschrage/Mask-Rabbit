@@ -12,8 +12,11 @@ class Categories extends React.Component {
         return (
             <div className="category-container">
                 <ul>
-                    {categories.map(category => 
-                        <CategoryItem category={category} key={category.id}/>)}
+                    
+                    {categories.map(category => (
+                        
+                        <CategoryItem category={category} key={category.id}/>
+                    ))}
                 </ul>
             </div>
         )
@@ -23,7 +26,14 @@ class Categories extends React.Component {
 
 export default Categories;
 
-// render() {
+{/* <ul>
+    {numbers.map((number) =>
+        <ListItem key={number.toString()}
+            value={number} />
+    )}
+</ul> */}
+
+
 //     const { pokemon, loading } = this.props;
 
 //     if (loading) { return <LoadingIcon />; }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CategoryItem = props => (
-    <div className="category item" key={props.key}>
+    <div className="category item">
         <Link to={`/task`}>
             <button>
             {/* <img src={}/> */}
