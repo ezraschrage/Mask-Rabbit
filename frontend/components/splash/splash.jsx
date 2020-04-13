@@ -43,9 +43,8 @@ class Splash extends React.Component {
                     </div>
                 </div>
                 <div className="splash categories">
-                    <h2>Popular projects near you</h2>
+                    <div className="pop-text">Popular projects near you</div>
                     <div className="categories images">
-                        <p>Here is where the categoreis will go.</p>
                         <CategoriesContainer />
                     </div>
                 </div>

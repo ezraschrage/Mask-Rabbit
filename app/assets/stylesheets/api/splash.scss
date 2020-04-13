@@ -138,6 +138,7 @@ background-image: image-url('mask_large.jpg');
 }
 
 .google-app {
+    margin-right: 5px;
     background-image: image-url('google.png');
         background-position: center;
     background-size: cover;
@@ -149,7 +150,7 @@ background-image: image-url('mask_large.jpg');
     background-image: image-url('app_store.png');
         background-position: center;
     background-size: cover;
-    height: 40px;
+    height: 62px;
     width: 125px;
 
 }
@@ -157,4 +158,15 @@ background-image: image-url('mask_large.jpg');
 .splash.categories {
     width: 100%;
     display: flex;
+}
+
+.pop-text {
+    // display: block;
+    width: 87vw;
+    font-size: 34px;
+    text-align: left;
+    align-self: left;
+    // position: relative;
+        font-family: "Proxima", Arial, Helvetica, sans-serif;
+
 }

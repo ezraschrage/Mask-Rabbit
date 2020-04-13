@@ -4,7 +4,8 @@
 
 
 .category-container {
-    height: 600px;
+
+    width: 100%;
 }
 
 .categories {
@@ -13,24 +14,57 @@
     justify-content: center;
 }
 
-.category.item {
-    display: flex;
-    height: 260px;
+.category-li {
+
     width: 20%;
-    padding: 10px;
+    // padding: 0px 10px 10px 10px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.17);
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
+    margin: 15px;
+
+}
+
+.category.btn {
+    // display: block;
+    // background: white;
     background-color: white;
+    color: #242a30;
+        display: flex;
+    height: 260px;
+        flex-direction: column;
+    align-items: center;
+    // background-color: white;
     justify-content: center;
+
 }
 
 
 .category.name {
     font-size: 18px;
+    padding: 6px;
 }
 
 .category.price {
-    font-size: 16px;
+    color: #2F8F84;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+        font-size: 16px;
+}
+
+.tag {
+    background-image: image-url('price_tag.png');
+    background-position: center;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+.category.pic {
+    background-image: image-url('planting.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 170px;
+    width: 100%;
+    display: block;
+    box-shadow: none;
 }

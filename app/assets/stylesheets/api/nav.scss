@@ -41,13 +41,14 @@
     font-size: 15px;
     cursor: pointer;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
-    width: 170px;
+    width: 180px;
     height: 45px;
     // padding: 13px 25px;
     border: 1px solid #51af33;
     color: #51af33;
     transition: 0.2s;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .nav .big-btn:hover {
@@ -68,6 +69,18 @@
 .nav-text-gift {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-text-gift > div{
+
+    cursor: auto;
+}
+.nav-text-gift > div:hover {
+    cursor: auto;
+        color: #51af33;
+
 }
 
 .gift {
@@ -77,7 +90,8 @@
     background-repeat: no-repeat;
     background-position: left;
     min-width: 16px;
-    cursor: pointer;
+    min-height: 16px;
+    cursor: auto;
 }
 .nav-text:hover {
     color: #438e29;
