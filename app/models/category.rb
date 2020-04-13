@@ -24,4 +24,6 @@ class Category < ApplicationRecord
     has_many :maskers,
         through: :masker_categoreis,
         source: :masker
+
+    has_one_attached :photo
 end
