@@ -4,41 +4,54 @@ import { Link } from 'react-router-dom';
 const Nav = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="nav">
-        <Link to="/">
-            <button className={"logo-long"}></button>
-        </Link>
-        <Link to="/tasks">
-            <button className="nav-text">Contactless Tasks and Delivery</button>
-        </Link>
-        <Link to="/tasks">
-            <button className="nav-text">Services Drop down here</button>
-        </Link>   
-        <Link to="/login">
-            <button className="nav-text">Log in</button>
-        </Link>
-        <button className="btn">Become a Masker (coming soon!</button>
+            <div className="logo-container">
+            <Link to="/">
+                <button className={"logo-nav"}></button>
+            </Link>
+            </div>
+            <div className="nav-link-container">
+                <Link to="/tasks">
+                    <button className="nav-text">Contactless Tasks and Delivery</button>
+                </Link>
+                <Link to="/tasks">
+                    <button className="nav-text btn">Book a Task</button>
+                </Link>
+                <div className="nav-text-gift">
+                    <div className="gift"></div>
+                    <div className="nav-text">Free Credit (coming soon!)</div>
+                </div>
+                <Link to="/login">
+                    <button className="nav-text">Log in</button>
+                </Link>
+                <button className="nav big-btn">Become a Masker (coming soon!</button>
+            </div>
         </nav>
     );
     const personalNav = () => (
         <nav className="nav">
-            <Link to="/">
-                <button className={"logo-long"}></button>
-            </Link>
-            <Link to="/tasks">
-                <button className="nav-text">Contactless Tasks and Delivery</button>
-            </Link>
-            <button className="nav-text gift">Free Credit (coming soon!)</button>
-            <Link to="/tasks">
-                <button className="nav-text">Book a Task</button>
-            </Link>
-            <Link to="/account">
-                <button className="nav-text">My Tasks</button>
-            </Link>
-            <Link to="/account">
-                <button className="nav-text">Account</button>
-            </Link>
-            <button className="btn">Become a Masker (coming soon!</button>
-            <button className="btn" onClick={logout}>Log Out</button>
+            <div className="logo-container">
+                <Link to="/">
+                    <button className={"logo-nav"}></button>
+                </Link>
+            </div>
+            <div className="nav-link-container">
+                <Link to="/tasks">
+                    <button className="nav-text">Contactless Tasks and Delivery</button>
+                </Link>
+                <Link to="/tasks">
+                    <button className="nav-text btn">Book a Task</button>
+                </Link>
+                <div className="nav-text-gift">
+                    <div className="gift"></div>
+                    <div className="nav-text">Free Credit (coming soon!)</div>
+                </div>
+                <Link to="/account">
+                    <button className="nav-text btn">My Tasks</button>
+                </Link>
+                <Link to="/account">
+                    <button className="nav-text btn">Account</button>
+                </Link>
+            </div>
         </nav>
     );
 

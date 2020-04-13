@@ -12,7 +12,7 @@ class Splash extends React.Component {
         return (
             <>
             <NavContainer />
-            <div className="splash">
+            <div className="splash container">
                 <div className="splash search">
                     <div className="splash search txt">
                         <p className="txt large">Help around the home, at your fingertips </p>

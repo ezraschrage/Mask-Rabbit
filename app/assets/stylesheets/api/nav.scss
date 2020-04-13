@@ -1,24 +1,90 @@
 
+.logo-nav {
+      background-image: image-url('logo.png');
+      background-size: 160px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    //   justify-content: space-between;
+    //   align-self: flex-start;
+      width: 160px;
+      height: 40px;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+
+}
+
+.logo-container {
+    display: flex;
+    align-self: left;
+    padding-left: 10px;
+}
+
+.nav-link-container {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
 .nav {
     display: flex;
     width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 0px;
 }
 
-.nav .btn {
-    font-size: 16px;
+.nav .big-btn {
+    font-size: 15px;
     cursor: pointer;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 13px 25px;
+    width: 170px;
+    height: 45px;
+    // padding: 13px 25px;
     border: 1px solid #51af33;
-    margin: 0px 0px 20px;
     color: #51af33;
     transition: 0.2s;
     border-radius: 4px;
 }
 
-.nav button:hover {
+.nav .big-btn:hover {
     background-color: #438e29;
     color: white;
 }
 
+.nav-text {
+    color: #51af33;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 10px;
+
+}
+
+.nav-text-gift {
+    display: flex;
+    justify-content: center;
+}
+
+.gift {
+    background: image-url('gift.png');
+    background-size: contain;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-width: 16px;
+    cursor: pointer;
+}
+.nav-text:hover {
+    color: #438e29;
+    background-color: white;
+}
+
+.nav-text.drop {
+    position: relative;
+    display: inline-block;
+}

@@ -23,7 +23,7 @@ class LoginPage extends React.Component {
         return (
             <div className="session login">
                 <div className="session-container front">
-                    <div className="logo-long" />
+                    <div className="logo-session" />
                     <button className="dead-link btn Facebook">Facebook (coming soon!)</button>                
                     <button className="dead-link btn Google">Google (coming soon!)</button>
                     <button className="btn" onClick={this.handleSubmit}>Use a demo account</button>

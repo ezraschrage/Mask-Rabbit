@@ -8,7 +8,7 @@ import LoginPageContainer from './session_form/login_page_container';
 // import DashboardContainer from "./dashboard/dashboard_container";
 import SplashContainer from "./splash/splash_container";
 // Protected: Are you logged in? Go to this. Else to / page
-// AuthRoute: Are you not logged in? Go to this. Else to /dash page.
+// AuthRoute: Are you not logged in? Go to this. Else to / page.
 
 const App = () => (
     <div>
@@ -16,11 +16,11 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginPageContainer} />
             <AuthRoute exact path="/login/email" component={LoginFormContainer} />
             <AuthRoute exact path="/signup/password" component={SignupFormContainer} />
-            <ProtectedRoute exact path="/" component={SplashContainer} />
+            {/* <ProtectedRoute exact path="/" component={SplashContainer} /> */}
             {/* //To be deleted */}
             {/* <Route exact path="/" component={NavContainer} /> */}
             {/* // To be deleted */}
-            <AuthRoute exact path="/" component={SplashContainer} />
+            <Route exact path="/" component={SplashContainer} />
             <Redirect to='/' />
         </Switch>
     </div>

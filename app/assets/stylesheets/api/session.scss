@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.logo-session {
+      background-image: image-url('logo.png');
+      background-size: 260px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: flex-start;
+      width: 260px;
+      height: 60px;
+      background-repeat: no-repeat;
+}
+
 .session {
   background-image: image-url('garden_long.jpg');
   display: flex;
@@ -32,18 +45,7 @@
     position: absolute;
 }
 
-.logo-long {
-      background-image: image-url('logo.jpg');
-      background-size: 260px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-      align-items: flex-start;
-      width: 260px;
-      height: 60px;
-      background-repeat: no-repeat;
-}
+
 
 .session-container .btn {
     font-size: 16px;

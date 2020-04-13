@@ -1,0 +1,29 @@
+.splash.container {
+  background-image: image-url('window.jpg');
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  top:60px;
+
+}
+
+.splash.search {
+    display: flex;
+    background: white;
+    width: 580px;
+    // padding: 24px 32px;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    top: 150px;
+    position: absolute;
+}
+
+.splash.categories {
+    display: flex;
+}
