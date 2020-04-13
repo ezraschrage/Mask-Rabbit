@@ -6,5 +6,4 @@ class Api::CategoriesController < ApplicationController
         render :index
     end
 
-
 end

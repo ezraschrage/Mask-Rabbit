@@ -8,6 +8,8 @@
 # # This file should contain all the record creation needed to seed the database with its default values.
 # # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
+require 'open-uri'
+
 Category.destroy_all
 User.destroy_all
 
@@ -20,7 +22,7 @@ user5 = User.create!(email: "d@d.com", first_name: "Dana", last_name: "Davidson"
 
 cat1 = Category.create!(name: "Assemble a Table/Desk", 
     description: "Our Masker will help assemble your furniture around the house. They are even prepared to work outside if your home is too small to maintain social distancing.", 
-    low_avg: 59, high_avg: 148)
+    low_avg: 59, high_avg: 148, )
 cat2 = Category.create!(name: "Mount a TV or Mirror", 
     description: "Let one of our Maskers ensure that anything you put up on your wall will stay up. Let your mirror or TV enable the best self-care possible for yourself.", 
     low_avg: 59, high_avg: 106)
@@ -43,7 +45,26 @@ cat8 = Category.create!(name: "Plant Flowers",
     description: "Some of our Masker's want to put their green thumb to your benefit. With spring around the corner, you can have the help you need to make sure your yard is full of life.",
     low_avg: 47, high_avg: 141)
 
+catfile1 = open('https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg')
+catfile2 = open('https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg')
+catfile3 = open('https://mask-rabbit-seed.s3.amazonaws.com/van.jpg')
+catfile4 = open('https://mask-rabbit-seed.s3.amazonaws.com/spray.jpg')
+catfile5 = open('https://mask-rabbit-seed.s3.amazonaws.com/sweep.jpg')
+catfile6 = open('https://mask-rabbit-seed.s3.amazonaws.com/tp.jpg')
+catfile7 = open('https://mask-rabbit-seed.s3.amazonaws.com/moving.jpg')
+catfile8 = open('https://mask-rabbit-seed.s3.amazonaws.com/planting.jpg')
 
+cat1.photo.attach(io: catfile1, filename: 'drill.jpg')
+cat2.photo.attach(io: catfile2, filename: 'tv.jpg')
+cat3.photo.attach(io: catfile3, filename: 'van.jpg')
+cat4.photo.attach(io: catfile4, filename: 'spray.jpg')
+cat5.photo.attach(io: catfile5, filename: 'sweep.jpg')
+cat6.photo.attach(io: catfile6, filename: 'tp.jpg')
+cat7.photo.attach(io: catfile7, filename: 'moving.jpg')
+cat8.photo.attach(io: catfile8, filename: 'planting.jpg')
+# file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
+
+# demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
 #  name        :string           not null
 #  description :string           not null
 #  created_at  :datetime         not null

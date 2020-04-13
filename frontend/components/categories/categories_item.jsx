@@ -5,8 +5,7 @@ const CategoryItem = props => (
     <li className="category-li">
         <Link to={`/task`}>
             <div className="category btn">
-            {/* <img src={}/> */}
-            <span className="category pic"></span>
+            <img className="category pic" src={props.category.photoUrl} />
             <span className="category name">{props.category.name}</span>
             <span className="category price">
                 <div className="tag"></div>
@@ -18,18 +17,3 @@ const CategoryItem = props => (
 )
 
 export default CategoryItem;
-
-// const CategoryItem = ({ category }) => {
-//     <div className="category item">
-//         <Link to={`/task`}>
-//             <button>
-//                 {/* <img src={}/> */}
-//                 <span>Here will be an image</span>
-//                 <span>{category.name}</span>
-//                 <span>Avg. Project: ${category.low_avg} - ${category.high_avg}</span>
-//             </button>
-//         </Link>
-//     </div>
-// }
-
-// export default CategoryItem;
