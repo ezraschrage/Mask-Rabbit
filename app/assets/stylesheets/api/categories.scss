@@ -1,3 +1,36 @@
 // Place all the styles related to the api/categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.category-container {
+    height: 600px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category.item {
+    display: flex;
+    height: 260px;
+    width: 20%;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.17);
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+}
+
+
+.category.name {
+    font-size: 18px;
+}
+
+.category.price {
+    font-size: 16px;
+}

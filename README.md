@@ -7,3 +7,8 @@
 ["Ecommerce, price, shop, tag icon"](https://www.iconfinder.com/icons/4177555/ecommerce_price_shop_tag_icon) by Jordan Alfarishy is licensed under CC BY 3.0
 
 Gift https://www.iconfinder.com/icons/172472/gift_present_icon
+
+Half star https://www.iconfinder.com/icons/49625/half_rating_star_icon
+
+Full star https://www.iconfinder.com/icons/49624/bookmark_favorite_full_rating_star_icon
+

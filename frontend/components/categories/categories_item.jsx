@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CategoryItem = props => (
-    <div className="category item">
+    <li className="category container">
         <Link to={`/task`}>
-            <button>
+            <button className="category item">
             {/* <img src={}/> */}
-            <span>Here will be an image</span>
-            <span>{props.category.name}</span>
-            <span>Avg. Project: ${props.category.low_avg} - ${props.category.high_avg}</span>
+            <span className="category pic">Here will be an image</span>
+            <span className="category name">{props.category.name}</span>
+            <span className="category price">Avg. Project: ${props.category.low_avg} - ${props.category.high_avg}</span>
             </button>
         </Link>
-    </div>
+    </li>
 )
 
 export default CategoryItem;

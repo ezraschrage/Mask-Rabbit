@@ -1,5 +1,21 @@
 .splash.container {
-  background-image: image-url('window.jpg');
+//   background-image: image-url('window.jpg');
+  display: flex;
+  flex-direction: column;
+//   height: 100vh;
+  width: 100%;
+//   justify-content: center;
+//   box-sizing: border-box;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   min-height: 600px;
+//   top:60px;
+
+}
+
+.splash.search {
+background-image: image-url('mask_large.jpg');
   display: flex;
   height: 100vh;
   width: 100%;
@@ -10,20 +26,135 @@
   background-size: cover;
   min-height: 600px;
   top:60px;
-
 }
 
-.splash.search {
+.splash.txt {
     display: flex;
-    background: white;
-    width: 580px;
+    flex-direction: column;
+    background-color: white;
+    width: 680px;
     // padding: 24px 32px;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
     justify-content: center;
     top: 150px;
     position: absolute;
+    text-align: center;
+    padding: 40px 0px;
+    align-items: center;
+
+}
+
+.txt.large {
+    font-size: 40px;
+    width: 460px;
+    padding-bottom: 10px;
+}
+
+.txt.small {
+    font-size: 16px;
+    width: 460px;
+    padding: 15px 0px;
+}
+
+.splash.bar {
+    display: flex;
+    width: 90%;
+}
+
+.search {
+    width: 80%;
+}
+
+.splash.btn {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    width: 20%;
+    // padding: 13px 25px;
+    border: 1px solid #51af33;
+    // margin: 0px 0px 20px;
+    color: #51af33;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.splash.btn:hover {
+    background-color: #438e29;
+    color: white;
+}
+
+.reviews {
+    width: 100%;
+    background-color: #f9fafb;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+    align-items: center;
+}
+
+
+.stars {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.full-star {
+    background-image: image-url('star.png');
+  
+    background-position: center;
+    background-size: cover;
+    height: 24px;
+    width: 24px;
+}
+
+.half-star {
+        background-image: image-url('half-star.png');
+  
+    background-position: center;
+    background-size: cover;
+    height: 24px;
+    width: 24px;
+}
+
+
+.ikea {
+    display: flex;
+    align-items: center;
+    
+}
+.ikea-img {
+    background-image: image-url('Ikea.png');
+    background-position: center;
+    background-size: cover;
+    height: 45px;
+    width: 120px;
+}
+
+.apps {
+    display: flex;
+    align-items: center;
+}
+
+.google-app {
+    background-image: image-url('google.png');
+        background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 125px;
+}
+
+.app-store {
+    background-image: image-url('app_store.png');
+        background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 125px;
+
 }
 
 .splash.categories {
+    width: 100%;
     display: flex;
 }

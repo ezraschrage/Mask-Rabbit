@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/footer_component'
 import NavContainer from '../nav/nav_container';
 import CategoriesContainer from '../categories/categories_container';
 
@@ -14,13 +15,31 @@ class Splash extends React.Component {
             <NavContainer />
             <div className="splash container">
                 <div className="splash search">
-                    <div className="splash search txt">
-                        <p className="txt large">Help around the home, at your fingertips </p>
-                        <p className="txt small">You don't always have to DIY. Get help from thousands of trusted Taskers for everything from home repairs to cleaning.</p>
-                        <div className="splash search bar">
-                            <p>Here will go the search bar.</p>
-                            <button>Get help today</button>
+                    <div className="splash txt">
+                        <span className="txt large">Help around the home, the safest possible way! </span>
+                        <span className="txt small">You don't always have to DIY. Get help from thousands of trusted Maskers, all trained in PPE and social distancing techniques.</span>
+                        <div className="splash bar">
+                            <span className="search">Here will go the search bar.</span>
+                            <button className="splash btn">Get help today</button>
                         </div>
+                    </div>
+                </div>
+                <div className="reviews">
+                    <div className="stars">
+                        <div className="full-star"></div>
+                        <div className="full-star"></div>
+                        <div className="full-star"></div>
+                        <div className="full-star"></div>
+                        <div className="half-star"></div>
+                        <span>1.1+ million reviews</span>
+                    </div>
+                    <div className="ikea">
+                        <div className="ikea-img"></div>
+                        <span>Partnered with IKEA</span>
+                    </div>
+                    <div className="apps">
+                        <div className="google-app"></div>
+                        <div className="app-store"></div>
                     </div>
                 </div>
                 <div className="splash categories">
@@ -31,6 +50,7 @@ class Splash extends React.Component {
                     </div>
                 </div>
             </div>
+            <Footer />
             </>
 
         );

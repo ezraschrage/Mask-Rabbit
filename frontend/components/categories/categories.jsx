@@ -11,10 +11,9 @@ class Categories extends React.Component {
         const { categories } = this.props;
         return (
             <div className="category-container">
-                <ul>
+                <ul className="categories">
                     
                     {categories.map(category => (
-                        
                         <CategoryItem category={category} key={category.id}/>
                     ))}
                 </ul>
