@@ -1,31 +1,21 @@
 export const createTask = task => (
     $.ajax({
-        method: "POST",
-        url: "/api/tasks",
+        method: `POST`,
+        url: `/api/tasks`,
         data: { task }
     })
 );
 
-export const fetchTasks = user => (
+export const fetchTasks = () => (
     $.ajax({
-        method: "GET",
-        url: "/api/",
-        data: { user }
+        method: `GET`,
+        url: `/api/tasks`,
     })
 );
 
 export const deleteTask = taskId => (
     $.ajax({
-        method: "DELETE",
-        url: "/api/tasks/${taskId}",
-        data: { taskId }
+        method: `DELETE`,
+        url: `/api/tasks/${taskId}`,
     })
 );
-
-export const deleteTask = (id) => {
-    return $.ajax({
-        method: 'DELETE',
-        url: `api/tasks/${id}`,
-        data: { id }
-    });
-}
