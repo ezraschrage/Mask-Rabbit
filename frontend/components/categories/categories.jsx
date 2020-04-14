@@ -25,28 +25,3 @@ class Categories extends React.Component {
 
 export default Categories;
 
-{/* <ul>
-    {numbers.map((number) =>
-        <ListItem key={number.toString()}
-            value={number} />
-    )}
-</ul> */}
-
-
-//     const { pokemon, loading } = this.props;
-
-//     if (loading) { return <LoadingIcon />; }
-
-//     return (
-//         <section className="pokedex">
-//             <Route exact path="/" component={PokemonFormContainer} />
-//             <Route
-//                 path="/pokemon/:pokemonId"
-//                 component={PokemonDetailContainer}
-//             />
-//             <ul>
-//                 {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
-//             </ul>
-//         </section>
-//     );
-// }

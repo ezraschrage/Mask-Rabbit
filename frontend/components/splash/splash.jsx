@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../footer/footer_component'
 import NavContainer from '../nav/nav_container';
 import CategoriesContainer from '../categories/categories_container';
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
     constructor (props) {
@@ -18,10 +19,11 @@ class Splash extends React.Component {
                     <div className="splash txt">
                         <span className="txt large">Help around the home, the safest possible way! </span>
                         <span className="txt small">You don't always have to DIY. Get help from thousands of trusted Maskers, all trained in PPE and social distancing techniques.</span>
-                        <div className="splash bar">
-                            <span className="search">Here will go the search bar.</span>
-                            <button className="splash btn">Get help today</button>
-                        </div>
+                        
+                            <Link to="/" className="txt link">
+                                <button className="splash btn">Get help today</button>
+                            </Link>
+                            
                     </div>
                 </div>
                 <div className="reviews">

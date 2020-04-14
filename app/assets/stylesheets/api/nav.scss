@@ -5,8 +5,6 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-    //   justify-content: space-between;
-    //   align-self: flex-start;
       width: 160px;
       height: 40px;
       background-repeat: no-repeat;
@@ -23,7 +21,6 @@
 
 .nav-link-container {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     padding-right: 10px;
 }
@@ -34,7 +31,6 @@
     height: 70px;
     justify-content: space-between;
     align-items: center;
-    // margin: 0px;
 }
 
 .nav .big-btn {
@@ -43,7 +39,6 @@
     font-family: "Proxima", Arial, Helvetica, sans-serif;
     width: 180px;
     height: 45px;
-    // padding: 13px 25px;
     border: 1px solid #51af33;
     color: #51af33;
     transition: 0.2s;
@@ -63,7 +58,6 @@
     cursor: pointer;
     font-size: 15px;
     padding: 10px 10px;
-
 }
 
 .nav-text-gift {
@@ -74,13 +68,12 @@
 }
 
 .nav-text-gift > div{
-
     cursor: auto;
 }
+
 .nav-text-gift > div:hover {
     cursor: auto;
-        color: #51af33;
-
+    color: #51af33;
 }
 
 .gift {
@@ -93,6 +86,7 @@
     min-height: 16px;
     cursor: auto;
 }
+
 .nav-text:hover {
     color: #438e29;
     background-color: white;
