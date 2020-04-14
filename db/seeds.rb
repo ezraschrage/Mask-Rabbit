@@ -45,14 +45,14 @@ cat8 = Category.create!(name: "Plant Flowers",
     description: "Some of our Masker's want to put their green thumb to your benefit. With spring around the corner, you can have the help you need to make sure your yard is full of life.",
     low_avg: 47, high_avg: 141)
 
-catfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")
-catfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
-catfile3 = open("https://mask-rabbit-seed.s3.amazonaws.com/van.jpg")
-catfile4 = open("https://mask-rabbit-seed.s3.amazonaws.com/bathroom.jpg")
-catfile5 = open("https://mask-rabbit-seed.s3.amazonaws.com/sweep.jpg")
-catfile6 = open("https://mask-rabbit-seed.s3.amazonaws.com/tp.jpg")
-catfile7 = open("https://mask-rabbit-seed.s3.amazonaws.com/moving.jpg")
-catfile8 = open("https://mask-rabbit-seed.s3.amazonaws.com/brown.jpg")
+catfile1 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/drill.jpg")
+catfile2 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/tv.jpg")
+catfile3 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/van.jpg")
+catfile4 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/bathroom.jpg")
+catfile5 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/sweep.jpg")
+catfile6 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/tp.jpg")
+catfile7 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/moving.jpg")
+catfile8 = open("https://mask-rabbit-dev.s3.amazonaws.com/seed/brown.jpg")
 
 cat1.photo.attach(io: catfile1, filename: "drill.jpg")
 cat2.photo.attach(io: catfile2, filename: "tv.jpg")
