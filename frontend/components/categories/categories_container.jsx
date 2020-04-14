@@ -4,7 +4,6 @@ import { fetchCategories } from "../../actions/category_actions"
 
 
 const mSTP = state => {
-    console.log(state)
     return {
     categories: Object.values(state.entities.categories)
     }
