@@ -2,14 +2,12 @@ import TasksForm from "./tasks_form";
 import { connect } from "react-redux";
 import { createTask } from "../../actions/task_actions"
 
-const mSTP = ({ session, entities: { users } }) => {
-    return {
-        currentUser: users[session.id]
-    };
+const mSTP = (state) => {
+    return {}
 };
 
 const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
+    createTask: (task) => dispatch(createTask(task))
 });
 
 export default connect(mSTP, mDTP)(Splash);
