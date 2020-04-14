@@ -17,7 +17,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginPageContainer} />
             <AuthRoute exact path="/login/email" component={LoginFormContainer} />
             <AuthRoute exact path="/signup/password" component={SignupFormContainer} />
-            {/* <ProtectedRoute exact path="/" component={SplashContainer} /> */}
+            {/* <ProtectedRoute exact path="/task" component={SplashContainer} /> */}
             {/* //To be deleted */}
             {/* <Route exact path="/" component={NavContainer} /> */}
             {/* // To be deleted */}
