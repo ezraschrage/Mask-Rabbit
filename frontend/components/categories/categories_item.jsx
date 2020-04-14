@@ -5,7 +5,7 @@ const CategoryItem = props => (
     <li className="category-li">
         <Link to={`/task`}>
             <div className="category btn">
-            {/* <img className="category pic" src={props.category.photoUrl} /> */}
+            <img className="category pic" src={props.category.photoUrl} />
             <span className="category name">{props.category.name}</span>
             <span className="category price">
                 <div className="tag"></div>
