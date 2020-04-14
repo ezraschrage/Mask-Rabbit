@@ -6,7 +6,7 @@ class TasksInterest extends React.Component {
         
         this.state = {
             interest: '',
-            active: true
+            // active: true
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,16 +26,12 @@ class TasksInterest extends React.Component {
         const inactive = () => {
             <div className="form-interest">
                 <div className="form-header">TASK INTEREST</div>
-                <div className="form-question">What brings you here today?</div>
-                <div className="form-interest-radio">Radio input here</div>
+                {/* <div className="form-answer">${this.state.tasks.interest}</div> */}
                 <button className="form-save-btn" type="submit">Save</button>
             </div>
         }
 
-        return (
-            <>
-            </>
-        )
+        return active;
     }
 }
 
