@@ -1,4 +1,4 @@
-import TasksFormDetails from "./tasks_form_details";
+import TaskFormDetails from "./task_form_details";
 import { connect } from "react-redux";
 import { createTask } from "../../actions/task_actions"
 
