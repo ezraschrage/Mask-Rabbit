@@ -1,5 +1,6 @@
 class Api::TasksController < ApplicationController
     
+    before_action :ensure_logged_in, only: [:new, :index, :destroy ]
 
     def create
         @task = Task.new(task_params)
@@ -11,8 +12,8 @@ class Api::TasksController < ApplicationController
        
     end
 
-    def show
-        @task = Task.find(params[:id])      
+    def index
+        @tasks = Task.where(user_id: current_user.id)    
     end
 
     def destroy
