@@ -4,6 +4,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginPageContainer from './session_form/login_page_container';
+// import TaskContainer from './tasks/tasks_container'
 // import NavContainer from "./nav/nav_container";
 // import DashboardContainer from "./dashboard/dashboard_container";
 import SplashContainer from "./splash/splash_container";
@@ -20,6 +21,7 @@ const App = () => (
             {/* //To be deleted */}
             {/* <Route exact path="/" component={NavContainer} /> */}
             {/* // To be deleted */}
+            {/* <Route path="/new-task" component={TaskContainer} /> */}
             <Route exact path="/" component={SplashContainer} />
             <Redirect to='/' />
         </Switch>
