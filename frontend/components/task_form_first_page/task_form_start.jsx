@@ -10,7 +10,7 @@ class TaskFormStart extends React.Component {
 
     }
     render() {
-        const active = () => {
+        return (
             <div className="form-start">
                 <div className="form-header">START ADDRESS</div>
                 <div className="form-address">
@@ -25,10 +25,7 @@ class TaskFormStart extends React.Component {
                 </div>
                 <button className="form-save-btn" type="submit">Save</button>
             </div>
-        }
-
-
-        return active;
+        )
     }
 }
 

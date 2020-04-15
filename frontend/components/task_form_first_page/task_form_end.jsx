@@ -3,10 +3,10 @@ import React from 'react';
 class TaskFormEnd extends React.Component {
     constructor(props) {
         super(props)
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        // this.state = {
             
-        }
+        // }
 
 
     }
@@ -14,7 +14,7 @@ class TaskFormEnd extends React.Component {
 
 
     render() {
-        const active = () => {
+        return (
             <div className="form-end">
                 <div className="form-header">END ADDRESS (OPTIONAL)</div>
                 <div className="form-address">
@@ -29,11 +29,9 @@ class TaskFormEnd extends React.Component {
                 </div>
                 <button className="form-save-btn" type="submit">Save</button>
             </div>
-        }
-
-
-        return active;
+        )    
     }
+
 }
 
 export default TaskFormEnd;

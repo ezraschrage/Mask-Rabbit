@@ -10,10 +10,10 @@ const Nav = ({ currentUser, logout }) => {
             </Link>
             </div>
             <div className="nav-link-container">
-                <Link to="/tasks">
+                <Link to="/task/new">
                     <button className="nav-text">Contactless Tasks and Delivery</button>
                 </Link>
-                <Link to="/tasks">
+                <Link to="/task/new">
                     <button className="nav-text btn">Book a Task</button>
                 </Link>
                 <div className="nav-text-gift">
@@ -35,10 +35,10 @@ const Nav = ({ currentUser, logout }) => {
                 </Link>
             </div>
             <div className="nav-link-container">
-                <Link to="/tasks">
+                <Link to="/task/new">
                     <button className="nav-text">Contactless Tasks and Delivery</button>
                 </Link>
-                <Link to="/tasks">
+                <Link to="/task/new">
                     <button className="nav-text btn">Book a Task</button>
                 </Link>
                 <div className="nav-text-gift">

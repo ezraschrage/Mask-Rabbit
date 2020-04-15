@@ -1,6 +1,7 @@
-import TaskFormFirst from '';
 import { connect } from 'react-redux';
-import React from 'react';
+import TaskFormFirst from './task_form_first';
+
+
 
 const mSTP = state => {
     return {
