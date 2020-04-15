@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TaskFormFirst from './task_form_first';
+import TaskForm from './task_form';
 
 
 
@@ -14,4 +14,4 @@ const mDTP = dispatch => {
     };
 };
 
-export default connect(mSTP, mDTP)(TaskFormFirst);
+export default connect(mSTP, mDTP)(TaskForm);

@@ -2,11 +2,11 @@ import TaskFormInterest from './task_form_interest';
 import TaskFormStart from './task_form_start';
 import TaskFormEnd from './task_form_end';
 import TaskFormOptions from './task_form_options';
-import TaskFormNav from '../tasks/task_form_nav'
+import TaskFormNav from '../task_form/task_form_nav'
 import TaskFormDetails from './task_form_details';
 import React from 'react';
 
-class TaskFormFirst extends React.Component {
+class TaskFormFirstPage extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -33,4 +33,4 @@ class TaskFormFirst extends React.Component {
     }
 }
 
-export default TaskFormFirst;
+export default TaskFormFirstPage;
