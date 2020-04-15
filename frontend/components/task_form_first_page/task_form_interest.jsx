@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TasksInterest extends React.Component {
+class TaskFormInterest extends React.Component {
     constructor(props) {
         super(props)
         
@@ -23,18 +23,19 @@ class TasksInterest extends React.Component {
                 <button className="form-save-btn" type="submit">Save</button>
             </div>
         }
-        const inactive = () => {
-            <div className="form-interest">
-                <div className="form-header">TASK INTEREST</div>
-                {/* <div className="form-answer">${this.state.tasks.interest}</div> */}
-                <button className="form-save-btn" type="submit">Save</button>
-            </div>
-        }
+
 
         return active;
     }
 }
 
-export default TasksInterest;
+export default TaskFormInterest;
 
 
+const inactive = () => {
+    <div className="form-interest">
+        <div className="form-header">TASK INTEREST</div>
+        {/* <div className="form-answer">${this.state.tasks.interest}</div> */}
+        <button className="form-save-btn" type="submit">Save</button>
+    </div>
+}
