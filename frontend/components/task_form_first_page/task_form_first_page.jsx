@@ -15,18 +15,15 @@ class TaskFormFirstPage extends React.Component {
 
 
         return (
-            <div className="task-form-first-container">
-                <TaskFormNav />
-                <div className="task-form-first-questions">
-                    <TaskFormInterest />
-                    <TaskFormStart />
-                    <TaskFormEnd />
-                    <TaskFormOptions />
-                    <TaskFormDetails />
-                    <button type="submit" className="task-form-first-btn">
-                        See Maskers and Prices
-                    </button>
-                </div>
+            <div className="task-form-first-questions">
+                <TaskFormInterest />
+                <TaskFormStart />
+                <TaskFormEnd />
+                <TaskFormOptions />
+                <TaskFormDetails />
+                <button type="submit" className="task-form-first-btn">
+                    See Maskers and Prices
+                </button>
             </div>
         )
 
