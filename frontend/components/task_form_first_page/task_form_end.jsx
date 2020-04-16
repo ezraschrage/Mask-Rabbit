@@ -27,7 +27,9 @@ class TaskFormEnd extends React.Component {
                         placeholder="Unit or Apt #"
                     />
                 </div>
-                <button className="form-save-btn" type="submit">Save</button>
+                <div className="form-save">
+                    <button className="form-save-btn" type="submit">Save</button>
+                </div>
             </div>
         )    
     }

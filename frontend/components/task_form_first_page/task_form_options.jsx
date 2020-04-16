@@ -14,12 +14,32 @@ class TaskFormOptions extends React.Component {
         return (
             <div className="form-options">
                 <div className="form-header">TASK OPTIONS</div>
-                <div className="form-question">How big is your task?</div>
-                <div className="form-length-radio">Radio input here</div>
-                <div className="form-question">Vehicle Requirements</div>
+                <div className="form-question-border">How big is your task?</div>
+                <div className="form-length-radio">
+                    <label>
+                        <input type="radio"
+                            value="Small - Est. 1 hr"
+                            className="length-radio" />
+                         Small - Est. 1 hr
+                    </label>
+                    <label>
+                        <input type="radio"
+                            value="Medium - Est. 2-3 hrs"
+                            className="length-radio" />
+                         Medium - Est. 2-3 hrs
+                    </label>
+                    <label>
+                        <input type="radio"
+                            value="Large - Est. 4+ hrs"
+                            className="length-radio" />
+                         Large - Est. 4+ hrs
+                    </label>
+                </div>
+                <div className="form-question-border">Vehicle Requirements</div>
                 <div className="form-vehicle-radio">Radio input here</div>
-                <button className="form-save-btn" type="submit">Save</button>
-            </div>
+                <div className="form-save">
+                    <button className="form-save-btn" type="submit">Save</button>
+                </div>            </div>
         )
     }
 }

@@ -73,3 +73,85 @@
     font-weight: bold;
     font-size: 19px;
 }
+
+.form-interest-radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-save {
+    align-self: center;
+    font-weight: bold;
+    font-size: 19px;
+
+}
+
+
+
+.form-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-start > div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.form-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-end > div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.form-address {
+    display: flex;
+    flex-direction: row;
+
+}
+.address-bar {
+    flex-grow: 8;
+    border: 1px solid #b1b9c3;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-right: 20px;
+    height: 24px;
+}
+
+.address-apt {
+    flex-grow: 1;
+        border: 1px solid #b1b9c3;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 24px;
+}
+
+.form-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-options > div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+.form-save {
+    align-self: center;
+}
+
+.form-question-border {
+        font-weight: bold;
+    font-size: 19px;
+    border-bottom: 1px solid #dce0e6;
+    padding-bottom: 10px;
+}
