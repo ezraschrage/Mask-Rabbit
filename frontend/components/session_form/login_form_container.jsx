@@ -7,10 +7,6 @@ import LoginForm from './login_form';
 const mSTP = ({ errors }) => {
     return {
         errors: errors.session,
-            fill: {
-            email: '',
-            password: ''
-        }
     };
 };
 

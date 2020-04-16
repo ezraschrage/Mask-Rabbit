@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TaskForm from './task_form';
-import { createTask } from '../../actions/task_actions'
+import { createTask, receiveTaskErrors } from '../../actions/task_actions'
 
 
 
@@ -17,14 +17,16 @@ const mSTP = state => {
             start_address: "",
             end_address: "",
             vehicle_requirements: ""
-        }
+        },
+        errors: state.errors.task
     }
     };
 
 
 const mDTP = dispatch => {
     return {
-        processForm: (task) => dispatch(createTask(task))
+        processForm: (task) => dispatch(createTask(task)),
+        clearErrors: () => dispatch(receiveTaskErrors([]))
     };
 };
 

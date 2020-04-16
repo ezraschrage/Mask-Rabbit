@@ -9,6 +9,7 @@ class TaskFormInterest extends React.Component {
             // active: true
         }
 
+
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -20,12 +21,12 @@ class TaskFormInterest extends React.Component {
                 <div className="form-header">TASK INTEREST</div>
                 <div className="form-question">What brings you here today?</div>
                 <div className="form-interest-radio">
-                    <form className="form-radio">
+                    <form className="form-interest-radio">
                         <label>
                             <input type="radio" 
                             value="I'm ready to book right now"
                             className="interest-radio"
-                            onChange={this.update('interest')}
+                            onChange={this.props.update('interest')}
                             />
                             I'm ready to book right now
                         </label>

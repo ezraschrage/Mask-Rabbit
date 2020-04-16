@@ -17,32 +17,36 @@ class TaskFormFirstPage extends React.Component {
         return (
             <div className="task-form-first-questions">
                 <TaskFormInterest currentState={this.state}
-                    handleSubmit={this.handleSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
-                    update={this.update}
-                    {...props}/>
+                    update={this.props.update}
+                    // {...props}
+                    />
                 <TaskFormStart 
                     currentState={this.state}
-                    handleSubmit={this.handleSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
-                    update={this.update}
-                    {...props}
+                    update={this.props.update}
+                    // {...props}
                 />
                 <TaskFormEnd currentState={this.state}
-                    handleSubmit={this.handleSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
-                    update={this.update}
-                    {...props}/>
+                    update={this.props.update}
+                    // {...props}
+                    />
                 <TaskFormOptions currentState={this.state}
-                    handleSubmit={this.handleSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
-                    update={this.update}
-                    {...props}/>
+                    update={this.props.update}
+                    // {...props}
+                    />
                 <TaskFormDetails currentState={this.state}
-                    handleSubmit={this.handleSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
-                    update={this.update}
-                    {...props}/>
+                    update={this.props.update}
+                    // {...props}
+                    />
             </div>
         )
 
