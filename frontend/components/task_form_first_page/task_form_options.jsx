@@ -36,10 +36,30 @@ class TaskFormOptions extends React.Component {
                     </label>
                 </div>
                 <div className="form-question-border">Vehicle Requirements</div>
-                <div className="form-vehicle-radio">Radio input here</div>
+                <div className="form-vehicle-radio">
+                    <label>
+                        <input type="radio"
+                            value="Not needed for task"
+                            className="vehicle-radio" />
+                         Not needed for task
+                    </label>
+                    <label>
+                        <input type="radio"
+                            value="Task requires a car"
+                            className="vehicle-radio" />
+                         Task requires a car
+                    </label>
+                    <label>
+                        <input type="radio"
+                            value="Task requires a truck"
+                            className="vehicle-radio" />
+                         Task requires a truck
+                    </label>
+                </div>
                 <div className="form-save">
                     <button className="form-save-btn" type="submit">Save</button>
-                </div>            </div>
+                </div>            
+            </div>
         )
     }
 }

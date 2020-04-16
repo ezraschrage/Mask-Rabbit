@@ -155,3 +155,44 @@
     border-bottom: 1px solid #dce0e6;
     padding-bottom: 10px;
 }
+
+.form-length-radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-length-radio > label {
+    padding-bottom: 14px;
+}
+
+.form-length-radio > label {
+    font-weight: bold;
+}
+
+.form-vehicle-radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form-details > div {
+    margin-bottom: 25px;
+}
+
+.form-details-input {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
