@@ -3,8 +3,8 @@
 # Table name: tasks
 #
 #  id                   :bigint           not null, primary key
-#  category_id          :integer          not null
-#  length_of_task       :integer          not null
+#  category_id          :integer
+#  length_of_task       :string           not null
 #  date                 :datetime         not null
 #  per_hr               :integer          not null
 #  user_id              :integer          not null
@@ -15,13 +15,14 @@
 #  vehicle_requirements :string           not null
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  interest             :string           not null
 #
 class Task < ApplicationRecord
 
     validates :length_of_task, :date, :per_hr, :user_id,
         :masker_id, :description, :start_address, :vehicle_requirements,
-        presence: true
-    validates :length_of_task, :per_hr, numericality: { greater_than: 0 }
+        :interest, presence: true
+    validates :per_hr, numericality: { greater_than: 0 }
 
     has_one :category,
         foreign_key: :category_id,

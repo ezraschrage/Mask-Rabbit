@@ -22,25 +22,31 @@ class TaskFormInterest extends React.Component {
                 <div className="form-question">What brings you here today?</div>
                 <div className="form-interest-radio">
                     <form className="form-interest-radio">
-                        <label>
-                            <input type="radio" 
+                        <label className="radio-label">
+                            <input type="radio"
+                            name="form-interest"
                             value="I'm ready to book right now"
                             className="interest-radio"
                             onChange={this.props.update('interest')}
                             />
-                            I'm ready to book right now
+                            &ensp;I'm ready to book right now
                         </label>
-                        <label>
+                        <label className="radio-label">
                             <input type="radio" 
-                            value="I'm interested in booking sometime soon"
-                                className="interest-radio"/>
-                            I'm interested in booking sometime soon
+                                value="I'm interested in booking sometime soon"
+                                className="interest-radio"
+                                name="form-interest"
+                                onChange={this.props.update('interest')}
+                                />
+                             &ensp;I'm interested in booking sometime soon
                         </label>
-                        <label>
+                        <label className="radio-label">
                             <input type="radio" 
-                            value="I'm just browsing"
-                                className="interest-radio"/>
-                            I'm just browsing
+                                value="I'm just browsing"
+                                className="interest-radio"
+                                onChange={this.props.update('interest')}
+                                name="form-interest"/>
+                             &ensp;I'm just browsing
                         </label>
                     </form>
                 </div>

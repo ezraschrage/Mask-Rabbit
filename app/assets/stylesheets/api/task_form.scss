@@ -74,9 +74,9 @@
     font-size: 19px;
 }
 
-.form-interest-radio {
+.form-interest-radio > label{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
 }
 
@@ -193,6 +193,3 @@
     padding: 10px;
     font-size: 15px;
 }
-
-
-
