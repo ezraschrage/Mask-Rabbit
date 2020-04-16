@@ -8,7 +8,7 @@ const mSTP = state => {
     return {
         task: {
             category_id: 0,
-            length_of_task: 1,
+            length_of_task: "",
             date: new Date(),
             per_hr: 1,
             user_id: state.session.id,
@@ -16,7 +16,8 @@ const mSTP = state => {
             description: "",
             start_address: "",
             end_address: "",
-            vehicle_requirements: ""
+            vehicle_requirements: "",
+            interest: ""
         },
         errors: state.errors.task
     }

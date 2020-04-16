@@ -21,7 +21,7 @@ const App = () => (
             {/* //To be deleted */}
             {/* <Route exact path="/" component={NavContainer} /> */}
             {/* // To be deleted */}
-            <Route path="/task/new" component={TaskFormContainer} />
+            <ProtectedRoute path="/task" component={TaskFormContainer} />
             <Route exact path="/" component={SplashContainer} />
             <Redirect to='/' />
         </Switch>

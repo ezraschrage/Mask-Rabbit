@@ -19,24 +19,30 @@ class TaskFormOptions extends React.Component {
                     <form className="form-length-radio">
                         <label>
                             <input type="radio"
-                                value="1"
+                                value="Small - Est. 1 hr"
                                 className="length-radio"
                                 name="form-length"
-                                onChange={this.props.update('length')}
+                                onChange={this.props.update('length_of_task')}
                                 />
-                            Small - Est. 1 hr
+                            &ensp;Small - Est. 1 hr
                         </label>
                         <label>
                             <input type="radio"
                                 value="Medium - Est. 2-3 hrs"
-                                className="length-radio" />
-                            Medium - Est. 2-3 hrs
+                                className="length-radio" 
+                                name="form-length"
+                                onChange={this.props.update('length_of_task')}
+                                />
+                            &ensp;Medium - Est. 2-3 hrs
                         </label>
                         <label>
                             <input type="radio"
                                 value="Large - Est. 4+ hrs"
-                                className="length-radio" />
-                            Large - Est. 4+ hrs
+                                className="length-radio" 
+                                name="form-length"
+                                onChange={this.props.update('length_of_task')}
+                                />
+                            &ensp;Large - Est. 4+ hrs
                         </label>
                     </form>
                 </div>
@@ -45,20 +51,29 @@ class TaskFormOptions extends React.Component {
                     <label>
                         <input type="radio"
                             value="Not needed for task"
-                            className="vehicle-radio" />
-                         Not needed for task
+                            className="vehicle-radio" 
+                            name="form-vehicle"
+                            onChange={this.props.update('vehicle_requirements')}
+                            />
+                         &ensp;Not needed for task
                     </label>
                     <label>
                         <input type="radio"
                             value="Task requires a car"
-                            className="vehicle-radio" />
-                         Task requires a car
+                            className="vehicle-radio" 
+                            name="form-vehicle"
+                            onChange={this.props.update('vehicle_requirements')}
+                            />  
+                         &ensp;Task requires a car
                     </label>
                     <label>
                         <input type="radio"
                             value="Task requires a truck"
-                            className="vehicle-radio" />
-                         Task requires a truck
+                            className="vehicle-radio" 
+                            name="form-vehicle"
+                            onChange={this.props.update('vehicle_requirements')}
+                            />
+                         &ensp;Task requires a truck
                     </label>
                 </div>
                 <div className="form-save">
