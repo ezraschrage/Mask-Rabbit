@@ -3,20 +3,26 @@ import * as APIUtil from "../util/task_api_util";
 export const RECEIVE_TASKS = "RECEIVE_TASKS";
 export const REMOVE_TASK = "REMOVE_TASK";
 export const RECEIVE_TASK = "RECEIVE_TASK";
+export const RECEIVE_TASK_ERRORS = "RECEIVE_TASK_ERRORS";
 
-const receiveTasks = tasks => ({
+export const receiveTasks = tasks => ({
     type: RECEIVE_TASKS,
     tasks
 });
 
-const receiveTask = task => ({
+export const receiveTask = task => ({
     type: RECEIVE_TASK,
     task
 });
 
-const removeTask = taskId => ({
+export const removeTask = taskId => ({
     type: REMOVE_TASK,
     taskId
+});
+
+export const receiveTaskErrors = errors => ({
+    type: RECEIVE_TASK_ERRORS,
+    errors
 });
 
 export const fetchTasks = () => dispatch => (
@@ -24,9 +30,12 @@ export const fetchTasks = () => dispatch => (
         dispatch(receiveTasks(tasks))
     ))
 );
+
 export const createTask = (task) => dispatch => (
     APIUtil.createTask(task).then(task => (
         dispatch(receiveTask(task))
+   ), err => (
+        dispatch(receiveTaskErrors(err.responseJSON))
     ))
 );
 

@@ -7,7 +7,7 @@ class Api::TasksController < ApplicationController
         if @task.save
             render :show
         else
-            render json: @user.errors.full_messages, status: 422
+            render json: @task.errors.full_messages, status: 422
         end
        
     end
@@ -21,7 +21,7 @@ class Api::TasksController < ApplicationController
         if @task.destroy
             render "api/tasks/show"
         else
-            render json: @user.errors.full_messages, status: 422
+            render json: @task.errors.full_messages, status: 422
         end
     end
 

@@ -16,11 +16,33 @@ class TaskFormFirstPage extends React.Component {
 
         return (
             <div className="task-form-first-questions">
-                <TaskFormInterest />
-                <TaskFormStart />
-                <TaskFormEnd />
-                <TaskFormOptions />
-                <TaskFormDetails />
+                <TaskFormInterest currentState={this.state}
+                    handleSubmit={this.handleSubmit}
+                    task={this.props.task}
+                    update={this.update}
+                    {...props}/>
+                <TaskFormStart 
+                    currentState={this.state}
+                    handleSubmit={this.handleSubmit}
+                    task={this.props.task}
+                    update={this.update}
+                    {...props}
+                />
+                <TaskFormEnd currentState={this.state}
+                    handleSubmit={this.handleSubmit}
+                    task={this.props.task}
+                    update={this.update}
+                    {...props}/>
+                <TaskFormOptions currentState={this.state}
+                    handleSubmit={this.handleSubmit}
+                    task={this.props.task}
+                    update={this.update}
+                    {...props}/>
+                <TaskFormDetails currentState={this.state}
+                    handleSubmit={this.handleSubmit}
+                    task={this.props.task}
+                    update={this.update}
+                    {...props}/>
             </div>
         )
 

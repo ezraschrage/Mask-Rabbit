@@ -6,11 +6,12 @@ class TaskFormNav extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            
 
         };
 
     }
+
 
     render() {
 
@@ -18,7 +19,11 @@ class TaskFormNav extends React.Component {
             <>
                 <div className="form-nav">
                     <div className="form-nav-top">
-                        <div className="form-nav-logo"></div>
+                        <Link to="/">
+                            <div className="form-nav-logo">
+                        
+                            </div>
+                        </Link>
                         <div className="form-nav-progress">
                             <div className="form-nav-step">
                                 <div className="form-nav-step-top">
@@ -74,7 +79,7 @@ class TaskFormNav extends React.Component {
                         <div className="form-message">
                             <div className="form-message-notebook"></div>
                             <div className="form-message-text">Tell us about your task. 
-                                We use these details to show Taskers in your area who fit your needs.</div>
+                                We use these details to show Maskers in your area who fit your needs.</div>
                         </div>
                     </div>
                 </div>

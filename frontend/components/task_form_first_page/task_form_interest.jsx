@@ -20,24 +20,28 @@ class TaskFormInterest extends React.Component {
                 <div className="form-header">TASK INTEREST</div>
                 <div className="form-question">What brings you here today?</div>
                 <div className="form-interest-radio">
-                    <label>
-                        <input type="radio" 
-                        value="I'm ready to book right now"
-                        className="interest-radio"/>
-                         I'm ready to book right now
-                    </label>
-                    <label>
-                        <input type="radio" 
-                        value="I'm interested in booking sometime soon"
-                            className="interest-radio"/>
-                         I'm interested in booking sometime soon
-                    </label>
-                    <label>
-                        <input type="radio" 
-                        value="I'm just browsing"
-                            className="interest-radio"/>
-                         I'm just browsing
-                    </label>
+                    <form className="form-radio">
+                        <label>
+                            <input type="radio" 
+                            value="I'm ready to book right now"
+                            className="interest-radio"
+                            onChange={this.update('interest')}
+                            />
+                            I'm ready to book right now
+                        </label>
+                        <label>
+                            <input type="radio" 
+                            value="I'm interested in booking sometime soon"
+                                className="interest-radio"/>
+                            I'm interested in booking sometime soon
+                        </label>
+                        <label>
+                            <input type="radio" 
+                            value="I'm just browsing"
+                                className="interest-radio"/>
+                            I'm just browsing
+                        </label>
+                    </form>
                 </div>
                 <div className="form-save">
                     <button className="form-save-btn" type="submit">Save</button>
