@@ -9,10 +9,10 @@ class TaskForm extends React.Component {
 
     render() {
         return (
-            <>
-            <TaskFormNav />
-            <TaskFormFirstPage />
-            </>
+            <div className="form-container">
+                <TaskFormNav />
+                <TaskFormFirstPage />
+            </div>
         )
     }
 

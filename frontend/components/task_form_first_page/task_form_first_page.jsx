@@ -21,9 +21,6 @@ class TaskFormFirstPage extends React.Component {
                 <TaskFormEnd />
                 <TaskFormOptions />
                 <TaskFormDetails />
-                <button type="submit" className="task-form-first-btn">
-                    See Maskers and Prices
-                </button>
             </div>
         )
 

@@ -19,11 +19,15 @@ class TaskFormInterest extends React.Component {
             <div className="form-interest">
                 <div className="form-header">TASK INTEREST</div>
                 <div className="form-question">What brings you here today?</div>
-                <div className="form-interest-radio">Radio input here</div>
-                <button className="form-save-btn" type="submit">Save</button>
+                <div className="form-interest-radio">Radio input here
+                </div>
+                <div className="form-save">
+                    <button className="form-save-btn" type="submit">Save</button>
+                </div>
             </div>
         )
         }
 }
 
 export default TaskFormInterest;
+
