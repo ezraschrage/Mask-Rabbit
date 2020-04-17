@@ -3,8 +3,8 @@
 # Table name: tasks
 #
 #  id                   :bigint           not null, primary key
-#  category_id          :integer          not null
-#  length_of_task       :integer          not null
+#  category_id          :integer
+#  length_of_task       :string           not null
 #  date                 :datetime         not null
 #  per_hr               :integer          not null
 #  user_id              :integer          not null
@@ -15,6 +15,7 @@
 #  vehicle_requirements :string           not null
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  interest             :string           not null
 #
 require 'test_helper'
 

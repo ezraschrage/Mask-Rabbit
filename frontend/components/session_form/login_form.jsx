@@ -43,10 +43,11 @@ class LoginForm extends React.Component {
             <div className="session login">
                 <div className="session-container">
                     <div className="logo-session"/>
+                    <div className="errors">
+                        {this.renderErrors()}
+                    </div>
                     <form onSubmit={this.handleSubmit} className="form-box">
-                        <div className="errors">
-                            {this.renderErrors()}
-                        </div>
+
                         <span className="text">Email Address</span>
                         <input 
                             type="text"

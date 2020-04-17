@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CategoryItem = props => (
     <li className="category-li">
-        <Link to={`/task`}>
+        <Link to={`/task/new`}>
             <div className="category btn">
             <img className="category pic" src={props.category.photoUrl} />
             <span className="category name">{props.category.name}</span>

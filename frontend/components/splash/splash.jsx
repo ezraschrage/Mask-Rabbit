@@ -18,9 +18,11 @@ class Splash extends React.Component {
                 <div className="splash search">
                     <div className="splash txt">
                         <span className="txt large">Help around the home, the safest possible way! </span>
-                        <span className="txt small">You don't always have to DIY. Get help from thousands of trusted Maskers, all trained in PPE and social distancing techniques.</span>
+                        <span className="txt small">You don't always have to DIY. 
+                        Get help from thousands of trusted Maskers, all trained in PPE and social distancing techniques.
+                        Let us, safely, help you get things done.</span>
                         
-                            <Link to="/" className="txt link">
+                            <Link to="/task/new" className="txt link">
                                 <button className="splash btn">Get help today</button>
                             </Link>
                             
