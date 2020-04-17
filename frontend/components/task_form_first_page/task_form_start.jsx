@@ -17,6 +17,7 @@ class TaskFormStart extends React.Component {
                     <input className="address-bar" 
                         type="text"
                         placeholder="Enter street address"
+                        onChange={this.props.update('address')}
                         />
                     <input className="address-apt"
                         type="text"

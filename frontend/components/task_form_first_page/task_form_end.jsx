@@ -3,12 +3,7 @@ import React from 'react';
 class TaskFormEnd extends React.Component {
     constructor(props) {
         super(props)
-        // this.handleSubmit = this.handleSubmit.bind(this);
-        // this.state = {
-            
-        // }
-
-
+        
     }
 
 
@@ -21,6 +16,7 @@ class TaskFormEnd extends React.Component {
                     <input className="address-bar"
                         type="text"
                         placeholder="Enter street address"
+                        onChange={this.props.update('details')}
                     />
                     <input className="address-apt"
                         type="text"

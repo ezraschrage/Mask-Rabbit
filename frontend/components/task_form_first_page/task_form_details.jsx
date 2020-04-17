@@ -7,7 +7,7 @@ class TaskFormDetails extends React.Component {
 
 
         };
-
+        
     }
 
     render() {
@@ -19,7 +19,7 @@ class TaskFormDetails extends React.Component {
                 This helps us show you only qualified and available Maskers for the job.
                 Don't worry, you can edit this later.</div>
                 <div className="form-detail-input">
-                    <textarea className="form-details-input"
+                    <textarea className="form-details-input" onChange={this.props.update('details')}
                         placeholder="Provide a summary of what you need done for your Masker. 
                     Be sure to include details like the size of your space, 
                     any equipment/tools needed, and how to get in."></textarea>
@@ -28,7 +28,7 @@ class TaskFormDetails extends React.Component {
                     please post additional tasks for each Masker needed.
                 </div>
                 <div className="form-save">
-                    <button type="submit" className="form-save-btn">
+                    <button className="form-save-btn" onClick={(e) => this.props.handleSubmit(e)}>
                         See Maskers and Prices
                     </button>
                 </div>

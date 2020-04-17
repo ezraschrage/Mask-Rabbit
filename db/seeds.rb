@@ -62,6 +62,8 @@ cat5.photo.attach(io: catfile5, filename: "sweep.jpg")
 cat6.photo.attach(io: catfile6, filename: "tp.jpg")
 cat7.photo.attach(io: catfile7, filename: "moving.jpg")
 cat8.photo.attach(io: catfile8, filename: "brown.jpg")
+
+mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "I'm the Masker for you!")
 # file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
 
 # demo_user.avatar.attach(io: file, filename: 'some_file.jpg')

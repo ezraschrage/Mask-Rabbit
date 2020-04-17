@@ -45,6 +45,7 @@ class TaskFormFirstPage extends React.Component {
                     handleSubmit={this.props.handleSubmit}
                     task={this.props.task}
                     update={this.props.update}
+                    
                     // {...props}
                     />
             </div>
