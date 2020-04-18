@@ -5,23 +5,30 @@
 
 ### Description
 
-MaskRabbit is a clone of the website TaskRabbit. A user will have the ability to create an account, create details for a task, and those criteria will be used to see if there are any available other users ("Maskers") who are willing to help them.
+MaskRabbit is a clone of the website TaskRabbit that emphasized social distancing and PPE. 
+A user will have the ability to create an account, create details for a task, 
+and those criteria will be used to see if there are any available other users 
+("Maskers") who are willing to help them.
 
 ["Check it out here!"](https://maskrabbit.herokuapp.com/)
 
 ### Framework
 
 MaskRabbit was built with the following technologies:
-- Ruby on Rails
+- Ruby 2.5.1
+- Rails 5.2.3
 - PostgreSQL 12
+- Bcrypt
+- JQuery
 - React
 - Redux
-- AWS image storage
+- Amazon S3
 
-### Features
+### Website Features
 
-MaskRabbit attempts to replicate the styling and layout of TaskRabbit wherever possible. This was accomplished using
-the TaskRabbit logo as a template and finding icons that are similar to ones displayed on the page.
+MaskRabbit attempts to replicate the styling and layout of the TaskRabbit website 
+wherever possible. This was accomplished using the TaskRabbit logo as a template 
+and finding icons that are similar to ones displayed on the page.
 
 ![MaskRabbit categories example](app/assets/images/screenshot_categories.png "MaskRabbit categories example")
 
@@ -31,14 +38,53 @@ the TaskRabbit logo as a template and finding icons that are similar to ones dis
 
 ![MaskRabbit task creation example](app/assets/images/screenshot_task_creation.png "MaskRabbit task creation example")
 
+One addition to the website is the ability to use a demo account for accessibility, though it is possible to create create your own personal account. <br>
+
+### Backend Features
+
+In order to minimize the number of requests, a series of joins tables were created
+```
+  class MaskerCategory < ApplicationRecord
+    validates :masker_id, :category_id, :base_rate, presence: true
+    validates :base_rate, numericality: { greater_than: 0 }
+
+    belongs_to :masker,
+        foreign_key: :masker_id,
+        class_name: :Masker
+
+    belongs_to :category,
+        foreign_key: :category_id,
+        class_name: :Category
+  end
+
+class MaskerDay < ApplicationRecord
+
+    validates :masker_id, :start_time, :end_time, presence: true
+
+    belongs_to :masker,
+        foreign_key: :masker_id,
+        class_name: :Masker
+
+end
+```
+
 
 <!-- ![Philadelphia's Magic Gardens. This place was so cool!](/assets/images/philly-magic-gardens.jpg "Philadelphia's Magic Gardens") -->
 
- (## Your one-stop shop for services provided by people in PPE and trained in social distancing.
-(### A TaskRabbit clone
+ <!-- (## Your one-stop shop for services provided by people in PPE and trained in social distancing.
+(### A TaskRabbit clone -->
+
+### Features to be Implemented
+- Masker sign up and ability to edit info.
+- Address verification and ability to see if there are available Maskers to that address
+- Account page to view your tasks
+- Given enough Maskers, ability to calculate average price for a particular task.
+- Mobile screen interface
+- OmniAuth implementation
+
 ### Attributions
 
-"Rabbit with Mask" from The Avian and Exotic Animal Clinic
+["Masked Rabbit"](https://images.squarespace-cdn.com/content/v1/5c8fbfe87d0c914f25ad6fa4/1584113952445-ZB8MYADTXJGGIYRXMPUB/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/Rabbit+with+mask.jpg?format=1500w) from The Avian and Exotic Animal Clinic
 
 ["Ecommerce, price, shop, tag icon"](https://www.iconfinder.com/icons/4177555/ecommerce_price_shop_tag_icon) by Jordan Alfarishy is licensed under CC BY 3.0
 
