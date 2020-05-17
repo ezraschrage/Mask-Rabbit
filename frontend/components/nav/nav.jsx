@@ -51,6 +51,9 @@ const Nav = ({ currentUser, logout }) => {
                 <Link to="/account">
                     <button className="nav-text btn">Account</button>
                 </Link>
+                
+                    <button className="nav-text btn" onClick={logout} >Log out</button>
+                
             </div>
         </nav>
     );
