@@ -6,7 +6,7 @@
     background-color: #f9fafb;
 }
 
-.task-form-first-questions {
+.task-form-first {
     padding: 32px 18px 0px 18px;
     
     display: flex;
@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.task-form-first-questions > div {
+.task-form-first > div {
     background-color: white;
     width: 74%;
     margin-top: 8px;
@@ -198,4 +198,28 @@
     resize: none;
     padding: 10px;
     font-size: 15px;
+}
+
+.task-form-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-date {
+    min-width: 400px;
+    // text-align: center;
+//   background-image: image-url('mask_large.jpg');
+//   padding: 10px;
+  margin: 10px;
+}
+
+.form-masker {
+    min-width: 400px;
+        // text-align: center;
+//   background-image: image-url('mask_large.jpg');
+//   padding: 10px;
+  margin: 10px;
+
 }

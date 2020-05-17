@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route, Redirect, Link, Switch } from 'react-router-dom'
-import TaskFormFirstPage from '../task_form_first_page/task_form_first_page';
-import TaskFormSecondPage from '../task_form_second_page/task_form_second_page';
-import TaskFormConfirmationPage from '../task_form_confirmation_page/task_form_confirmation_page';
+import TaskFormFirstPage from './task_form_first_page';
+import TaskFormSecondPage from './task_form_second_page';
+import TaskFormConfirmationPage from './task_form_confirmation_page';
 import TaskFormNav from './task_form_nav';
 
 class TaskForm extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            
+                step: 1,
                 category_id: 1,
                 length_of_task: "asd",
                 date: new Date(),
@@ -30,7 +30,6 @@ class TaskForm extends React.Component {
     }
 
     update(property) {
-        
         return e => this.setState({
             [property]: e.target.value
         });
@@ -57,7 +56,7 @@ class TaskForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const task = Object.assign({}, this.state)
-        // this.props.processForm(task);
+        this.props.processForm(task);
     }
 
     handlePageSubmit(e) {
@@ -109,10 +108,18 @@ class TaskForm extends React.Component {
                     {this.renderErrors()}
                 </div>
                 <div className="form-container">
-                    <TaskFormNav />
-                    <Route exact path='/task/new' render={FormFirst} />
+                    <form onSubmit={this.handleSubmit} className="form-box">
+                        <TaskFormNav />
+                        <TaskFormFirstPage currentState={this.state}
+                            handleSubmit={this.handleSubmit}
+                            task={this.props.task}
+                            update={this.update}/>
+                        <TaskFormSecondPage />
+                        <TaskFormConfirmationPage />
+                    </form>
+                    {/* <Route exact path='/task/new' render={FormFirst} />
                     <Route exact path='/task/date' render={FormSecond} />
-                    <Route exact path='/task/confirm' render={FormConfirm} />
+                    <Route exact path='/task/confirm' render={FormConfirm} /> */}
                     
                 </div>
             </>

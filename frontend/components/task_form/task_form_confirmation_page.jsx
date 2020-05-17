@@ -4,6 +4,7 @@ class TaskFormConfirmationPage extends React.Component {
     render() {
         return (
             <>
+            <p>3rd page</p>
             </>
         )
     }

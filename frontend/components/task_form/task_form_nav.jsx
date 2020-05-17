@@ -79,7 +79,8 @@ class TaskFormNav extends React.Component {
                         <div className="form-message">
                             <div className="form-message-notebook"></div>
                             <div className="form-message-text">Tell us about your task. 
-                                We use these details to show Maskers in your area who fit your needs.</div>
+                                We use these details to show Maskers in your area who fit your needs.
+                            </div>
                         </div>
                     </div>
                 </div>

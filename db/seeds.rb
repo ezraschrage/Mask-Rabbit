@@ -45,41 +45,66 @@ cat8 = Category.create!(name: "Plant Flowers",
     description: "Some of our Masker's want to put their green thumb to your benefit. With spring around the corner, you can have the help you need to make sure your yard is full of life.",
     low_avg: 47, high_avg: 141)
 
-catfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")
-catfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
-catfile3 = open("https://mask-rabbit-seed.s3.amazonaws.com/van.jpg")
-catfile4 = open("https://mask-rabbit-seed.s3.amazonaws.com/bathroom.jpg")
-catfile5 = open("https://mask-rabbit-seed.s3.amazonaws.com/sweep.jpg")
-catfile6 = open("https://mask-rabbit-seed.s3.amazonaws.com/tp.jpg")
-catfile7 = open("https://mask-rabbit-seed.s3.amazonaws.com/moving.jpg")
-catfile8 = open("https://mask-rabbit-seed.s3.amazonaws.com/brown.jpg")
-# catfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/drill.jpg")
-# catfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tv.jpg")
-# catfile3 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/van.jpg")
-# catfile4 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/bathroom.jpg")
-# catfile5 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/sweep.jpg")
-# catfile6 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tp.jpg")
-# catfile7 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/moving.jpg")
-# catfile8 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/brown.jpg")
+#  Web
+# catfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")
+# catfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
+# catfile3 = open("https://mask-rabbit-seed.s3.amazonaws.com/van.jpg")
+# catfile4 = open("https://mask-rabbit-seed.s3.amazonaws.com/bathroom.jpg")
+# catfile5 = open("https://mask-rabbit-seed.s3.amazonaws.com/sweep.jpg")
+# catfile6 = open("https://mask-rabbit-seed.s3.amazonaws.com/tp.jpg")
+# catfile7 = open("https://mask-rabbit-seed.s3.amazonaws.com/moving.jpg")
+# catfile8 = open("https://mask-rabbit-seed.s3.amazonaws.com/brown.jpg")
 
-cat1.photo.attach(io: catfile1, filename: "drill.jpg")
-cat2.photo.attach(io: catfile2, filename: "tv.jpg")
-cat3.photo.attach(io: catfile3, filename: "van.jpg")
-cat4.photo.attach(io: catfile4, filename: "bathroom.jpg")
-cat5.photo.attach(io: catfile5, filename: "sweep.jpg")
-cat6.photo.attach(io: catfile6, filename: "tp.jpg")
-cat7.photo.attach(io: catfile7, filename: "moving.jpg")
-cat8.photo.attach(io: catfile8, filename: "brown.jpg")
-# cat1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/drill.jpg"), filename: "drill.jpg")
-# cat2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tv.jpg"), filename: "tv.jpg")
-# cat3.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/van.jpg"), filename: "van.jpg")
-# cat4.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/bathroom.jpg"), filename: "bathroom.jpg")
-# cat5.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/sweep.jpg"), filename: "sweep.jpg")
-# cat6.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tp.jpg"), filename: "tp.jpg")
-# cat7.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/moving.jpg"), filename: "moving.jpg")
-# cat8.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/brown.jpg"), filename: "brown.jpg")
+# Local
+catfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/drill.jpg")
+catfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tv.jpg")
+catfile3 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/van.jpg")
+catfile4 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/bathroom.jpg")
+catfile5 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/sweep.jpg")
+catfile6 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tp.jpg")
+catfile7 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/moving.jpg")
+catfile8 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/brown.jpg")
 
-mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "I'm the Masker for you!")
+# Web
+# cat1.photo.attach(io: catfile1, filename: "drill.jpg")
+# cat2.photo.attach(io: catfile2, filename: "tv.jpg")
+# cat3.photo.attach(io: catfile3, filename: "van.jpg")
+# cat4.photo.attach(io: catfile4, filename: "bathroom.jpg")
+# cat5.photo.attach(io: catfile5, filename: "sweep.jpg")
+# cat6.photo.attach(io: catfile6, filename: "tp.jpg")
+# cat7.photo.attach(io: catfile7, filename: "moving.jpg")
+# cat8.photo.attach(io: catfile8, filename: "brown.jpg")
+
+# Local
+cat1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/drill.jpg"), filename: "drill.jpg")
+cat2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tv.jpg"), filename: "tv.jpg")
+cat3.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/van.jpg"), filename: "van.jpg")
+cat4.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/bathroom.jpg"), filename: "bathroom.jpg")
+cat5.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/sweep.jpg"), filename: "sweep.jpg")
+cat6.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tp.jpg"), filename: "tp.jpg")
+cat7.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/moving.jpg"), filename: "moving.jpg")
+cat8.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/brown.jpg"), filename: "brown.jpg")
+
+mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "Ready to help you out! You can always count on Andrew")
+mask2 = Masker.create!(user_id: 4, location: "Brooklyn", bio: "My name is Catherine. If you want service done well with a smile, I'm your gal!")
+
+# Web
+# maskfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")
+# maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
+
+# Local
+maskfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow.jpg")
+maskfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman.jpg")
+
+# Web
+# cat1.photo.attach(io: catfile1, filename: "drill.jpg")
+# cat2.photo.attach(io: catfile2, filename: "tv.jpg")
+
+# Local
+mask1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow.jpg"), filename: "yellow.jpg")
+mask2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman.jpg"), filename: "woman.jpg")
+
+
 # file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
 
 # demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
