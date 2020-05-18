@@ -12,6 +12,7 @@ require 'open-uri'
 
 Category.destroy_all
 User.destroy_all
+Task.destroy_all
 
 user1 = User.create!(email: "guest@guest.com", first_name: "Alex", last_name: "Johnson", zip: 12345, password: "abcdef")
 user2 = User.create!(email: "a@a.com", first_name: "Andrew", last_name: "Aarons", zip: 12345, password: "abcdef")

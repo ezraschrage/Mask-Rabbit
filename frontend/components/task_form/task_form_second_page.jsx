@@ -8,7 +8,8 @@ class TaskFormSecondPage extends React.Component {
         return (
             <div className="task-form-second">
                 <div className="form-date" >
-                    Date
+                    <input type="date" className="date-pick"/>
+                    <input type="text"/>
                 </div>
                 <div className="form-masker">
                     Mala

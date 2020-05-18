@@ -13,6 +13,7 @@
 //                 category_id: 1,
 //                 length_of_task: "asd",
 //                 date: new Date(),
+//                 time: "8:00am"
 //                 per_hr: 1,
 //                 user_id: 1,
 //                 // user_id: state.session.id,

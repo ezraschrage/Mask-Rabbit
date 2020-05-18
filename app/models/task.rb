@@ -5,7 +5,7 @@
 #  id                   :bigint           not null, primary key
 #  category_id          :integer
 #  length_of_task       :string           not null
-#  date                 :datetime         not null
+#  date                 :date             not null
 #  per_hr               :integer          not null
 #  user_id              :integer          not null
 #  masker_id            :integer          not null
@@ -16,10 +16,11 @@
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  interest             :string           not null
+#  time                 :string           not null
 #
 class Task < ApplicationRecord
 
-    validates :length_of_task, :date, :per_hr, :user_id,
+    validates :length_of_task, :date, :time, :per_hr, :user_id,
         :masker_id, :description, :start_address, :vehicle_requirements,
         :interest, presence: true
     validates :per_hr, numericality: { greater_than: 0 }

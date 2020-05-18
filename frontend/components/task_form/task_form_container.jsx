@@ -10,6 +10,7 @@ const mSTP = state => {
         //     category_id: 0,
         //     length_of_task: "",
         //     date: new Date(),
+        //     time: "8:00am"
         //     per_hr: 1,
         //     user_id: state.session.id,
         //     masker_id: 0,
