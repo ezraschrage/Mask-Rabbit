@@ -9,12 +9,11 @@ class TaskFormSecondPage extends React.Component {
             <div className="task-form-second">
                 <div className="form-date" >
                     <input type="date" className="date-pick"
-                    placeholder = 'Select a date'
-                    // value = {props.currentState.task.date}
-                    onChange={this.props.update('date')} />
+                        placeholder = 'Select a date'
+                        // value = {props.currentState.task.date}
+                        onChange={this.props.update('date')} />
                     <select className="time-pick"
-                    onChange={this.props.update('time')}
->
+                        onChange={this.props.update('time')}>
 
                         <option value="I'm Flexible">I'm Flexible</option>
                         <option value="8:00am">8:00am</option>

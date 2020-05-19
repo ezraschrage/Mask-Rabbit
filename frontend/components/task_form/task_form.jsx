@@ -13,7 +13,7 @@ class TaskForm extends React.Component {
                 category_id: 1,
                 length_of_task: "asd",
                 date: new Date(),
-                time: "8:00am",
+                time: "I'm Flexible",
                 per_hr: 1,
                 user_id: 1,
                 // user_id: state.session.id,
@@ -110,7 +110,7 @@ class TaskForm extends React.Component {
                 </div>
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
-                        <TaskFormNav />
+                        <TaskFormNav currentState={this.state}/>
                         <TaskFormFirstPage currentState={this.state}
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
