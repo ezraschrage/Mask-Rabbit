@@ -14,11 +14,14 @@ class TaskFormNav extends React.Component {
         const firstPage = () => (
             <div className="form-nav">
                 <div className="form-nav-top">
+                    <div>
                     <Link to="/">
                         <div className="form-nav-logo">
 
                         </div>
                     </Link>
+                    </div>
+                    {/* <div className="spacer"></div> */}
                     <div className="form-nav-progress">
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
@@ -78,7 +81,7 @@ class TaskFormNav extends React.Component {
                     </Link>
                     <div className="form-nav-progress">
                         {/* Insert return to step 1 click */}
-                        <div className="form-nav-step active" onClick="">
+                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(1, e)}>
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
                                 <div className="form-nav-num active">
@@ -137,7 +140,8 @@ class TaskFormNav extends React.Component {
                     </Link>
                     <div className="form-nav-progress">
                         {/* Insert return to step 1 click */}
-                        <div className="form-nav-step active">
+                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(1, e)}>
+
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
                                 <div className="form-nav-num active">
@@ -150,7 +154,8 @@ class TaskFormNav extends React.Component {
                             </div>
                         </div>
                         {/* Insert return to step 6 click */}
-                        <div className="form-nav-step active">
+                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(6, e)}>
+
                             <div className="form-nav-step-top">
                                 <div className="form-nav-line active"></div>
                                 <div className="form-nav-num active">
@@ -188,7 +193,7 @@ class TaskFormNav extends React.Component {
         );
         
 
-        switch (this.props.currentState.step) {
+        switch (this.props.state.step) {
             case 6:
                 return secondPage();
             case 7:

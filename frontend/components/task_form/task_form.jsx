@@ -9,7 +9,7 @@ class TaskForm extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-                step: 7,
+                step: 1,
                 category_id: 1,
                 length_of_task: "asd",
                 date: new Date(),
@@ -27,7 +27,7 @@ class TaskForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
-        
+        this.changeStep = this.changeStep.bind(this);
     }
 
     update(property) {
@@ -62,6 +62,12 @@ class TaskForm extends React.Component {
         return this.props.clearErrors();
     }
 
+    changeStep(num, e) {
+        e.preventDefault();
+        return this.setState({step: num})
+    }
+
+
 
     handleSubmit(e) {
         e.preventDefault();
@@ -83,7 +89,7 @@ class TaskForm extends React.Component {
         // const FormFirst = (props) => {
         //     return (
                 
-        //     <TaskFormFirstPage currentState={this.state}
+        //     <TaskFormFirstPage state={this.state}
         //         handleSubmit={this.handleSubmit}
         //         task={this.props.task}
         //         update={this.update}
@@ -95,7 +101,7 @@ class TaskForm extends React.Component {
 
         // const FormSecond = (props) => {
         //     return(
-        //         <TaskFormSecondPage currentState={this.state}
+        //         <TaskFormSecondPage state={this.state}
         //             handleSubmit={this.handleSubmit}
         //             task={this.props.task}
         //             update={this.update}
@@ -104,7 +110,7 @@ class TaskForm extends React.Component {
 
         // const FormConfirm = (props) => {
         //     return (
-        //         <TaskFormConfirmationPage currentState={this.state}
+        //         <TaskFormConfirmationPage state={this.state}
         //             handleSubmit={this.handleSubmit}
         //             task={this.props.task}
         //             update={this.update}
@@ -119,19 +125,26 @@ class TaskForm extends React.Component {
                 </div>
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
-                        <TaskFormNav currentState={this.state}/>
-                        <TaskFormFirstPage currentState={this.state}
+                        <TaskFormNav state={this.state}
+                            changeStep={this.changeStep} />
+
+                        <TaskFormFirstPage state={this.state}
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
-                            update={this.update}/>
-                        <TaskFormSecondPage currentState={this.state}
+                            update={this.update}
+                            changeStep={this.changeStep}/>
+                        {/* <TaskFormSecondPage state={this.state}
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
-                            update={this.update} />
-                        <TaskFormConfirmationPage currentState={this.state}
+                            update={this.update}
+                            changeStep={this.changeStep} />
+
+                        <TaskFormConfirmationPage state={this.state}
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
-                            update={this.update} />
+                            update={this.update} 
+                            changeStep={this.changeStep} /> */}
+
                     </form>
                     {/* <Route exact path='/task/new' render={FormFirst} />
                     <Route exact path='/task/date' render={FormSecond} />

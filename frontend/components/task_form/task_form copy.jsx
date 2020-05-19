@@ -75,7 +75,7 @@
 //         const FormFirst = (props) => {
 //             return (
                 
-//             <TaskFormFirstPage currentState={this.state}
+//             <TaskFormFirstPage state={this.state}
 //                 handleSubmit={this.handleSubmit}
 //                 task={this.props.task}
 //                 update={this.update}
@@ -87,7 +87,7 @@
 
 //         const FormSecond = (props) => {
 //             return(
-//                 <TaskFormSecondPage currentState={this.state}
+//                 <TaskFormSecondPage state={this.state}
 //                     handleSubmit={this.handleSubmit}
 //                     task={this.props.task}
 //                     update={this.update}
@@ -96,7 +96,7 @@
 
 //         const FormConfirm = (props) => {
 //             return (
-//                 <TaskFormConfirmationPage currentState={this.state}
+//                 <TaskFormConfirmationPage state={this.state}
 //                     handleSubmit={this.handleSubmit}
 //                     task={this.props.task}
 //                     update={this.update}
