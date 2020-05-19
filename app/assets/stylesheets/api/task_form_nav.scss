@@ -114,7 +114,7 @@
   background-size: cover;
 }
 .form-message-shield {
-  background-image: image-url('shield.png');
+  background-image: image-url('shield.svg');
   width: 36px;
   height: 36px;
   background-position: center;
@@ -122,7 +122,7 @@
   background-size: cover;
 }
 .form-message-clipboard {
-  background-image: image-url('clipboard.png');
+  background-image: image-url('clipboard.svg');
   width: 36px;
   height: 36px;
   background-position: center;
@@ -147,3 +147,4 @@
 .form-nav-step.active {
     cursor: pointer;
 }
+

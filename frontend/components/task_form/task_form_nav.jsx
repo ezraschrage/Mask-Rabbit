@@ -119,7 +119,7 @@ class TaskFormNav extends React.Component {
                 </div>
                 <div className="form-bottom">
                     <div className="form-message">
-                        <div className="form-message-notebook"></div>
+                        <div className="form-message-shield"></div>
                         <div className="form-message-text">Filter and sort to find your Masker. 
                         Then view their availability to request your date and time.
                             </div>
@@ -178,7 +178,7 @@ class TaskFormNav extends React.Component {
                 </div>
                 <div className="form-bottom">
                     <div className="form-message">
-                        <div className="form-message-notebook"></div>
+                        <div className="form-message-clipboard"></div>
                         <div className="form-message-text">You're almost done!
                         We just need a few more details to connect you with your Masker.
                             </div>
