@@ -77,7 +77,7 @@ class TaskFormNav extends React.Component {
                         </div>
                     </Link>
                     <div className="form-nav-progress">
-                        <div className="form-nav-step">
+                        <div className="form-nav-step active">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
                                 <div className="form-nav-num active">
@@ -90,6 +90,7 @@ class TaskFormNav extends React.Component {
                             </div>
                         </div>
                         <div className="form-nav-step">
+                            
                             <div className="form-nav-step-top">
                                 <div className="form-nav-line active"></div>
                                 <div className="form-nav-num active">

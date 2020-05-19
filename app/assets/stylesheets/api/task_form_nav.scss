@@ -113,6 +113,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.form-message-shield {
+  background-image: image-url('shield.png');
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-message-clipboard {
+  background-image: image-url('clipboard.png');
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .form-nav-num.active {
     background-color: #51af33;
@@ -127,4 +143,7 @@
 .form-nav-line.active {
         border-bottom: 2px solid #51af33;
 
+}
+.form-nav-step.active {
+    cursor: pointer;
 }
