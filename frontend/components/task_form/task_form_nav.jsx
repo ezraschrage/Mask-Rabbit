@@ -23,48 +23,36 @@ class TaskFormNav extends React.Component {
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
-                                <div className="form-nav-num first">
+                                <div className="form-nav-num active">
                                     <span>1</span>
                                 </div>
                                 <div className="form-nav-line"></div>
                             </div>
-                            <div className="form-nav-bottom first">
+                            <div className="form-nav-bottom active">
                                 <span> Describe your task</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-line"></div>
-                                <div className="form-nav-num second">
+                                <div className="form-nav-num">
                                     <span>2</span>
                                 </div>
                                 <div className="form-nav-line"></div>
                             </div>
-                            <div className="form-nav-bottom second">
-                                <span>Browse Maskers & prices</span>
+                            <div className="form-nav-bottom">
+                                <span>Browse Maskers & Dates</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-line"></div>
-                                <div className="form-nav-num third">
+                                <div className="form-nav-num">
                                     <span>3</span>
-                                </div>
-                                <div className="form-nav-line"></div>
-                            </div>
-                            <div className="form-nav-bottom third">
-                                <span>Choose date & time</span>
-                            </div>
-                        </div>
-                        <div className="form-nav-step">
-                            <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num fourth">
-                                    <span>4</span>
                                 </div>
                                 <div className="form-nav-empty"></div>
                             </div>
-                            <div className="form-nav-bottom fourth">
+                            <div className="form-nav-bottom">
                                 <span>Confirm details</span>
                             </div>
                         </div>
@@ -92,25 +80,25 @@ class TaskFormNav extends React.Component {
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
-                                <div className="form-nav-num first">
-                                    <span>1</span>
+                                <div className="form-nav-num active">
+                                    <span> {`\u2713`} </span>
                                 </div>
-                                <div className="form-nav-line"></div>
+                                <div className="form-nav-line active"></div>
                             </div>
-                            <div className="form-nav-bottom first">
+                            <div className="form-nav-bottom">
                                 <span> Describe your task</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num second">
+                                <div className="form-nav-line active"></div>
+                                <div className="form-nav-num active">
                                     <span>2</span>
                                 </div>
                                 <div className="form-nav-line"></div>
                             </div>
-                            <div className="form-nav-bottom second">
-                                <span>Browse Maskers & prices</span>
+                            <div className="form-nav-bottom active">
+                                <span>Browse Maskers & Dates</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
@@ -119,21 +107,9 @@ class TaskFormNav extends React.Component {
                                 <div className="form-nav-num third">
                                     <span>3</span>
                                 </div>
-                                <div className="form-nav-line"></div>
-                            </div>
-                            <div className="form-nav-bottom third">
-                                <span>Choose date & time</span>
-                            </div>
-                        </div>
-                        <div className="form-nav-step">
-                            <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num fourth">
-                                    <span>4</span>
-                                </div>
                                 <div className="form-nav-empty"></div>
                             </div>
-                            <div className="form-nav-bottom fourth">
+                            <div className="form-nav-bottom">
                                 <span>Confirm details</span>
                             </div>
                         </div>
@@ -142,8 +118,8 @@ class TaskFormNav extends React.Component {
                 <div className="form-bottom">
                     <div className="form-message">
                         <div className="form-message-notebook"></div>
-                        <div className="form-message-text">Tell us about your task.
-                        We use these details to show Maskers in your area who fit your needs.
+                        <div className="form-message-text">Filter and sort to find your Masker. 
+                        Then view their availability to request your date and time.
                             </div>
                     </div>
                 </div>
@@ -161,48 +137,36 @@ class TaskFormNav extends React.Component {
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
-                                <div className="form-nav-num first">
-                                    <span>1</span>
+                                <div className="form-nav-num active">
+                                    <span> {`\u2713`} </span>
                                 </div>
-                                <div className="form-nav-line"></div>
+                                <div className="form-nav-line active"></div>
                             </div>
-                            <div className="form-nav-bottom first">
+                            <div className="form-nav-bottom">
                                 <span> Describe your task</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num second">
-                                    <span>2</span>
+                                <div className="form-nav-line active"></div>
+                                <div className="form-nav-num active">
+                                    <span> {`\u2713`} </span>
                                 </div>
-                                <div className="form-nav-line"></div>
+                                <div className="form-nav-line active"></div>
                             </div>
-                            <div className="form-nav-bottom second">
-                                <span>Browse Maskers & prices</span>
+                            <div className="form-nav-bottom">
+                                <span>Browse Maskers & Dates</span>
                             </div>
                         </div>
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num third">
+                                <div className="form-nav-line active"></div>
+                                <div className="form-nav-num active">
                                     <span>3</span>
-                                </div>
-                                <div className="form-nav-line"></div>
-                            </div>
-                            <div className="form-nav-bottom third">
-                                <span>Choose date & time</span>
-                            </div>
-                        </div>
-                        <div className="form-nav-step">
-                            <div className="form-nav-step-top">
-                                <div className="form-nav-line"></div>
-                                <div className="form-nav-num fourth">
-                                    <span>4</span>
                                 </div>
                                 <div className="form-nav-empty"></div>
                             </div>
-                            <div className="form-nav-bottom fourth">
+                            <div className="form-nav-bottom active">
                                 <span>Confirm details</span>
                             </div>
                         </div>
@@ -211,8 +175,8 @@ class TaskFormNav extends React.Component {
                 <div className="form-bottom">
                     <div className="form-message">
                         <div className="form-message-notebook"></div>
-                        <div className="form-message-text">Tell us about your task.
-                        We use these details to show Maskers in your area who fit your needs.
+                        <div className="form-message-text">You're almost done!
+                        We just need a few more details to connect you with your Masker.
                             </div>
                     </div>
                 </div>
@@ -220,13 +184,13 @@ class TaskFormNav extends React.Component {
         );
         
 
-        switch (this.props.state.step) {
+        switch (this.props.currentState.step) {
             case 6:
-                return secondPage;
+                return secondPage();
             case 7:
-                return thirdPage;
+                return thirdPage();
             default:
-                return firstPage;
+                return firstPage();
         }
     }
 }

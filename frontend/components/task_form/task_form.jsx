@@ -9,7 +9,7 @@ class TaskForm extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-                step: 1,
+                step: 7,
                 category_id: 1,
                 length_of_task: "asd",
                 date: new Date(),

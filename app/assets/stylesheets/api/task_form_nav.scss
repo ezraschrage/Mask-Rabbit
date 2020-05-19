@@ -114,13 +114,17 @@
   background-size: cover;
 }
 
-.form-nav-num.first {
+.form-nav-num.active {
     background-color: #51af33;
 }
 
-.form-nav-num.first span {
+.form-nav-num.active span {
     color: white;
 }
-.form-nav-bottom.first {
+.form-nav-bottom.active {
     font-weight: bold;
+}
+.form-nav-line.active {
+        border-bottom: 2px solid #51af33;
+
 }
