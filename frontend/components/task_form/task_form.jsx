@@ -115,7 +115,10 @@ class TaskForm extends React.Component {
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
                             update={this.update}/>
-                        <TaskFormSecondPage />
+                        <TaskFormSecondPage
+                            handleSubmit={this.handleSubmit}
+                            task={this.props.task}
+                            update={this.update} />
                         <TaskFormConfirmationPage />
                     </form>
                     {/* <Route exact path='/task/new' render={FormFirst} />
