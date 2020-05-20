@@ -5,7 +5,7 @@
 
 ### Description
 
-MaskRabbit is a clone of the website TaskRabbit that emphasized social distancing and PPE. 
+MaskRabbit is a clone of the website TaskRabbit that emphasizes social distancing and PPE. 
 A user will have the ability to create an account, create details for a task, 
 and those criteria will be used to see if there are any available other users 
 ("Maskers") who are willing to help them.
