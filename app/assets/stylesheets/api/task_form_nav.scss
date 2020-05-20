@@ -19,6 +19,7 @@
     border-bottom: 1px solid #dce0e6;
     justify-content: center;
     align-items: stretch;
+    // max-width: 1050px;
 }
 
 .form-nav-progress {
@@ -28,6 +29,7 @@
     flex-direction: row;
     flex-grow: 1;
     align-items: stretch;
+    max-width: 1050px;
 }
 
 .form-message {
@@ -148,6 +150,6 @@
     cursor: pointer;
 }
 
-.spacer {
-    max-width: 200px;
+.hide {
+    display: none;
 }
