@@ -10,7 +10,7 @@ A user will have the ability to create an account, create details for a task,
 and those criteria will be used to see if there are any available other users 
 ("Maskers") who are willing to help them.
 
-["Check it out here!"](https://maskrabbit.herokuapp.com/)
+[Check it out here!](https://maskrabbit.herokuapp.com/)
 
 ### Framework
 
@@ -67,12 +67,6 @@ class MaskerDay < ApplicationRecord
 
 end
 ```
-
-
-<!-- ![Philadelphia's Magic Gardens. This place was so cool!](/assets/images/philly-magic-gardens.jpg "Philadelphia's Magic Gardens") -->
-
- <!-- (## Your one-stop shop for services provided by people in PPE and trained in social distancing.
-(### A TaskRabbit clone -->
 
 ### Features to be Implemented
 - Masker sign up and ability to edit info.
