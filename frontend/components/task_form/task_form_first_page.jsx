@@ -7,13 +7,78 @@ class TaskFormFirstPage extends React.Component {
 
     render () {
 
-        // const interest = () => {
+        const interestLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
 
-        // };
+        const interestShort = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const startLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const startShort = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const endLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const endShort = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const interestLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const interestLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const interestLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
+        
+        const interestLong = () => {
+            return (
+                <>
+                </>
+            )
+        }
         
         return (
             <div className="task-form-first">
-
                 {/* form interest */}
                 <div className="form-interest">
                     <div className="form-header">TASK INTEREST</div>
@@ -47,7 +112,8 @@ class TaskFormFirstPage extends React.Component {
                         </label>
                     </div>
                     <div className="form-save">
-                        <button className="form-save-btn" type="submit">Save</button>
+                        <button className="form-save-btn" type="submit"
+                            onClick={(e) => this.props.changeStep(1, e)} >Save</button>
                     </div>
                 </div>
 
