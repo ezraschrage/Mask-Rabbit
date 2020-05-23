@@ -10,6 +10,39 @@ class TaskFormFirstPage extends React.Component {
         const interestLong = () => {
             return (
                 <>
+                <div className="form-question">What brings you here today?</div>
+                <div className="form-interest-radio">
+                    <label className="radio-label">
+                        <input type="radio"
+                            name="form-interest"
+                            value="I'm ready to book right now"
+                            className="interest-radio"
+                            onChange={this.props.update('interest')}
+                        />
+                            &ensp;I'm ready to book right now
+                        </label>
+                    <label className="radio-label">
+                        <input type="radio"
+                            value="I'm interested in booking sometime soon"
+                            className="interest-radio"
+                            name="form-interest"
+                            onChange={this.props.update('interest')}
+                        />
+                             &ensp;I'm interested in booking sometime soon
+                        </label>
+                    <label className="radio-label">
+                        <input type="radio"
+                            value="I'm just browsing"
+                            className="interest-radio"
+                            onChange={this.props.update('interest')}
+                            name="form-interest" />
+                             &ensp;I'm just browsing
+                        </label>
+                </div>
+                <div className="form-save">
+                    <button className="form-save-btn" type="submit"
+                        onClick={(e) => this.props.changeStep(1, e)} >Save</button>
+                </div>
                 </>
             )
         }
@@ -17,6 +50,9 @@ class TaskFormFirstPage extends React.Component {
         const interestShort = () => {
             return (
                 <>
+                <div>
+                    {this.props.state.interest}
+                </div>
                 </>
             )
         }
@@ -49,28 +85,28 @@ class TaskFormFirstPage extends React.Component {
             )
         }
         
-        const interestLong = () => {
+        const optionsShort = () => {
             return (
                 <>
                 </>
             )
         }
         
-        const interestLong = () => {
+        const optionsLong = () => {
             return (
                 <>
                 </>
             )
         }
         
-        const interestLong = () => {
+        const deailsShort = () => {
             return (
                 <>
                 </>
             )
         }
         
-        const interestLong = () => {
+        const detailsLong = () => {
             return (
                 <>
                 </>
@@ -82,39 +118,7 @@ class TaskFormFirstPage extends React.Component {
                 {/* form interest */}
                 <div className="form-interest">
                     <div className="form-header">TASK INTEREST</div>
-                    <div className="form-question">What brings you here today?</div>
-                    <div className="form-interest-radio">
-                        <label className="radio-label">
-                            <input type="radio"
-                                name="form-interest"
-                                value="I'm ready to book right now"
-                                className="interest-radio"
-                                onChange={this.props.update('interest')}
-                            />
-                            &ensp;I'm ready to book right now
-                        </label>
-                            <label className="radio-label">
-                                <input type="radio"
-                                    value="I'm interested in booking sometime soon"
-                                    className="interest-radio"
-                                    name="form-interest"
-                                    onChange={this.props.update('interest')}
-                                />
-                             &ensp;I'm interested in booking sometime soon
-                        </label>
-                            <label className="radio-label">
-                                <input type="radio"
-                                    value="I'm just browsing"
-                                    className="interest-radio"
-                                    onChange={this.props.update('interest')}
-                                    name="form-interest" />
-                             &ensp;I'm just browsing
-                        </label>
-                    </div>
-                    <div className="form-save">
-                        <button className="form-save-btn" type="submit"
-                            onClick={(e) => this.props.changeStep(1, e)} >Save</button>
-                    </div>
+                    {(this.props.state.step === 1) ? interestLong() : interestShort()}
                 </div>
 
                 {/* Start address */}
