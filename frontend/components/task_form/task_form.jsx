@@ -22,12 +22,15 @@ class TaskForm extends React.Component {
                 start_address: "asd",
                 end_address: "asd",
                 vehicle_requirements: "asd",
-                interest: "asd"
+                interest: "",
+                errors: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this.changeStep = this.changeStep.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
+        this.addErrors = this.addErrors.bind(this);
     }
 
     update(property) {
@@ -48,14 +51,19 @@ class TaskForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul className="errors">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            // <ul className="errors">
+            //     {this.state.errors.map((error, i) => (
+            //         <li key={`error-${i}`}>
+            //             {error}
+            //         </li>
+            //     ))}
+            // </ul>
+        <p className="errors">{this.state.errors}</p>
         );
+    }
+
+    addErrors(errors) {
+        this.setState({errors: errors})
     }
 
     componentWillUnmount() {
@@ -121,7 +129,7 @@ class TaskForm extends React.Component {
         return (
             <>
                 <div className='task-type-error'>
-                    {this.renderErrors()}
+                    {/* {this.renderErrors()} */}
                 </div>
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className="form-box">
@@ -132,7 +140,9 @@ class TaskForm extends React.Component {
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}
                             update={this.update}
-                            changeStep={this.changeStep}/>
+                            changeStep={this.changeStep}
+                            renderErrors={this.renderErrors}
+                            addErrors={this.addErrors}/>
                         {/* <TaskFormSecondPage state={this.state}
                             handleSubmit={this.handleSubmit}
                             task={this.props.task}

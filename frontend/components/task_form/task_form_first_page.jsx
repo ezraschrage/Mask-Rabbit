@@ -3,19 +3,29 @@ import React from 'react';
 class TaskFormFirstPage extends React.Component {
     constructor(props) {
         super(props)
+
+        this.interestButton = this.interestButton.bind(this);
+    }
+
+    interestButton(e) {
+        e.preventDefault();
+        if (this.props.state.interest !== "") {
+            this.props.addErrors([])
+            this.props.changeStep(2,e)
+        } else {
+            this.props.addErrors(["Please select an interest"])
+
+        }
     }
 
     render () {
 
-        let checkedOne;
-        let checkedTwo;
-        let checkedThree;
-
-
-        // "I'm ready to book right now"
-        // "I'm interested in booking sometime soon"
-        // "I'm just browsing"
-        // if (this.props.state.interest === )
+        // const interestError = () => {
+        //     return (
+        //         <p>Please select an interest</p>
+        //     )
+        // }
+        
         const interestLong = () => {
             return (
                 <>
@@ -28,7 +38,7 @@ class TaskFormFirstPage extends React.Component {
                                 name="form-interest"
                                 value="I'm ready to book right now"
                                 className="interest-radio"
-                                checkedOne
+                                checked={this.props.state.interest === "I'm ready to book right now"}
                                 onChange={this.props.update('interest')}
                             />
                                 &ensp;I'm ready to book right now
@@ -38,6 +48,7 @@ class TaskFormFirstPage extends React.Component {
                                 value="I'm interested in booking sometime soon"
                                 className="interest-radio"
                                 name="form-interest"
+                                    checked={this.props.state.interest === "I'm interested in booking sometime soon"}
                                 onChange={this.props.update('interest')}
                             />
                                 &ensp;I'm interested in booking sometime soon
@@ -46,14 +57,18 @@ class TaskFormFirstPage extends React.Component {
                             <input type="radio"
                                 value="I'm just browsing"
                                 className="interest-radio"
+                                    checked={this.props.state.interest === "I'm just browsing"}
                                 onChange={this.props.update('interest')}
                                 name="form-interest" />
                                 &ensp;I'm just browsing
                             </label>
                     </div>
+                    <div>
+                        {this.props.renderErrors()}
+                    </div>
                     <div className="form-save">
                         <button className="form-save-btn" type="submit"
-                            onClick={(e) => this.props.changeStep(2, e)} >Save</button>
+                                onClick={(e) => this.interestButton(e)} >Save</button>
                     </div>
                 </div>
                 </>

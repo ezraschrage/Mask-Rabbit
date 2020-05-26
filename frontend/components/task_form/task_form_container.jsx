@@ -20,7 +20,7 @@ const mSTP = state => {
         //     vehicle_requirements: "",
         //     interest: ""
         // },
-        errors: state.errors.task
+        // errors: errors.task
     }
     };
 
