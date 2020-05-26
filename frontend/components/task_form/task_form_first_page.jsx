@@ -13,18 +13,11 @@ class TaskFormFirstPage extends React.Component {
             this.props.addErrors([])
             this.props.changeStep(2,e)
         } else {
-            this.props.addErrors(["Please select an interest"])
-
+            this.props.addErrors(["Please select an interest", "Please add antoher thing", "No please, keep going"])
         }
     }
 
     render () {
-
-        // const interestError = () => {
-        //     return (
-        //         <p>Please select an interest</p>
-        //     )
-        // }
         
         const interestLong = () => {
             return (
@@ -63,9 +56,9 @@ class TaskFormFirstPage extends React.Component {
                                 &ensp;I'm just browsing
                             </label>
                     </div>
-                    <div>
+                    
                         {this.props.renderErrors()}
-                    </div>
+                    
                     <div className="form-save">
                         <button className="form-save-btn" type="submit"
                                 onClick={(e) => this.interestButton(e)} >Save</button>

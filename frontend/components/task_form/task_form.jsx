@@ -23,7 +23,7 @@ class TaskForm extends React.Component {
                 end_address: "asd",
                 vehicle_requirements: "asd",
                 interest: "",
-                errors: ""
+                errors: []
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,16 +50,24 @@ class TaskForm extends React.Component {
 
 
     renderErrors() {
-        return (
-            // <ul className="errors">
-            //     {this.state.errors.map((error, i) => (
-            //         <li key={`error-${i}`}>
-            //             {error}
-            //         </li>
-            //     ))}
-            // </ul>
-        <p className="errors">{this.state.errors}</p>
+
+        const errors = this.state.errors;
+        const errorList = errors.map((error, i) =>
+            <li key={`error-${i}`}>
+                {error}
+            </li>
         );
+      
+        const none = () => (
+                <>
+                </>
+        )
+
+        const some = () => (
+            <ul className="form-errors">{errorList}</ul>
+            )
+        
+        return (this.state.errors.length > 0) ? some() : none()
     }
 
     addErrors(errors) {
