@@ -52,9 +52,7 @@
     margin-top: 10px;
 }
 
-.short {
-    cursor: pointer;
-}
+
 // .form-box > .btn {
 //     margin-top: 10px;
 //     background-color: #51af33;
@@ -235,4 +233,12 @@
 
 .form-errors {
     color: red;
+}
+
+.completed {
+    color: #438e29;
+}
+
+.active {
+    cursor: pointer;
 }

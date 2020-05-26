@@ -11,17 +11,17 @@ class TaskForm extends React.Component {
         this.state = {
                 step: 1,
                 category_id: 1,
-                length_of_task: "asd",
+                length_of_task: "",
                 date: new Date(),
-                time: "I'm Flexible",
+                time: "",
                 per_hr: 1,
                 user_id: 1,
                 // user_id: state.session.id,
                 masker_id: 1,
-                description: "asd",
-                start_address: "asd",
-                end_address: "asd",
-                vehicle_requirements: "asd",
+                description: "",
+                start_address: "",
+                end_address: "",
+                vehicle_requirements: "",
                 interest: "",
                 errors: []
         }
