@@ -18,6 +18,7 @@ class TaskFormFirstPage extends React.Component {
             this.props.addErrors(["Please select an interest"])
         }
     }
+
     startButton(e) {
         e.preventDefault();
         if (this.props.state.start_address !== "") {
@@ -27,6 +28,7 @@ class TaskFormFirstPage extends React.Component {
             this.props.addErrors(["Please input an address"])
         }
     }
+
     endButton(e) {
         e.preventDefault();
             this.props.addErrors([])
@@ -45,6 +47,16 @@ class TaskFormFirstPage extends React.Component {
             if (this.props.state.vehicle_requirements === "") { errors.push("Please select a vehicle requirement") }
             // if (this.props.state.vehicle_requirements === "") { this.props.addErrors(["Please select a vehicle requirement"])}
             this.props.addErrors(errors);
+        }
+    }
+
+    descriptionButton(e) {
+        e.preventDefault();
+        if (this.props.state.description !== "") {
+            this.props.addErrors([])
+            this.props.changeStep(6, e)
+        } else {
+            this.props.addErrors(["Please provide details"])
         }
     }
 
@@ -335,16 +347,54 @@ class TaskFormFirstPage extends React.Component {
             )
         }
         
-        const detailsLong = () => {
+        const descriptionLong = () => {
             return (
                 <>
+                    <div className="form-description">
+                        <div className="form-header">TELL US THE DETAILS OF YOUR TASK</div>
+                        <div className="form-header">Start the conversation and tell your Masker what you need done.
+                        This helps us show you only qualified and available Maskers for the job.
+                        Don't worry, you can edit this later.</div>
+                        <div className="form-detail-input">
+                            <textarea className="form-description-input" onChange={this.props.update('description')}
+                                placeholder="Provide a summary of what you need done for your Masker. 
+                            Be sure to include description like the size of your space, 
+                            any equipment/tools needed, and how to get in."
+                                value={this.props.state.description}></textarea>
+                        </div>
+                        <div className="form-header">If you need two or more Maskers,
+                        please post additional tasks for each Masker needed.
+                    </div>
+                        {this.props.renderErrors()}
+                        <div className="form-save">
+                            <button className="form-save-btn" type="submit"
+                                onClick={(e) => this.descriptionButton(e)}>See Maskers and Prices</button>
+                        </div>
+                    </div>
                 </>
             )
         }
         
-        const deailsShort = () => {
+        const descriptionShort = () => {
             return (
                 <>
+                    <div className="form-description">
+                        <div className="form-header">TELL US THE DETAILS OF YOUR TASK</div>
+                    </div>
+                </>
+            )
+        }
+
+        const descriptionShortCompleted = () => {
+            return (
+                <>
+                    <div className="form-description active">
+                        <div className="form-header">TELL US THE DETAILS OF YOUR TASK</div>
+                        <div className="completed">
+                            <span> {`\u2713`} </span>
+                            {this.props.state.description}
+                        </div>
+                    </div>
                 </>
             )
         }
@@ -352,13 +402,9 @@ class TaskFormFirstPage extends React.Component {
         return (
             <div className="task-form-first">
 
-                {/* form interest */}
-
                 {(this.props.state.step === 1) ? interestLong() : 
                     (this.props.state.interest === "") ? interestShort() : interestShortCompleted()}
-                
-  
-                {/* Start address */}
+
                 {(this.props.state.step === 2) ? startLong() :
                     (this.props.state.start_address === "") ? startShort() : startShortCompleted()}
 
@@ -367,141 +413,9 @@ class TaskFormFirstPage extends React.Component {
 
                 {(this.props.state.step === 4) ? optionsLong() :
                     ((this.props.state.vehicle_requirements === "") && (this.props.state.length_of_task === ""))? optionsShort() : optionsShortCompleted()}
-                {/* <div className="form-start">
-                    <div className="form-header">START ADDRESS</div>
-                    <div className="form-address">
-                        <input className="address-bar"
-                            type="text"
-                            placeholder="Enter street address"
-                            onChange={this.props.update('address')}
-                        />
-                        <input className="address-apt"
-                            type="text"
-                            placeholder="Unit or Apt #"
-                        />
-                    </div>
-                    <div className="form-save">
-                        <button className="form-save-btn" type="submit">Save</button>
-                    </div>
-                </div> */}
 
-                {/* End address */}
-
-                {/* <div className="form-end">
-                    <div className="form-header">END ADDRESS (OPTIONAL)</div>
-                    <div className="form-address">
-                        <input className="address-bar"
-                            type="text"
-                            placeholder="Enter street address"
-                            onChange={this.props.update('description')}
-                        />
-                        <input className="address-apt"
-                            type="text"
-                            placeholder="Unit or Apt #"
-                        />
-                    </div>
-                    <div className="form-save">
-                        <button className="form-save-btn" type="submit">Save</button>
-                    </div>
-                </div> */}
-
-                {/* Options */}
-
-                {/* <div className="form-options">
-                    <div className="form-header">TASK OPTIONS</div>
-                    <div className="form-question-border">How big is your task?</div>
-                    <div className="form-length-radio">
-                        
-                            <label>
-                                <input type="radio"
-                                    value="Small - Est. 1 hr"
-                                    className="length-radio"
-                                    name="form-length"
-                                    onChange={this.props.update('length_of_task')}
-                                />
-                            &ensp;Small - Est. 1 hr
-                        </label>
-                            <label>
-                                <input type="radio"
-                                    value="Medium - Est. 2-3 hrs"
-                                    className="length-radio"
-                                    name="form-length"
-                                    onChange={this.props.update('length_of_task')}
-                                />
-                            &ensp;Medium - Est. 2-3 hrs
-                        </label>
-                            <label>
-                                <input type="radio"
-                                    value="Large - Est. 4+ hrs"
-                                    className="length-radio"
-                                    name="form-length"
-                                    onChange={this.props.update('length_of_task')}
-                                />
-                            &ensp;Large - Est. 4+ hrs
-                        </label>
-                        
-                    </div>
-                    <div className="form-question-border">Vehicle Requirements</div>
-                    <div className="form-vehicle-radio">
-                        <label>
-                            <input type="radio"
-                                value="Not needed for task"
-                                className="vehicle-radio"
-                                name="form-vehicle"
-                                onChange={this.props.update('vehicle_requirements')}
-                            />
-                         &ensp;Not needed for task
-                    </label>
-                        <label>
-                            <input type="radio"
-                                value="Task requires a car"
-                                className="vehicle-radio"
-                                name="form-vehicle"
-                                onChange={this.props.update('vehicle_requirements')}
-                            />
-                         &ensp;Task requires a car
-                    </label>
-                        <label>
-                            <input type="radio"
-                                value="Task requires a truck"
-                                className="vehicle-radio"
-                                name="form-vehicle"
-                                onChange={this.props.update('vehicle_requirements')}
-                            />
-                         &ensp;Task requires a truck
-                    </label>
-                    </div>
-                    <div className="form-save">
-                        <button className="form-save-btn" type="submit">Save</button>
-                    </div>
-                </div> */}
-
-                {/* form details */}
-                <div className="form-details">
-                    <div className="form-header">TELL US THE DETAILS OF YOUR TASK</div>
-                    <div className="form-header">Start the conversation and tell your Masker what you need done.
-                        This helps us show you only qualified and available Maskers for the job.
-                        Don't worry, you can edit this later.</div>
-                    <div className="form-detail-input">
-                        <textarea className="form-details-input" onChange={this.props.update('description')}
-                            placeholder="Provide a summary of what you need done for your Masker. 
-                            Be sure to include details like the size of your space, 
-                            any equipment/tools needed, and how to get in."></textarea>
-                    </div>
-                    <div className="form-header">If you need two or more Maskers,
-                        please post additional tasks for each Masker needed.
-                    </div>
-                    <div className="form-save">
-                        <button className="form-save-btn" type="submit">Save</button>
-                        {/* <button className="form-save-btn" onClick={(e) => this.props.handleSubmit(e)}>
-                            See Maskers and Prices
-                    </button> */}
-                    </div>
-                </div>
-
-
-
-
+                {(this.props.state.step === 5) ? descriptionLong() :
+                    (this.props.state.description === "") ? descriptionShort() : descriptionShortCompleted()}
             </div>
         )
 

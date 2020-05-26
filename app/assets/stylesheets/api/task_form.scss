@@ -185,17 +185,17 @@
     justify-content: left;
 }
 
-.form-details {
+.form-description {
     display: flex;
     flex-direction: column;
     justify-content: left;
 }
 
-.form-details > div {
+.form-description > div {
     margin-bottom: 25px;
 }
 
-.form-details-input {
+.form-description-input {
     width: 100%;
     height: 200px;
     resize: none;
