@@ -1,10 +1,16 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 class TaskFormFirstPage extends React.Component {
     constructor(props) {
         super(props)
         
         this.interestButton = this.interestButton.bind(this);
+        this.startButton = this.startButton.bind(this);
+        this.endButton = this.endButton.bind(this);
+        this.optionsButton = this.optionsButton.bind(this);
+        this.descriptionButton = this.descriptionButton.bind(this);
+
     }
 
     

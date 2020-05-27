@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Redirect, Link, Switch } from 'react-router-dom'
+import { withRouter } from "react-router";
+import { Route, Redirect, Link, Switch, withouRouter } from 'react-router-dom'
 import TaskFormFirstPage from './task_form_first_page';
 import TaskFormSecondPage from './task_form_second_page';
 import TaskFormConfirmationPage from './task_form_confirmation_page';
@@ -35,12 +36,18 @@ class TaskForm extends React.Component {
 
     update(property) {
         switch (this.state.step) {
-            case 6:
+            case  6:
+                // this.props.history.push(`/task/date`);
                 break;
             case 7:
                 break;
             default:
                 break;
+
+
+//                     <Route exact path='/task/new' render={FormFirst} />
+//                     <Route exact path='/task/date' render={FormSecond} />
+//                     <Route exact path='/task/confirm' render={FormConfirm} />
         };
         return e => this.setState({
             [property]: e.target.value
@@ -92,38 +99,6 @@ class TaskForm extends React.Component {
     }
 
     render() {
-
-        // const FormFirst = (props) => {
-        //     return (
-                
-        //     <TaskFormFirstPage state={this.state}
-        //         handleSubmit={this.handleSubmit}
-        //         task={this.props.task}
-        //         update={this.update}
-        //         {...props}
-                
-        //         />
-        //     )
-        // }
-
-        // const FormSecond = (props) => {
-        //     return(
-        //         <TaskFormSecondPage state={this.state}
-        //             handleSubmit={this.handleSubmit}
-        //             task={this.props.task}
-        //             update={this.update}
-        //             {...props}/>)
-        // }
-
-        // const FormConfirm = (props) => {
-        //     return (
-        //         <TaskFormConfirmationPage state={this.state}
-        //             handleSubmit={this.handleSubmit}
-        //             task={this.props.task}
-        //             update={this.update}
-        //             {...props}/>
-        //     )
-        // }
         
         const firstPageComp = () => {
             return (
@@ -137,7 +112,7 @@ class TaskForm extends React.Component {
         }
         const secondPageComp = () => {
             return (
-            <TaskFormFirstPage state={this.state}
+            <TaskFormSecondPage state={this.state}
                             update={this.update}
                             changeStep={this.changeStep}
                             renderErrors={this.renderErrors}
@@ -164,10 +139,7 @@ class TaskForm extends React.Component {
                         {(this.state.step < 6) ? firstPageComp() : 
                             (this.state.step === 6) ? secondPageComp() : thirdPageComp()}
                     </form>
-                    {/* <Route exact path='/task/new' render={FormFirst} />
-                    <Route exact path='/task/date' render={FormSecond} />
-                    <Route exact path='/task/confirm' render={FormConfirm} /> */}
-                    
+                
                 </div>
             </>
         )
@@ -175,4 +147,4 @@ class TaskForm extends React.Component {
 
 }
 
-export default TaskForm;
+export default withRouter(TaskForm);

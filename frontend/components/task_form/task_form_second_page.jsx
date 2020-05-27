@@ -1,8 +1,12 @@
 import React from 'react';
 
-// Here will go Masker
-
 class TaskFormSecondPage extends React.Component {
+
+    constructor(props) {
+        super(props)
+
+
+    }
 
     render () {
         return (
@@ -10,7 +14,7 @@ class TaskFormSecondPage extends React.Component {
                 <div className="form-date" >
                     <input type="date" className="date-pick"
                         placeholder = 'Select a date'
-                        // value = {props.state.task.date}
+                        value = {props.state.task.date}
                         onChange={this.props.update('date')} />
                     <select className="time-pick"
                         onChange={this.props.update('time')}>
