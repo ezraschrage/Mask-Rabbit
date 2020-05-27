@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router";
-import { Route, Redirect, Link, Switch, withouRouter } from 'react-router-dom'
+// import { Route, Redirect, Link, Switch, withRouter } from 'react-router-dom'
 import TaskFormFirstPage from './task_form_first_page';
 import TaskFormSecondPage from './task_form_second_page';
 import TaskFormConfirmationPage from './task_form_confirmation_page';
@@ -17,7 +17,6 @@ class TaskForm extends React.Component {
                 time: "",
                 per_hr: 1,
                 user_id: 1,
-                // user_id: state.session.id,
                 masker_id: 1,
                 description: "",
                 start_address: "",
@@ -36,7 +35,7 @@ class TaskForm extends React.Component {
 
     update(property) {
         switch (this.state.step) {
-            case  6:
+            case 6:
                 // this.props.history.push(`/task/date`);
                 break;
             case 7:

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 class TaskFormFirstPage extends React.Component {
     constructor(props) {
@@ -61,6 +62,7 @@ class TaskFormFirstPage extends React.Component {
         if (this.props.state.description !== "") {
             this.props.addErrors([])
             this.props.changeStep(6, e)
+            this.props.history.push('/task/date')
         } else {
             this.props.addErrors(["Please provide details"])
         }
@@ -428,4 +430,4 @@ class TaskFormFirstPage extends React.Component {
     }
 }
 
-export default TaskFormFirstPage;
+export default withRouter(TaskFormFirstPage);
