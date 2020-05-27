@@ -91,15 +91,6 @@ class TaskForm extends React.Component {
         this.props.processForm(task);
     }
 
-    handlePageSubmit(e) {
-        e.preventDefault();
-    }
-
-    handleComponentSubmit(e) {
-        e.preventDefault();
-
-    }
-
     render() {
 
         // const FormFirst = (props) => {
@@ -134,35 +125,44 @@ class TaskForm extends React.Component {
         //     )
         // }
         
-        return (
-            <>
-                <div className='task-type-error'>
-                    {/* {this.renderErrors()} */}
-                </div>
-                <div className="form-container">
-                    <form onSubmit={this.handleSubmit} className="form-box">
-                        <TaskFormNav state={this.state}
-                            changeStep={this.changeStep} />
+        const firstPageComp = () => {
+            return (
+            <TaskFormFirstPage state={this.state}
+                update={this.update}
+                changeStep={this.changeStep}
+                renderErrors={this.renderErrors}
+                addErrors={this.addErrors} />
+            )
 
-                        <TaskFormFirstPage state={this.state}
-                            handleSubmit={this.handleSubmit}
-                            task={this.props.task}
+        }
+        const secondPageComp = () => {
+            return (
+            <TaskFormFirstPage state={this.state}
                             update={this.update}
                             changeStep={this.changeStep}
                             renderErrors={this.renderErrors}
                             addErrors={this.addErrors}/>
-                        {/* <TaskFormSecondPage state={this.state}
-                            handleSubmit={this.handleSubmit}
-                            task={this.props.task}
-                            update={this.update}
+            )
+        }
+
+        const thirdPageComp = () => {
+            return (
+            <TaskFormConfirmationPage state={this.state}
+                handleSubmit={this.handleSubmit}
+                task={this.props.task}
+                update={this.update}
+                changeStep={this.changeStep} />
+            )
+        }
+
+        return (
+            <>
+                <div className="form-container">
+                    <form onSubmit={this.handleSubmit} className="form-box">
+                        <TaskFormNav state={this.state}
                             changeStep={this.changeStep} />
-
-                        <TaskFormConfirmationPage state={this.state}
-                            handleSubmit={this.handleSubmit}
-                            task={this.props.task}
-                            update={this.update} 
-                            changeStep={this.changeStep} /> */}
-
+                        {(this.state.step < 6) ? firstPageComp() : 
+                            (this.state.step === 6) ? secondPageComp() : thirdPageComp()}
                     </form>
                     {/* <Route exact path='/task/new' render={FormFirst} />
                     <Route exact path='/task/date' render={FormSecond} />
