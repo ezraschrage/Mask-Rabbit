@@ -11,6 +11,7 @@ class TaskFormSecondPage extends React.Component {
     render () {
         return (
             <div className="task-form-second">
+
                 <div className="form-date" >
                     <input type="date" className="date-pick"
                         placeholder = 'Select a date'
@@ -50,8 +51,10 @@ class TaskFormSecondPage extends React.Component {
                         <option value="9:30pm">9:30pm</option>
                     </select>
                 </div>
+
+
                 <div className="form-masker">
-                    Mala
+                    
                 </div>
             </div>
         )

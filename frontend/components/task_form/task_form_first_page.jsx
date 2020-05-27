@@ -62,7 +62,6 @@ class TaskFormFirstPage extends React.Component {
         if (this.props.state.description !== "") {
             this.props.addErrors([])
             this.props.changeStep(6, e)
-            this.props.history.push('/task/date')
         } else {
             this.props.addErrors(["Please provide details"])
         }
