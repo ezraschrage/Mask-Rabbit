@@ -128,6 +128,14 @@ class TaskFormNav extends React.Component {
                             </div>
                     </div>
                 </div>
+                <div className="form-bottom">
+                    <div className="form-message blue">
+                        
+                        <div className="form-message-text">Taskers agree to follow all public health guidance and regulations to protect their health and yours.
+                        </div>
+                        <div className="form-message-cross"></div>
+                    </div>
+                </div>
             </div>
         );
         const thirdPage = () => (

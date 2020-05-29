@@ -32,9 +32,6 @@
     max-width: 1050px;
 }
 
-.form-message {
-    height: 66px;
-}
 
 .form-nav-logo {
     background-image: image-url('rabbit.png');
@@ -99,12 +96,15 @@
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid #dce0e6;
+    width: 100%;
 }
 
 .form-message {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 66px;
+    width: 100%;
 }
 
 .form-message-notebook {
@@ -152,4 +152,21 @@
 
 .hide {
     display: none;
+}
+
+.blue {
+    background-color: #36b5bb;
+}
+
+.form-message-cross {
+  background-image: image-url('cross.svg');
+  width: 36px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-message-text {
+    padding: 0px 10px;
 }
