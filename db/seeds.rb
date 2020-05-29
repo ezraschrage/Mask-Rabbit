@@ -11,6 +11,7 @@
 require 'open-uri'
 
 Category.destroy_all
+Masker.destroy_all
 User.destroy_all
 Task.destroy_all
 
@@ -86,8 +87,8 @@ cat6.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/tp
 cat7.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/moving.jpg"), filename: "moving.jpg")
 cat8.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/brown.jpg"), filename: "brown.jpg")
 
-mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "Ready to help you out! You can always count on Andrew")
-mask2 = Masker.create!(user_id: 4, location: "Brooklyn", bio: "My name is Catherine. If you want service done well with a smile, I'm your gal!")
+mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "Ready to help you out! You can always count on Andrew", price: 50)
+mask2 = Masker.create!(user_id: 4, location: "Brooklyn", bio: "My name is Catherine. If you want service done well with a smile, I'm your gal!", price: 40)
 
 # Web
 # maskfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")

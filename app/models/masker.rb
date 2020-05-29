@@ -29,4 +29,6 @@ class Masker < ApplicationRecord
         through: :masker_categories,
         source: :category
 
+    has_one_attached :photo
+
 end
