@@ -1,0 +1,1 @@
+json.extract! masker, :id, :email, :first_name, :last_name, :zip
