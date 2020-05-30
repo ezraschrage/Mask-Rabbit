@@ -123,15 +123,15 @@ class TaskFormNav extends React.Component {
                 <div className="form-bottom">
                     <div className="form-message">
                         <div className="form-message-shield"></div>
-                        <div className="form-message-text">Filter and sort to find your Masker. 
-                        Then view their availability to request your date and time.
+                        <div className="form-message-text">Here are the available Maskers.
+                        See who you like and request your date and time.
                             </div>
                     </div>
                 </div>
                 <div className="form-bottom">
                     <div className="form-message blue">
                         
-                        <div className="form-message-text">Taskers agree to follow all public health guidance and regulations to protect their health and yours.
+                        <div className="form-message-text">Maskers agree to follow all public health guidance and regulations to protect their health and yours.
                         </div>
                         <div className="form-message-cross"></div>
                     </div>

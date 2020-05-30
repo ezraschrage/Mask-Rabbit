@@ -132,7 +132,7 @@ class TaskForm extends React.Component {
         return (
             <>
                 <div className="form-container">
-                    <form onSubmit={this.handleSubmit} className="form-box">
+                    <form onSubmit={this.handleSubmit} className="task-form-box">
                         <TaskFormNav state={this.state}
                             changeStep={this.changeStep} />
                         {(this.state.step < 6) ? firstPageComp() : 

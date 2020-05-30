@@ -9,14 +9,26 @@ class TaskFormSecondPage extends React.Component {
     }
 
     render () {
+        const today = new Date();
+        const month = (today.getMonth() + 1 < 9) ? "0" + (today.getMonth() + 1).toString() : (today.getMonth() + 1).toString();
+        const day = (today.getDate() < 10) ? "0" + today.getDate().toString() : today.getDate().toString();
+        const date = today.getFullYear().toString() + `-` + month + `-` + day;
+
         return (
             <div className="task-form-second">
 
                 <div className="form-date" >
+                    <div className="form-date-message">
+                        <div className="form-message-check_shield"></div>
+                        <div className="form-date-message-text">Always have peace of mind. All Maskers undergo ID and criminal background checks.
+                            </div>
+                    </div>
                     <div className="date-pick">
+                        <div className="form-message-calendar"/>
+                        <div>TASK DATE</div>
                         <input type="date" className="date-pick"
-                            placeholder = 'Select a date'
-                            value = {this.props.state.date}
+                            min={date}
+                            // value = {this.props.state.date}
                             onChange={this.props.update('date')} />
                     </div>
                     <div className="time-pick">
