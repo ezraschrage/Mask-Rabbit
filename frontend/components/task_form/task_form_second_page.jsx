@@ -25,8 +25,8 @@ class TaskFormSecondPage extends React.Component {
                     </div>
                     <div className="date-pick">
                         <div className="form-message-calendar"/>
-                        <div>TASK DATE</div>
-                        <input type="date" className="date-pick"
+                        <div className="form-date-text">TASK DATE</div>
+                        <input type="date" className="date-picker"
                             min={date}
                             // value = {this.props.state.date}
                             onChange={this.props.update('date')} />
