@@ -1,4 +1,4 @@
-class Api::MaskerController < ApplicationController
+class Api::MaskersController < ApplicationController
 
     def index
         @maskers = Masker.all
@@ -10,7 +10,4 @@ class Api::MaskerController < ApplicationController
         render :show
     end
 
-    def user_params
-        params.require(:masker).permit(:user_id, :location, :bio, :last_name, :zip)
-    end
 end

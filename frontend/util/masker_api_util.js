@@ -1,21 +1,13 @@
-export const createMasker = task => (
-    $.ajax({
-        method: `POST`,
-        url: `/api/maskers`,
-        data: { task }
-    })
-);
-
-export const fetchTasks = () => (
+export const fetchMaskers = () => (
     $.ajax({
         method: `GET`,
         url: `/api/maskers`,
     })
 );
 
-export const deleteTask = taskId => (
+export const fetchMasker = maskerId => (
     $.ajax({
-        method: `DELETE`,
-        url: `/api/maskers/${taskId}`,
+        method: `GET`,
+        url: `/api/maskers/${maskerId}`,
     })
 );

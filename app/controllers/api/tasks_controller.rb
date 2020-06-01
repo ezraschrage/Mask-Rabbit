@@ -1,6 +1,6 @@
 class Api::TasksController < ApplicationController
     
-    before_action :ensure_logged_in, only: [:new, :index, :destroy ]
+    before_action :require_logged_in, only: [:new, :index, :destroy ]
 
     def create
         @task = Task.new(task_params)
