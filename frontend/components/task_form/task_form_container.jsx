@@ -7,6 +7,7 @@ import { receiveMaskers } from '../../actions/masker_actions';
 
 const mSTP = state => {
     return {
+        tasks: Object.values(state.entities.tasks)
         // task: {
         //     category_id: 0,
         //     length_of_task: "",
