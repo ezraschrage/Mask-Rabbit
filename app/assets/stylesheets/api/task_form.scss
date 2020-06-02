@@ -331,6 +331,21 @@
 
 .form-date-text {
     width: 45px;
+    font-weight: bold;
+}
+.time-pick-text {
+    // width: 45px;
+    font-weight: bold;
+}
+
+.time-pick {
+    display: flex;
+    align-items: center;
+}
+
+.time-pick-select {
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 .hide {

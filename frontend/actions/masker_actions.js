@@ -1,46 +1,27 @@
 import * as APIUtil from "../util/masker_api_util";
 
-export const RECEIVE_MASKERS = "RECEIVE_TASKS";
-export const REMOVE_TASK = "REMOVE_TASK";
-export const RECEIVE_TASK = "RECEIVE_TASK";
-export const RECEIVE_TASK_ERRORS = "RECEIVE_TASK_ERRORS";
+export const RECEIVE_MASKERS = "RECEIVE_MASKERS";
+export const RECEIVE_MASKER = "RECEIVE_MASKER";
 
-export const receiveTasks = tasks => ({
-    type: RECEIVE_TASKS,
-    tasks
+
+export const receiveMaskers = maskers => ({
+    type: RECEIVE_MASKERS,
+    maskers
 });
 
-export const receiveTask = task => ({
-    type: RECEIVE_TASK,
-    task
+export const receiveMasker = masker => ({
+    type: RECEIVE_MASKER,
+    masker
 });
 
-export const removeTask = taskId => ({
-    type: REMOVE_TASK,
-    taskId
-});
-
-export const receiveTaskErrors = errors => ({
-    type: RECEIVE_TASK_ERRORS,
-    errors
-});
-
-export const fetchTasks = () => dispatch => (
-    APIUtil.fetchTasks().then(tasks => (
-        dispatch(receiveTasks(tasks))
+export const fetchMaskers = () => dispatch => (
+    APIUtil.fetchMaskers().then(maskers => (
+        dispatch(receiveMaskers(maskers))
     ))
 );
 
-export const createTask = (task) => dispatch => (
-    APIUtil.createTask(task).then(task => (
-        dispatch(receiveTask(task))
-    ), err => (
-        dispatch(receiveTaskErrors(err.responseJSON))
+export const fetchMasker = (userId) => dispatch => (
+    APIUtil.fetchMasker(userId).then(masker => (
+        dispatch(receiveMasker(masker))
     ))
 );
-
-export const deleteTask = (taskId) => dispatch => (
-    APIUtil.deleteTask(taskId).then(() => (
-        dispatch(removeTask(taskId))
-    ))
-)

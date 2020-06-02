@@ -1,1 +1,2 @@
-json.extract! masker, :id, :email, :first_name, :last_name, :zip
+json.extract! @masker, :id, :user_id, :location, :bio, :price
+json.photoUrl url_for(@masker.photo)
