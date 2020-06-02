@@ -1,18 +1,18 @@
-import Categories from "./categories";
+import Maskers from "./maskers";
 import { connect } from "react-redux";
-import { fetchCategories } from "../../actions/category_actions"
+import { fetchMaskers } from "../../actions/masker_actions"
 
 
 const mSTP = state => {
     return {
-    categories: Object.values(state.entities.categories)
+    maskers: Object.values(state.entities.maskers)
     }
 };
 
 const mDTP = dispatch => {
     return {
-        fetchCategories: () => dispatch(fetchCategories())
+        fetchMaskers: () => dispatch(fetchMaskers())
     }
 };
 
-export default connect(mSTP, mDTP)(Categories);
+export default connect(mSTP, mDTP)(Maskers);

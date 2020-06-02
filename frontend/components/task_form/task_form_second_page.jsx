@@ -1,4 +1,5 @@
 import React from 'react';
+import MaskersContainer from '../maskers/maskers_container';
 
 class TaskFormSecondPage extends React.Component {
 
@@ -71,7 +72,7 @@ class TaskFormSecondPage extends React.Component {
 
 
                 <div className="form-masker">
-                    
+                    <MaskersContainer />
                 </div>
             </div>
         )

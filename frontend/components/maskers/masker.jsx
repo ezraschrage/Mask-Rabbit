@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Masker = props => (
     <li className="masker-li">
         <div className="Masker-left">
@@ -16,10 +15,10 @@ const Masker = props => (
         <div className="Masker-right">
             <div className="Masker-right-top">
                 <div className="Masker-name">
-                    {/* {props.masker.} */}
+                    {props.masker.first_name} + " " + {props.masker.last_name}
                 </div>
                 <div className="Masker-price">
-
+                    {props.masker.price}
                 </div>
             </div>
             <div className="Masker-right-bottom">
@@ -27,24 +26,11 @@ const Masker = props => (
 
                 </p>
                 <p className="Masker-bio">
-
+                    {props.masker.bio}
                 </p>
             </div>
         </div>
     </li>
 )
 
-export default CategoryItem;
-
-/*
-
-Bio
-location
-price
-user
-    First name
-    Last name
-
-
-*/
-
+export default Masker;

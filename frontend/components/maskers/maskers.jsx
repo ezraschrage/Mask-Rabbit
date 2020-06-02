@@ -1,20 +1,20 @@
 import React from 'react';
-import CategoryItem from './categories_item';
+import Masker from './masker';
 
-class Categories extends React.Component {
+class Maskers extends React.Component {
 
     componentDidMount() {
-        this.props.fetchCategories()
+        this.props.fetchMaskers()
     }
 
     render () {
-        const { categories } = this.props;
+        const { maskers } = this.props;
         return (
-            <div className="category-container">
-                <ul className="categories">
+            <div className="maskers-container">
+                <ul className="maskers">
                     
-                    {categories.map(category => (
-                        <CategoryItem category={category} key={category.id}/>
+                    {maskers.map(masker => (
+                        <CategoryItem masker={masker} key={masker.id}/>
                     ))}
                 </ul>
             </div>
@@ -23,5 +23,5 @@ class Categories extends React.Component {
 
 };
 
-export default Categories;
+export default Maskers;
 
