@@ -14,7 +14,7 @@ class Maskers extends React.Component {
                 <ul className="maskers">
                     
                     {maskers.map(masker => (
-                        <CategoryItem masker={masker} key={masker.id}/>
+                        <Masker masker={masker} key={masker.id}/>
                     ))}
                 </ul>
             </div>

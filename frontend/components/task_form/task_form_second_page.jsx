@@ -6,7 +6,6 @@ class TaskFormSecondPage extends React.Component {
     constructor(props) {
         super(props)
 
-
     }
 
     render () {
@@ -29,7 +28,7 @@ class TaskFormSecondPage extends React.Component {
                         <div className="form-date-text">TASK DATE</div>
                         <input type="date" className="date-picker"
                             min={date}
-                            // value = {this.props.state.date}
+                            defaultValue = {date}
                             onChange={this.props.update('date')} />
                     </div>
                     <div className="time-pick">
