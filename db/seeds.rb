@@ -95,16 +95,16 @@ mask2 = Masker.create!(user_id: 4, location: "Brooklyn", bio: "My name is Cather
 # maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
 
 # Local
-maskfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow.jpg")
-maskfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman.jpg")
+maskfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg")
+maskfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman2.jpg")
 
 # Web
 # cat1.photo.attach(io: catfile1, filename: "drill.jpg")
 # cat2.photo.attach(io: catfile2, filename: "tv.jpg")
 
 # Local
-mask1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow.jpg"), filename: "yellow.jpg")
-mask2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman.jpg"), filename: "woman.jpg")
+mask1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg"), filename: "yellow2.jpg")
+mask2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman2.jpg"), filename: "woman2.jpg")
 
 
 # file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')

@@ -8,6 +8,12 @@ class TaskFormSecondPage extends React.Component {
 
     }
 
+    // state = { this.state }
+    // update = { this.update }
+    // changeStep = { this.changeStep }
+    // renderErrors = { this.renderErrors }
+    // addErrors = { this.addErrors }
+
     render () {
         const today = new Date();
         const month = (today.getMonth() + 1 < 9) ? "0" + (today.getMonth() + 1).toString() : (today.getMonth() + 1).toString();
@@ -71,7 +77,11 @@ class TaskFormSecondPage extends React.Component {
 
 
                 <div className="form-masker">
-                    <MaskersContainer />
+                    <MaskersContainer state={this.state}
+                        update={this.update}
+                        changeStep={this.changeStep}
+                        renderErrors={this.renderErrors}
+                        addErrors={this.addErrors}/>
                 </div>
             </div>
         )

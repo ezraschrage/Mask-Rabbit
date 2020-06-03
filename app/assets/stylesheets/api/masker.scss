@@ -8,13 +8,54 @@
     margin-bottom: 16px;
     box-shadow: 0px 2px 2px 2px rgba(36, 42, 48, 0.15);
     padding: 22px;
+    flex-direction: row;
 }
 
 .Masker-pic {
-    height: 100%;
-    width: 100%;
+    height: 150px;
+    width: 150px;
     display: block;
     box-shadow: none;
     overflow: hidden;
     background-size: cover;
+}
+
+.Masker-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.Masker-left > div {
+    padding: 15px;
+}
+
+.Masker-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Masker-right-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Masker-right-top > div {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.Masker-right-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.Masker-right-bottom > p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.Masker-about {
+    font-weight: bold;
 }
