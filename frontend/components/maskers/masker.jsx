@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Masker = props => (
-    <li className="masker-li">
+    <li className="Masker-li">
         <div className="Masker-left">
             <img className="Masker-pic" src={props.masker.photoUrl} />
             <div className="form-save">
