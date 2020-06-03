@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import TaskForm from './task_form';
 import { createTask, receiveTaskErrors } from '../../actions/task_actions'
 import { receiveMaskers } from '../../actions/masker_actions';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -35,4 +36,4 @@ const mDTP = dispatch => {
     };
 };
 
-export default connect(mSTP, mDTP)(TaskForm);
+export default withRouter(connect(mSTP, mDTP)(TaskForm));

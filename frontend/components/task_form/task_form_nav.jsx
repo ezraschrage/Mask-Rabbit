@@ -1,11 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class TaskFormNav extends React.Component {
     constructor(props) {
         super(props)
+        this.firstPageButton = this.firstPageButton.bind(this);
+        this.secondPageButton = this.secondPageButton.bind(this);
 
+    }
+
+    firstPageButton(e) {
+        e.preventDefault();
+            this.props.changeStep(5, e);
+            this.props.history.push(`/task/new`);
+    }
+
+    secondPageButton(e) {
+        e.preventDefault();
+            this.props.changeStep(6, e);
+            this.props.history.push(`/task/price`);
     }
 
 
@@ -81,7 +95,7 @@ class TaskFormNav extends React.Component {
                     </Link>
                     <div className="form-nav-progress">
                         {/* Insert return to step 1 click */}
-                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(1, e)}>
+                        <div className="form-nav-step active" onClick={(e) => this.firstPageButton(e)}>
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
                                 <div className="form-nav-num active">
@@ -148,7 +162,7 @@ class TaskFormNav extends React.Component {
                     </Link>
                     <div className="form-nav-progress">
                         {/* Insert return to step 1 click */}
-                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(1, e)}>
+                        <div className="form-nav-step active" onClick={(e) => this.firstPageButton(e)}>
 
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
@@ -162,7 +176,7 @@ class TaskFormNav extends React.Component {
                             </div>
                         </div>
                         {/* Insert return to step 6 click */}
-                        <div className="form-nav-step active" onClick={(e) => this.props.changeStep(6, e)}>
+                        <div className="form-nav-step active" onClick={(e) => this.secondPageButton(e)}>
 
                             <div className="form-nav-step-top">
                                 <div className="form-nav-line active"></div>
@@ -212,4 +226,4 @@ class TaskFormNav extends React.Component {
     }
 }
 
-export default TaskFormNav;
+export default withRouter(TaskFormNav);

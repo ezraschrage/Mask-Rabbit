@@ -36,7 +36,7 @@ class TaskForm extends React.Component {
     update(property) {
         switch (this.state.step) {
             case 6:
-                this.props.history.push(`/task/price`);
+                
                 break;
             case 7:
                 break;
@@ -135,9 +135,14 @@ class TaskForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className="task-form-box">
                         <TaskFormNav state={this.state}
                             changeStep={this.changeStep} />
-                        {(this.state.step < 6) ? <Route exact path='/task/new' render={firstPageComp} /> : 
-                            (this.state.step === 6) ? <Route exact path='/task/price' render={secondPageComp} /> : <Route exact path='/task/confirm' render={thirdPageComp} />}
-                    </form>
+                        <Switch>
+                        <Route exact path='/task/new' render={firstPageComp} />
+                        <Route exact path='/task/price' render={secondPageComp} />
+                        <Route exact path='/task/confirm' render={thirdPageComp} />
+                        {/* {(this.state.step < 6) ? <Route exact path='/task/new' render={firstPageComp} /> : 
+                            (this.state.step === 6) ? <Route exact path='/task/price' render={secondPageComp} /> : <Route exact path='/task/confirm' render={thirdPageComp} />} */}
+                        </Switch>
+                   </form>
                 
                 </div>
             </>
