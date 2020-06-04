@@ -23,11 +23,11 @@ class Maskers extends React.Component {
 
     maskerButton(e, id) {
         e.preventDefault();
-        let now = new Date()
-        console.log(this.props.state.date)
-        let reservation = new Date(this.props.state.date)
-        if ((reservation.getDay() >= now.getDay()) && (reservation.getMonth() 
-            >= now.getMonth()) && (reservation.getYear() >= now.getYear())) {
+        let today = new Date();
+        let appointment = new Date(this.props.state.date);
+        // let year = 
+        
+        if (true) {
             this.props.addErrors([])
             this.props.changeStep(7, e)
             this.props.history.push(`/task/confirm`);

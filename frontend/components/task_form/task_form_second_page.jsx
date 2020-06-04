@@ -17,10 +17,10 @@ class TaskFormSecondPage extends React.Component {
     // addErrors = { this.addErrors }
 
     render () {
-        const today = new Date();
-        const month = (today.getMonth() + 1 < 9) ? "0" + (today.getMonth() + 1).toString() : (today.getMonth() + 1).toString();
-        const day = (today.getDate() < 10) ? "0" + today.getDate().toString() : today.getDate().toString();
-        const date = today.getFullYear().toString() + `-` + month + `-` + day;
+        let today = new Date();
+        let month = (today.getMonth() + 1 < 9) ? "0" + (today.getMonth() + 1).toString() : (today.getMonth() + 1).toString();
+        let day = (today.getDate() < 10) ? "0" + today.getDate().toString() : today.getDate().toString();
+        let date = today.getFullYear().toString() + `-` + month + `-` + day;
 
         return (
             <div className="task-form-second">

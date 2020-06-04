@@ -13,7 +13,7 @@ class TaskForm extends React.Component {
                 step: 1,
                 category_id: 1,
                 length_of_task: "",
-                date: new Date(),
+                date: "",
                 time: "I'm flexible",
                 per_hr: 1,
                 user_id: 1,
@@ -99,6 +99,7 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const dateForm = new Date(this.state.date)
         const taskItems = { category_id: this.state.category_id, length_of_task: this.state.length_of_task,
             date: this.state.date, time: this.state.time, per_hr: this.state.per_hr, user_id: this.state.user_id,
             masker_id: this.state.masker_id, description: this.state.description, start_address: this.state.start_address,
