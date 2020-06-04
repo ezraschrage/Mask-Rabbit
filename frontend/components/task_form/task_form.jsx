@@ -35,13 +35,13 @@ class TaskForm extends React.Component {
 
     update(property) {
         switch (this.state.step) {
-            case 6:
-                this.props.history.push(`/task/price`);
-                break;
-            case 7:
-                break;
-            default:
-                break;
+            // case 6:
+            //     // this.props.history.push(`/task/price`);
+            //     break;
+            // case 7:
+            //     break;
+            // default:
+            //     break;
 
 
 //                     <Route exact path='/task/new' render={FormFirst} />
@@ -50,7 +50,7 @@ class TaskForm extends React.Component {
         };
         if (property === "date") {
             return e => this.setState({
-                [property]: Date.parse(e.target.value)
+                [property]: Date(e.target.value)
             });
         } else {
             return e => this.setState({
@@ -130,7 +130,8 @@ class TaskForm extends React.Component {
                 handleSubmit={this.handleSubmit}
                 task={this.props.task}
                 update={this.update}
-                changeStep={this.changeStep} />
+                changeStep={this.changeStep}
+                handleSubmit={this.handleSubmit} />
             )
         }
 

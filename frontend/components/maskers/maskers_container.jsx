@@ -1,6 +1,9 @@
 import Maskers from "./maskers";
 import { connect } from "react-redux";
 import { fetchMaskers } from "../../actions/masker_actions"
+import { withRouter } from 'react-router-dom';
+
+
 
 
 const mSTP = state => {
@@ -15,4 +18,4 @@ const mDTP = dispatch => {
     }
 };
 
-export default connect(mSTP, mDTP)(Maskers);
+export default withRouter(connect(mSTP, mDTP)(Maskers))

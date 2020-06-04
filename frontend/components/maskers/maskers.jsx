@@ -1,5 +1,6 @@
 import React from 'react';
 import Masker from './masker';
+import { withRouter } from 'react-router-dom';
 
 class Maskers extends React.Component {
 
@@ -20,15 +21,18 @@ class Maskers extends React.Component {
         this.props.fetchMaskers()
     }
 
-    maskerButton(e) {
+    maskerButton(e, id) {
         e.preventDefault();
-        if (Date.parse(this.props.state.date) >= Date.now ) {
+        // if (Date.parse(this.props.state.date) >= Date.now ) {
             this.props.addErrors([])
             this.props.changeStep(7, e)
             this.props.history.push(`/task/confirm`);
-        } else {
-            this.props.addErrors(["Please provide details"])
-        }
+            return e => this.setState({
+            [masker_id]: id
+        })
+        // } else {
+        //     this.props.addErrors(["Please provide details"])
+        // }
     }
 
     render () {
@@ -38,7 +42,7 @@ class Maskers extends React.Component {
                 <ul className="maskers">
                     
                     {maskers.map(masker => (
-                        <Masker masker={masker} key={masker.id}/>
+                        <Masker masker={masker} key={masker.id} maskerButton={this.maskerButton}/>
                     ))}
                 </ul>
             </div>
@@ -47,5 +51,5 @@ class Maskers extends React.Component {
 
 };
 
-export default Maskers;
+export default withRouter(Maskers);
 

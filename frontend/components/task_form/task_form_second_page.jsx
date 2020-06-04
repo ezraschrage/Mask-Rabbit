@@ -1,5 +1,7 @@
 import React from 'react';
 import MaskersContainer from '../maskers/maskers_container';
+import { withRouter } from 'react-router-dom';
+
 
 class TaskFormSecondPage extends React.Component {
 
@@ -77,11 +79,11 @@ class TaskFormSecondPage extends React.Component {
 
 
                 <div className="form-masker">
-                    <MaskersContainer state={this.state}
-                        update={this.update}
-                        changeStep={this.changeStep}
-                        renderErrors={this.renderErrors}
-                        addErrors={this.addErrors}/>
+                    <MaskersContainer state={this.props.state}
+                        update={this.props.update}
+                        changeStep={this.props.changeStep}
+                        renderErrors={this.props.renderErrors}
+                        addErrors={this.props.addErrors}/>
                 </div>
             </div>
         )
@@ -89,4 +91,4 @@ class TaskFormSecondPage extends React.Component {
 
 };
 
-export default TaskFormSecondPage;
+export default withRouter(TaskFormSecondPage);

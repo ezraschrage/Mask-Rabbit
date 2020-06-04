@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import TaskForm from './task_form';
 import { createTask, receiveTaskErrors } from '../../actions/task_actions'
-import { receiveMaskers } from '../../actions/masker_actions';
+// import { receiveMaskers } from '../../actions/masker_actions';
 import { withRouter } from 'react-router-dom';
 
 
@@ -31,8 +31,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         processForm: (task) => dispatch(createTask(task)),
-        clearErrors: () => dispatch(receiveTaskErrors([])),
-        receiveMaskers: () => dispatch(receiveMaskers)
+        clearErrors: () => dispatch(receiveTaskErrors([]))
+        // receiveMaskers: () => dispatch(receiveMaskers)
     };
 };
 
