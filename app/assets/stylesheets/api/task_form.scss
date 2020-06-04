@@ -312,6 +312,12 @@
     padding: 10px;
 }
 
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .date-pick {
     display: flex;
     align-items: center;
@@ -328,6 +334,9 @@
     font-size: 14px;
 }
 
+.date-errors {
+    padding-top: 10px;
+}
 
 .form-date-text {
     width: 45px;

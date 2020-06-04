@@ -13,17 +13,18 @@ class TaskForm extends React.Component {
                 step: 1,
                 category_id: 1,
                 length_of_task: "",
-                date: "",
+                date: this.props.today,
                 time: "I'm flexible",
                 per_hr: 1,
-                user_id: 1,
+                user_id: this.props.user,
                 masker_id: 1,
                 description: "",
                 start_address: "",
                 end_address: "",
                 vehicle_requirements: "",
                 interest: "",
-                errors: []
+                errors: [],
+                today: this.props.today
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,6 +32,7 @@ class TaskForm extends React.Component {
         this.changeStep = this.changeStep.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.addErrors = this.addErrors.bind(this);
+        this.updateMasker = this.updateMasker.bind(this);
     }
 
     update(property) {
@@ -58,6 +60,10 @@ class TaskForm extends React.Component {
                 [property]: e.target.value
             });
         // }
+    }
+
+    updateMasker(id, rate) {
+        this.setState({masker_id: id, per_hr: rate})
     }
 
 
@@ -126,7 +132,8 @@ class TaskForm extends React.Component {
                             update={this.update}
                             changeStep={this.changeStep}
                             renderErrors={this.renderErrors}
-                            addErrors={this.addErrors}/>
+                            addErrors={this.addErrors}
+                            updateMasker={this.updateMasker}/>
             )
         }
 
@@ -137,6 +144,7 @@ class TaskForm extends React.Component {
                 task={this.props.task}
                 update={this.update}
                 changeStep={this.changeStep}
+                
                 />
             )
         }

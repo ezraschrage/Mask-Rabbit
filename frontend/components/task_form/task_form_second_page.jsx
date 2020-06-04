@@ -31,15 +31,21 @@ class TaskFormSecondPage extends React.Component {
                         <div className="form-date-message-text">Always have peace of mind. All Maskers undergo ID and criminal background checks.
                             </div>
                     </div>
-                    <div className="date-pick">
-                        <div className="form-message-calendar"/>
-                        <div className="form-date-text">TASK DATE</div>
-                        <input type="date" className="date-picker"
-                            min={date}
-                            defaultValue = {date}
-                            onChange={this.props.update('date')} />
-                        {this.props.renderErrors()}
+                    <div className="date-box">
+                        <div className="date-pick">
+                            <div className="form-message-calendar"/>
+                            <div className="form-date-text">TASK DATE</div>
+                            <input type="date" className="date-picker"
+                                min={date}
+                                defaultValue = {date}
+                                onChange={this.props.update('date')} />
+                        </div>
+                            
+                            <div className="date-errors">
+                                {this.props.renderErrors()}
+                            </div>
                     </div>
+                    
                     <div className="time-pick">
                         <div className="time-pick-text">TIME PREFERENCE</div>
                         <select className="time-pick-select"
@@ -84,7 +90,8 @@ class TaskFormSecondPage extends React.Component {
                         update={this.props.update}
                         changeStep={this.props.changeStep}
                         renderErrors={this.props.renderErrors}
-                        addErrors={this.props.addErrors}/>
+                        addErrors={this.props.addErrors}
+                        updateMasker={this.props.updateMasker}/>
                 </div>
             </div>
         )
