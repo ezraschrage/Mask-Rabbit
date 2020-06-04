@@ -14,7 +14,7 @@ class TaskForm extends React.Component {
                 category_id: 1,
                 length_of_task: "",
                 date: new Date(),
-                time: "",
+                time: "I'm flexible",
                 per_hr: 1,
                 user_id: 1,
                 masker_id: 1,
@@ -48,15 +48,16 @@ class TaskForm extends React.Component {
 //                     <Route exact path='/task/date' render={FormSecond} />
 //                     <Route exact path='/task/confirm' render={FormConfirm} />
         };
-        if (property === "date") {
-            return e => this.setState({
-                [property]: Date(e.target.value)
-            });
-        } else {
+        // if (property === "date") {
+        //     console.log(e.target.value)
+        //     return e => this.setState({
+        //         [property]: Date(e.target.value)
+        //     });
+        // } else {
             return e => this.setState({
                 [property]: e.target.value
             });
-        }
+        // }
     }
 
 
@@ -98,7 +99,11 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const task = Object.assign({}, this.state)
+        const taskItems = { category_id: this.state.category_id, length_of_task: this.state.length_of_task,
+            date: this.state.date, time: this.state.time, per_hr: this.state.per_hr, user_id: this.state.user_id,
+            masker_id: this.state.masker_id, description: this.state.description, start_address: this.state.start_address,
+            end_address: this.state.end_address, vehicle_requirements: this.state.vehicle_requirements, interest: this.state.interest}
+        const task = Object.assign({}, taskItems)
         this.props.processForm(task);
     }
 
@@ -131,7 +136,7 @@ class TaskForm extends React.Component {
                 task={this.props.task}
                 update={this.update}
                 changeStep={this.changeStep}
-                handleSubmit={this.handleSubmit} />
+                />
             )
         }
 

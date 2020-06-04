@@ -38,6 +38,7 @@ class TaskFormSecondPage extends React.Component {
                             min={date}
                             defaultValue = {date}
                             onChange={this.props.update('date')} />
+                        {this.props.renderErrors()}
                     </div>
                     <div className="time-pick">
                         <div className="time-pick-text">TIME PREFERENCE</div>

@@ -23,16 +23,21 @@ class Maskers extends React.Component {
 
     maskerButton(e, id) {
         e.preventDefault();
-        // if (Date.parse(this.props.state.date) >= Date.now ) {
+        let now = new Date()
+        console.log(this.props.state.date)
+        let reservation = new Date(this.props.state.date)
+        if ((reservation.getDay() >= now.getDay()) && (reservation.getMonth() 
+            >= now.getMonth()) && (reservation.getYear() >= now.getYear())) {
             this.props.addErrors([])
             this.props.changeStep(7, e)
             this.props.history.push(`/task/confirm`);
             return e => this.setState({
-            [masker_id]: id
+            [masker_id]: id, [per_hr]: this.props.state.masker.per_hr
+            
         })
-        // } else {
-        //     this.props.addErrors(["Please provide details"])
-        // }
+        } else {
+            this.props.addErrors(["Please enter a valid date."])
+        }
     }
 
     render () {

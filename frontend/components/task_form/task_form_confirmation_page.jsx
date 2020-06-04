@@ -10,7 +10,7 @@ class TaskFormConfirmationPage extends React.Component {
             <>
             <p>3rd page</p>
                 <button className="form-save-btn" type="submit"
-                    onClick={(e) => this.handleSubmit(e)} >Save</button>
+                    onClick={(e) => this.props.handleSubmit(e)} >Save</button>
             </>
         )
     }
