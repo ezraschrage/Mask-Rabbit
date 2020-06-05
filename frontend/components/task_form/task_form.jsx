@@ -144,7 +144,8 @@ class TaskForm extends React.Component {
                 task={this.props.task}
                 update={this.update}
                 changeStep={this.changeStep}
-                
+                renderErrors={this.renderErrors}
+                addErrors={this.addErrors}
                 />
             )
         }
@@ -173,6 +174,3 @@ class TaskForm extends React.Component {
 
 export default withRouter(TaskForm);
 
-{/* <Route exact path='/task/new' render={TaskDetails} />
-    <Route exact path='/task/price' render={PickTasker} />
-    <Route exact path='/task/confirm' render={ConfirmTask} /> */}

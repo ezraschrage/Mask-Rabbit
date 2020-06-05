@@ -14,7 +14,8 @@ const mSTP = state => {
     return {
         tasks: Object.values(state.entities.tasks),
         user: state.session.id,
-        today: date
+        today: date,
+        maskers: state.maskers
         // task: {
         //     category_id: 0,
         //     length_of_task: "",

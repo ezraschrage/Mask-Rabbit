@@ -210,6 +210,13 @@
     padding: 10px;
     font-size: 15px;
 }
+.form-description-input-confirmation {
+    height: 200px;
+    resize: none;
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -356,6 +363,42 @@
     margin-left: 10px;
     font-size: 14px;
 }
+
+.task-form-third {
+    display: flex;
+    flex-direction: row;  
+}
+
+.task-form-third > div {
+    background-color: white;
+    width: 74%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
+    padding: 22px;
+    margin: 22px;
+}
+
+.form-confirmation-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-confirmation-details * {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.confirmation-text {
+    padding: 20px 0px;
+}
+
+.confirmation-text.margin {
+    border-top: 1.5px solid #dce0e6;
+    width: 100%;
+}
+
+
 
 .hide {
     display: none;
