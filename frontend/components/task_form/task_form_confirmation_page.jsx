@@ -18,6 +18,13 @@ class TaskFormConfirmationPage extends React.Component {
         }
     }
 
+    editTaskButton(e) {
+        e.preventDefault();
+            this.props.addErrors([])
+            this.props.changeStep(1, e)
+            this.props.history.push(`/task/new`);
+    }
+
     render() {
 
         let dateArray = this.props.state.date.split('-')
@@ -26,7 +33,15 @@ class TaskFormConfirmationPage extends React.Component {
         let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         let prettyDate = new Intl.DateTimeFormat('en-US',options).format(date)
 
-        let presentEnd = this.props.state.end_address === "" ? </>
+        
+        let notPresentEnd = ""
+
+        let presentEnd = `End Address: ${this.props.state.end_address}`
+        console.log(this.props)
+          
+
+        let endAddress = (this.props.state.end_address === '') ? notPresentEnd : presentEnd
+        // let presentEnd = this.props.state.end_address === "" ? 
 
         return (
             <div className="task-form-third">
@@ -43,13 +58,30 @@ class TaskFormConfirmationPage extends React.Component {
                 </div>
                 <div className="form-confirmation-info">
                     <div className="confirmation-masker">
-                        {/* <div>{this.props.state.}</div> */}
+                        {/* <div className="Masker-name-confirm">{this.props.masker.[this.props.state.masker_id.name]}</div> */}
+                        <div className="Masker-photo"></div>
                     </div>
                     <div className="confirmation-details">
                         <div>Date: {prettyDate}</div>
+                        <div>Start Address: {this.props.state.start_address}</div>
+                        <div>{endAddress}</div>
+                        <div>Job Size: {this.props.state.length_of_task}</div>
+                        <div>Vehicle: {this.props.state.vehicle}</div>
+                        <button className="Edit-Task-Button" onClick={(e) => this.editTaskButton(e)}
+                        >Edit Task</button>
                     </div>
-                    <div className="confirmation-money">
-
+                    <div className="confirmation-money-text">
+                        <div className="confirmation-money">
+                            <div>Hourly Rate:</div>
+                            <div>${this.props.state.per_hr}/hr</div>
+                        </div>
+                        <div className="confirmation-text">
+                            <div>A 15% Trust and Support fee is added to the Masker’s total rate.</div>
+                            <div>You will not be billed until your task is complete. Tasks have a one-hour minimum. 
+                                You can cancel or reschedule anytime. If you cancel your task within 24 hours of the 
+                                scheduled start time, you may be billed a one-hour cancellation fee at 
+                                the Masker's hourly rate.</div>
+                        </div>
                     </div>
                 </div>
 
@@ -60,5 +92,5 @@ class TaskFormConfirmationPage extends React.Component {
 
 export default TaskFormConfirmationPage;
 
-<p>3rd page</p>
-    
+<button className="form-save-btn" type="submit"
+    onClick={(e) => this.descriptionButton(e)}>See Maskers and Prices</button>
