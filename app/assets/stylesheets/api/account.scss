@@ -1,0 +1,24 @@
+.account > .btn {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 13px 25px;
+    border: 1px solid #51af33;
+    margin: 0px 0px 20px;
+    color: #51af33;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+
+// .account > .btn {
+//     margin-top: 10px;
+//     background-color: #51af33;
+//     color: white;
+// }
+
+.account > .btn:hover {
+    background-color: #438e29;
+    color: white;
+}

@@ -95,7 +95,7 @@ class TaskForm extends React.Component {
             end_address: this.state.end_address, vehicle_requirements: this.state.vehicle_requirements, interest: this.state.interest}
         const task = Object.assign({}, taskItems)
         this.props.processForm(task);
-        this.props.history.push(`/`);
+        this.props.history.push(`/account`);
     }
 
     render() {
