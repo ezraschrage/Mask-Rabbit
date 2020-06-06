@@ -36,11 +36,14 @@ class TaskFormConfirmationPage extends React.Component {
         
         let notPresentEnd = ""
 
-        let presentEnd = <div> End Address: &nbsp; &nbsp; {this.props.state.end_address}</div>
+        let presentEnd = <div className="confirmation-info-text-container">
+            <div>End Address: </div>
+            <div> {this.props.state.end_address} </div>
+            </div>
         // console.log(this.props)
         let shortMaskerFirst = this.props.state.masker_first_name[0] + "."
-        console.log(this.props.state.masker_first_name)
-        console.log(shortMaskerFirst)
+        // console.log(this.props.state.masker_first_name)
+        // console.log(shortMaskerFirst)
         let endAddress = (this.props.state.end_address === '') ? notPresentEnd : presentEnd
         // let addressDiv = <div>{endAdress} &nbsp; &nbsp;</div>
         // let presentEnd = this.props.state.end_address === "" ? 
@@ -64,12 +67,24 @@ class TaskFormConfirmationPage extends React.Component {
                         <img className="Masker-pic" src={this.props.state.masker_url} />
                     </div>
                     <div className="confirmation-info-text">
-                        <div>Date: &nbsp; &nbsp;  {prettyDate}</div>
-                        <div>Start Address: &nbsp; &nbsp; {this.props.state.start_address}</div>
+                        <div className="confirmation-info-text-container">
+                            <div> Date: </div>   
+                            <div> {prettyDate} </div>
+                        </div>
+                        <div className="confirmation-info-text-container">
+                            <div>Start Address: </div> 
+                            <div> {this.props.state.start_address} </div>
+                        </div>
                         {endAddress}
-                        <div>Job Size:&nbsp; &nbsp; {this.props.state.length_of_task}</div>
-                        <div>Vehicle:&nbsp; &nbsp; {this.props.state.vehicle}</div>
-                        <div className="Edit-Task-Button" onClick={(e) => this.editTaskButton(e)}
+                        <div className="confirmation-info-text-container">
+                            <div> Job Size: </div> 
+                            <div>{this.props.state.length_of_task}</div>
+                        </div>
+                        <div className="confirmation-info-text-container">
+                            <div> Vehicle: </div> 
+                            <div>{this.props.state.vehicle_requirements}</div>
+                        </div>
+                        <div className="edit-task-button" onClick={(e) => this.editTaskButton(e)}
                         >Edit Task</div>
                     </div>
                     <div className="confirmation-money-text">

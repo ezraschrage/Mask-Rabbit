@@ -425,6 +425,7 @@
     box-shadow: none;
     overflow: hidden;
     background-size: cover;
+    padding: 0px 15px;
 }
 
 .confirmation-info-text {
@@ -440,6 +441,7 @@
 .confirmation-money-text {
     display: flex;
     flex-direction: column;
+    border-top: 1.5px solid #dce0e6;
 
 }
 
@@ -462,8 +464,12 @@
     font-weight: bold;
 }
 
-.Edit-task-button {
+.edit-task-button {
     color: #438e29;
+}
+
+.edit-task-button.hov {
+    cursor: pointer;
 }
 
 .hide {

@@ -18,11 +18,14 @@
     box-shadow: none;
     overflow: hidden;
     background-size: cover;
+    padding: 0px 15px;
+    align-self: center;
 }
 
 .Masker-left {
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
 
 .Masker-left > div {
@@ -32,13 +35,14 @@
 .Masker-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    width:70%;
 }
 
 .Masker-right-top {
     display: flex;
     justify-content: space-between;
+    font-size: 17px
 }
 
 .Masker-right-top > div {
