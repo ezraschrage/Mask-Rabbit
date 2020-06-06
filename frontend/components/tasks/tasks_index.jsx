@@ -1,20 +1,21 @@
+// import React from 'react';
+
+// class TasksIndex extends React.Component {
+//     constructor (props) {
+//         super(props)
+//     }
+
+//     render () {
+//         return (
+//             <>
+//             </>
+//         )}
+// }
+
+// export default TasksIndex;
+
 import React from 'react';
-
-class TasksIndex extends React.Component {
-    constructor (props) {
-        super(props)
-    }
-
-    render () {
-        return (
-            <>
-            </>
-        )}
-}
-
-export default TasksIndex;
-
-import React from 'react';
+import { withRouter } from 'react-router-dom';
 import TaskItem from './task_index_item';
 
 class TaskIndex extends React.Component {
@@ -22,7 +23,6 @@ class TaskIndex extends React.Component {
         super(props);
 
         this.deleteTask = this.deleteTask.bind(this);
-        this.render = this.render.bind(this);
     }
 
     deleteTask(id){
@@ -42,7 +42,7 @@ class TaskIndex extends React.Component {
 
         return (
             <div className='user-task-index-container'>
-                <div>Your created tasks</div>
+                <div>Your tasks</div>
                 <ul className = 'user-task-list'>
                     {ownTasks.map((task) => {
                         return <TaskItem key={task.id} deleteTask ={this.deleteTask} task ={task}/>
