@@ -155,10 +155,10 @@ class TaskFormFirstPage extends React.Component {
                                 value={this.props.state.start_address}
                                 onChange={this.props.update('start_address')}
                             />
-                            <input className="address-apt"
+                            {/* <input className="address-apt"
                                 type="text"
                                 placeholder="Unit or Apt #"
-                            />
+                            /> */}
                         </div>
                         {this.props.renderErrors()}
                         <div className="form-save">
@@ -206,10 +206,10 @@ class TaskFormFirstPage extends React.Component {
                                 value={this.props.state.end_address}
                                 onChange={this.props.update('end_address')}
                             />
-                            <input className="address-apt"
+                            {/* <input className="address-apt"
                                 type="text"
                                 placeholder="Unit or Apt #"
-                            />
+                            /> */}
                         </div>
                         <div className="form-save">
                             <button className="form-save-btn" type="submit"

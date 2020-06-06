@@ -438,6 +438,22 @@
     padding-top:10px;
 }
 
+.confirmation-info-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.confirmation-info-text-left {
+    width: 30%;
+}
+
+.confirmation-info-text-right {
+    width: 70%;
+    line-height: 1.6;
+}
+
 .confirmation-money-text {
     display: flex;
     flex-direction: column;

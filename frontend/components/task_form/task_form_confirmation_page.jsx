@@ -37,8 +37,8 @@ class TaskFormConfirmationPage extends React.Component {
         let notPresentEnd = ""
 
         let presentEnd = <div className="confirmation-info-text-container">
-            <div>End Address: </div>
-            <div> {this.props.state.end_address} </div>
+            <div className="confirmation-info-text-left">End Address: </div>
+            <div className="confirmation-info-text-right"> {this.props.state.end_address} </div>
             </div>
         // console.log(this.props)
         let shortMaskerFirst = this.props.state.masker_first_name[0] + "."
@@ -68,21 +68,21 @@ class TaskFormConfirmationPage extends React.Component {
                     </div>
                     <div className="confirmation-info-text">
                         <div className="confirmation-info-text-container">
-                            <div> Date: </div>   
-                            <div> {prettyDate} </div>
+                            <div className="confirmation-info-text-left"> Date: </div>   
+                            <div className="confirmation-info-text-right"> {prettyDate} </div>
                         </div>
                         <div className="confirmation-info-text-container">
-                            <div>Start Address: </div> 
-                            <div> {this.props.state.start_address} </div>
+                            <div className="confirmation-info-text-left">Start Address: </div> 
+                            <div className="confirmation-info-text-right"> {this.props.state.start_address} </div>
                         </div>
                         {endAddress}
                         <div className="confirmation-info-text-container">
-                            <div> Job Size: </div> 
-                            <div>{this.props.state.length_of_task}</div>
+                            <div className="confirmation-info-text-left"> Job Size: </div> 
+                            <div className="confirmation-info-text-right">{this.props.state.length_of_task}</div>
                         </div>
                         <div className="confirmation-info-text-container">
-                            <div> Vehicle: </div> 
-                            <div>{this.props.state.vehicle_requirements}</div>
+                            <div className="confirmation-info-text-left"> Vehicle: </div> 
+                            <div className="confirmation-info-text-right">{this.props.state.vehicle_requirements}</div>
                         </div>
                         <div className="edit-task-button" onClick={(e) => this.editTaskButton(e)}
                         >Edit Task</div>
