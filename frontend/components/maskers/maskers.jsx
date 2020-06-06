@@ -11,12 +11,6 @@ class Maskers extends React.Component {
 
     }
 
-    // state = { this.state }
-    // update = { this.update }
-    // changeStep = { this.changeStep }
-    // renderErrors = { this.renderErrors }
-    // addErrors = { this.addErrors }
-
     componentDidMount() {
         this.props.fetchMaskers()
     }
@@ -26,10 +20,7 @@ class Maskers extends React.Component {
         let appointment = this.props.state.date;
         let appointmentArray = appointment.split('-');
         let todayArray = this.props.state.today.split('-')
-        console.log(fName)
-        console.log(lName)
-        // let year = 
-        // if (true) {       
+
         if (appointmentArray[0] >= todayArray[0] && 
             appointmentArray[1] >= todayArray[1] &&
             appointmentArray[2] >= todayArray[2]) {

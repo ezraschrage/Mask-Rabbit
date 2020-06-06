@@ -45,11 +45,6 @@ class TaskForm extends React.Component {
     }
 
     updateMasker(id, rate, url, fName, lName) {
-        console.log(id)
-        console.log(rate)
-        console.log(url)
-        console.log(fName)
-        console.log(lName)
         this.setState({masker_id: id, per_hr: rate, masker_url: url, masker_first_name: fName,
         masker_last_name: lName})
     }
@@ -93,13 +88,14 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const dateForm = new Date(this.state.date)
+        // const dateForm = new Date(this.state.date)
         const taskItems = { category_id: this.state.category_id, length_of_task: this.state.length_of_task,
             date: this.state.date, time: this.state.time, per_hr: this.state.per_hr, user_id: this.state.user_id,
             masker_id: this.state.masker_id, description: this.state.description, start_address: this.state.start_address,
             end_address: this.state.end_address, vehicle_requirements: this.state.vehicle_requirements, interest: this.state.interest}
         const task = Object.assign({}, taskItems)
         this.props.processForm(task);
+        this.props.history.push(`/`);
     }
 
     render() {

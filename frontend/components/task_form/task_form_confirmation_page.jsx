@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class TaskFormConfirmationPage extends React.Component {
     constructor (props) {
@@ -41,13 +42,8 @@ class TaskFormConfirmationPage extends React.Component {
             <div className="confirmation-info-text-left">End Address: </div>
             <div className="confirmation-info-text-right"> {this.props.state.end_address} </div>
             </div>
-        // console.log(this.props)
         let shortMaskerFirst = this.props.state.masker_first_name[0] + "."
-        // console.log(this.props.state.masker_first_name)
-        // console.log(shortMaskerFirst)
         let endAddress = (this.props.state.end_address === '') ? notPresentEnd : presentEnd
-        // let addressDiv = <div>{endAdress} &nbsp; &nbsp;</div>
-        // let presentEnd = this.props.state.end_address === "" ? 
 
         return (
             <div className="task-form-third">
@@ -108,4 +104,4 @@ class TaskFormConfirmationPage extends React.Component {
     }
 };
 
-export default TaskFormConfirmationPage;
+export default withRouter(TaskFormConfirmationPage);

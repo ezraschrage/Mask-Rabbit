@@ -396,7 +396,7 @@ class TaskFormFirstPage extends React.Component {
         const descriptionShortCompleted = () => {
             return (
                 <>
-                    <div className="form-description active">
+                    <div className="form-description active" onClick={(e) => this.props.changeStep(5, e)}>
                         <div className="form-header">TELL US THE DETAILS OF YOUR TASK</div>
                         <div className="completed">
                             <span> {`\u2713`} </span>

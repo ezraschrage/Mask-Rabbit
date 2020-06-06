@@ -31,7 +31,8 @@ class TaskFormSecondPage extends React.Component {
                             <div className="form-date-text">TASK DATE</div>
                             <input type="date" className="date-picker"
                                 min={date}
-                                defaultValue = {date}
+                                // defaultValue = {date}
+                                value={this.props.state.date}
                                 onChange={this.props.update('date')} />
                         </div>
                             
@@ -43,8 +44,9 @@ class TaskFormSecondPage extends React.Component {
                     <div className="time-pick">
                         <div className="time-pick-text">TIME PREFERENCE</div>
                         <select className="time-pick-select"
-                            onChange={this.props.update('time')}>
-
+                            onChange={this.props.update('time')}
+                            value={this.props.state.time}>
+                            
                             <option value="I'm Flexible">I'm Flexible</option>
                             <option value="8:00am">8:00am</option>
                             <option value="8:30am">8:30am</option>
