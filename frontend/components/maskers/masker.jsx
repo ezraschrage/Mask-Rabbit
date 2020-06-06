@@ -6,7 +6,9 @@ const Masker = props => (
             <img className="Masker-pic" src={props.masker.photoUrl} />
             <div className="form-save">
                 <button className="form-save-btn" type="submit"
-                    onClick={(e) => props.maskerButton(e, props.masker.id, props.masker.price)}>Select & Continue</button>
+                    onClick={(e) => props.maskerButton(e, props.masker.id, 
+                        props.masker.price, props.masker.photoUrl,
+                        props.masker.first_name, props.masker.last_name)}>Select & Continue</button>
             </div>
             {/* <div className="Masker-text">
                 You can chat with your Masker, adjust task details, or change task time after booking.

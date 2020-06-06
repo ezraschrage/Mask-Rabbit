@@ -24,7 +24,10 @@ class TaskForm extends React.Component {
                 vehicle_requirements: "",
                 interest: "",
                 errors: [],
-                today: this.props.today
+                today: this.props.today,
+                masker_first_name: "",
+                masker_last_name: "",
+                masker_url: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -62,8 +65,14 @@ class TaskForm extends React.Component {
         // }
     }
 
-    updateMasker(id, rate) {
-        this.setState({masker_id: id, per_hr: rate})
+    updateMasker(id, rate, url, fName, lName) {
+        console.log(id)
+        console.log(rate)
+        console.log(url)
+        console.log(fName)
+        console.log(lName)
+        this.setState({masker_id: id, per_hr: rate, masker_url: url, masker_first_name: fName,
+        masker_last_name: lName})
     }
 
 

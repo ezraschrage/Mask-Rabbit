@@ -12,7 +12,7 @@ class TaskFormNav extends React.Component {
 
     firstPageButton(e) {
         e.preventDefault();
-            this.props.changeStep(5, e);
+            this.props.changeStep(1, e);
             this.props.history.push(`/task/new`);
     }
 

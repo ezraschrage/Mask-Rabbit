@@ -36,11 +36,13 @@ class TaskFormConfirmationPage extends React.Component {
         
         let notPresentEnd = ""
 
-        let presentEnd = `End Address: ${this.props.state.end_address}`
-        console.log(this.props)
-          
-
+        let presentEnd = <div> End Address: &nbsp; &nbsp; {this.props.state.end_address}</div>
+        // console.log(this.props)
+        let shortMaskerFirst = this.props.state.masker_first_name[0] + "."
+        console.log(this.props.state.masker_first_name)
+        console.log(shortMaskerFirst)
         let endAddress = (this.props.state.end_address === '') ? notPresentEnd : presentEnd
+        // let addressDiv = <div>{endAdress} &nbsp; &nbsp;</div>
         // let presentEnd = this.props.state.end_address === "" ? 
 
         return (
@@ -58,24 +60,24 @@ class TaskFormConfirmationPage extends React.Component {
                 </div>
                 <div className="form-confirmation-info">
                     <div className="confirmation-masker">
-                        {/* <div className="Masker-name-confirm">{this.props.masker.[this.props.state.masker_id.name]}</div> */}
-                        <div className="Masker-photo"></div>
+                        <div className="Masker-name-confirm">{shortMaskerFirst} {this.props.state.masker_last_name}</div>
+                        <img className="Masker-pic" src={this.props.state.masker_url} />
                     </div>
-                    <div className="confirmation-details">
-                        <div>Date: {prettyDate}</div>
-                        <div>Start Address: {this.props.state.start_address}</div>
-                        <div>{endAddress}</div>
-                        <div>Job Size: {this.props.state.length_of_task}</div>
-                        <div>Vehicle: {this.props.state.vehicle}</div>
-                        <button className="Edit-Task-Button" onClick={(e) => this.editTaskButton(e)}
-                        >Edit Task</button>
+                    <div className="confirmation-info-text">
+                        <div>Date: &nbsp; &nbsp;  {prettyDate}</div>
+                        <div>Start Address: &nbsp; &nbsp; {this.props.state.start_address}</div>
+                        {endAddress}
+                        <div>Job Size:&nbsp; &nbsp; {this.props.state.length_of_task}</div>
+                        <div>Vehicle:&nbsp; &nbsp; {this.props.state.vehicle}</div>
+                        <div className="Edit-Task-Button" onClick={(e) => this.editTaskButton(e)}
+                        >Edit Task</div>
                     </div>
                     <div className="confirmation-money-text">
                         <div className="confirmation-money">
                             <div>Hourly Rate:</div>
                             <div>${this.props.state.per_hr}/hr</div>
                         </div>
-                        <div className="confirmation-text">
+                        <div className="confirmation-money-legal">
                             <div>A 15% Trust and Support fee is added to the Masker’s total rate.</div>
                             <div>You will not be billed until your task is complete. Tasks have a one-hour minimum. 
                                 You can cancel or reschedule anytime. If you cancel your task within 24 hours of the 

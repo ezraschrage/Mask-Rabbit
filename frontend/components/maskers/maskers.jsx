@@ -21,12 +21,13 @@ class Maskers extends React.Component {
         this.props.fetchMaskers()
     }
 
-    maskerButton(e, id, price) {
+    maskerButton(e, id, price, url, fName, lName) {
         e.preventDefault();
         let appointment = this.props.state.date;
         let appointmentArray = appointment.split('-');
         let todayArray = this.props.state.today.split('-')
-
+        console.log(fName)
+        console.log(lName)
         // let year = 
         // if (true) {       
         if (appointmentArray[0] >= todayArray[0] && 
@@ -35,7 +36,7 @@ class Maskers extends React.Component {
             this.props.addErrors([])
             this.props.changeStep(7, e)
             this.props.history.push(`/task/confirm`);
-            this.props.updateMasker(id, price)
+            this.props.updateMasker(id, price, url, fName, lName)
         } else {
             this.props.addErrors(["Please enter a valid date."])
         }

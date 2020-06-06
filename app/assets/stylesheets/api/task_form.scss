@@ -371,7 +371,6 @@
 
 .task-form-third > div {
     background-color: white;
-    width: 74%;
     margin-top: 8px;
     margin-bottom: 8px;
     box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
@@ -379,9 +378,20 @@
     margin: 22px;
 }
 
-.form-confirmation-details {
+.form-confirmation-details{
     display: flex;
     flex-direction: column;
+    width: 55%;
+}
+
+.form-confirmation-info {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.form-confirmation-info * {
+    padding:10px;
 }
 
 .form-confirmation-details * {
@@ -396,6 +406,60 @@
 .confirmation-text.margin {
     border-top: 1.5px solid #dce0e6;
     width: 100%;
+}
+
+.maskser-name-confirmation {
+    align-self: center;
+}
+
+.confirmation-masker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.confirmation-masker-pic {
+    height: 60px;
+    width: 60px;
+    display: block;
+    box-shadow: none;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.confirmation-info-text {
+    border-top: 1.5px solid #dce0e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-info-text * {
+    padding-top:10px;
+}
+
+.confirmation-money-text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.confirmation-money-legal {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-money-legal * {
+    padding: 15px 0px;
+}
+
+.confirmation-money {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmation-money * {
+    font-size: 21px;
+    font-weight: bold;
 }
 
 .Edit-task-button {
