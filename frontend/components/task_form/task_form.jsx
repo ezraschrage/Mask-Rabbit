@@ -39,30 +39,9 @@ class TaskForm extends React.Component {
     }
 
     update(property) {
-        switch (this.state.step) {
-            // case 6:
-            //     // this.props.history.push(`/task/price`);
-            //     break;
-            // case 7:
-            //     break;
-            // default:
-            //     break;
-
-
-//                     <Route exact path='/task/new' render={FormFirst} />
-//                     <Route exact path='/task/date' render={FormSecond} />
-//                     <Route exact path='/task/confirm' render={FormConfirm} />
-        };
-        // if (property === "date") {
-        //     console.log(e.target.value)
-        //     return e => this.setState({
-        //         [property]: Date(e.target.value)
-        //     });
-        // } else {
             return e => this.setState({
                 [property]: e.target.value
             });
-        // }
     }
 
     updateMasker(id, rate, url, fName, lName) {

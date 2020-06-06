@@ -366,6 +366,7 @@
 
 .task-form-third {
     display: flex;
+    width: 70%;
     flex-direction: row;  
 }
 
@@ -445,13 +446,19 @@
 
 }
 
+.confirmation-info-text-container * {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    line-height: 1.6;
+}
+
 .confirmation-info-text-left {
     width: 30%;
 }
 
 .confirmation-info-text-right {
     width: 70%;
-    line-height: 1.6;
 }
 
 .confirmation-money-text {
@@ -468,6 +475,7 @@
 
 .confirmation-money-legal * {
     padding: 15px 0px;
+    line-height: 1.6;
 }
 
 .confirmation-money {
@@ -484,7 +492,7 @@
     color: #438e29;
 }
 
-.edit-task-button.hov {
+.edit-task-button:hover {
     cursor: pointer;
 }
 

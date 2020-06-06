@@ -10,12 +10,6 @@ class TaskFormSecondPage extends React.Component {
 
     }
 
-    // state = { this.state }
-    // update = { this.update }
-    // changeStep = { this.changeStep }
-    // renderErrors = { this.renderErrors }
-    // addErrors = { this.addErrors }
-
     render () {
         let today = new Date();
         let month = (today.getMonth() + 1 < 9) ? "0" + (today.getMonth() + 1).toString() : (today.getMonth() + 1).toString();

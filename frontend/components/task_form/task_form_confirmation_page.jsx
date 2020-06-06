@@ -5,6 +5,7 @@ class TaskFormConfirmationPage extends React.Component {
         super(props)
 
         this.confirmationButton = this.confirmationButton.bind (this)
+        this.editTaskButton = this.editTaskButton.bind (this)
     }
 
     confirmationButton(e) {
@@ -20,9 +21,9 @@ class TaskFormConfirmationPage extends React.Component {
 
     editTaskButton(e) {
         e.preventDefault();
-            this.props.addErrors([])
-            this.props.changeStep(1, e)
-            this.props.history.push(`/task/new`);
+        this.props.addErrors([])
+        this.props.changeStep(1, e)
+        this.props.history.push(`/task/new`);
     }
 
     render() {
@@ -108,6 +109,3 @@ class TaskFormConfirmationPage extends React.Component {
 };
 
 export default TaskFormConfirmationPage;
-
-<button className="form-save-btn" type="submit"
-    onClick={(e) => this.descriptionButton(e)}>See Maskers and Prices</button>
