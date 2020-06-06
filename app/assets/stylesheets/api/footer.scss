@@ -27,6 +27,29 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+  border: none;
+}
+
+.linkedin {
+    background-image: image-url('linkedin.png');
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+}
+
+.angellist {
+   background-image: image-url('angellist.png');
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
 }
 
 .footer-break {
