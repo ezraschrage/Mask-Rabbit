@@ -6,6 +6,7 @@ import { fetchMasker } from "../../actions/masker_actions"
 const mSTP = (state) => {
     return {
         tasks: Object.values(state.entities.tasks),
+        currentUser: state.entities.users
     };
 };
 

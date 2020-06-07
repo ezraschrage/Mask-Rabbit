@@ -10,7 +10,8 @@ class Account extends React.Component {
             email: '',
             first_name: '',
             last_name: '',
-            zip: ''
+            zip: '',
+            errors: []
         }
     }
 
@@ -32,15 +33,23 @@ class Account extends React.Component {
     }
 
     renderErrors() {
-        return (
-            <ul className="errors">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+        const errors = this.state.errors;
+        const errorList = errors.map((error, i) =>
+            <li key={`error-${i}`}>
+                {error}
+            </li>
         );
+
+        const none = () => (
+            <>
+            </>
+        )
+
+        const some = () => (
+            <ul className="form-errors">{errorList}</ul>
+        )
+
+        return (this.state.errors.length > 0) ? some() : none()
     }
 
     render() {
@@ -94,6 +103,8 @@ class Account extends React.Component {
                         >Create Account
                         </button>
                     </form>
+                    <TasksContainer />
+                    <Footer />
                 </>
         )
 

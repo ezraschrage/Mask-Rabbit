@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import { Account } from './account';
+import Account from './account';
 import { updateUser, receiveSessionErrors, logout } from '../../actions/session_actions';
 
-const mSTP = ({ session, entities: { users } }) => {
+const mSTP = ({ session, errors, entities: { users } }) => {
     return {
-        currentUser: users[session.id]
-    };
+        currentUser: users[session.id],
+        errors: errors.session
+    }
 };
 const mDTP = dispatch => {
     return {

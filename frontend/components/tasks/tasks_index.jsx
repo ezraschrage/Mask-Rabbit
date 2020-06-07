@@ -16,9 +16,9 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import TaskItem from './task_index_item';
+import TaskItem from './tasks_item';
 
-class TaskIndex extends React.Component {
+class TasksIndex extends React.Component {
     constructor(props){
         super(props);
 
@@ -34,8 +34,9 @@ class TaskIndex extends React.Component {
     }
 
     render(){
-        const ownTasks = this.props.ownTasks;
-
+        const ownTasks = this.props.tasks;
+        console.log(ownTasks)
+        console.log(ownTasks[0])
         if(ownTasks.length === 0){
             return <div className='no-tasks'>You currently have no tasks.</div>
         }
@@ -44,13 +45,13 @@ class TaskIndex extends React.Component {
             <div className='user-task-index-container'>
                 <div>Your tasks</div>
                 <ul className = 'user-task-list'>
-                    {ownTasks.map((task) => {
-                        return <TaskItem key={task.id} deleteTask ={this.deleteTask} task ={task}/>
-                    })}
+                    {ownTasks.map((task) => (
+                        <TaskItem key={task.id} deleteTask={this.deleteTask} task={task}/>
+                    ))}
                 </ul>
             </div>
         )
     }
 }
 
-export default TaskIndex;
+export default TasksIndex;
