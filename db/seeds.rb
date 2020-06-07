@@ -20,6 +20,9 @@ user2 = User.create!(email: "a@a.com", first_name: "Andrew", last_name: "Aarons"
 user3 = User.create!(email: "b@b.com", first_name: "Ben", last_name: "Bradly", zip: 12345, password: "abcdef")
 user4 = User.create!(email: "c@c.com", first_name: "Catherine", last_name: "Calloway", zip: 12345, password: "abcdef")
 user5 = User.create!(email: "d@d.com", first_name: "Dana", last_name: "Davidson", zip: 12345, password: "abcdef")
+user6 = User.create!(email: "e@e.com", first_name: "Ed", last_name: "Edwards", zip: 12345, password: "abcdef")
+user7 = User.create!(email: "f@f.com", first_name: "Frank", last_name: "Frankers", zip: 12345, password: "abcdef")
+user8 = User.create!(email: "g@g.com", first_name: "Georgia", last_name: "Gil", zip: 12345, password: "abcdef")
 
 
 cat1 = Category.create!(name: "Assemble a Table/Desk", 
@@ -89,22 +92,32 @@ cat8.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/br
 
 mask1 = Masker.create!(user_id: 2, location: "Brooklyn", bio: "Ready to help you out! You can always count on Andrew", price: 50)
 mask2 = Masker.create!(user_id: 4, location: "Brooklyn", bio: "My name is Catherine. If you want service done well with a smile, I'm your gal!", price: 40)
+mask3 = Masker.create!(user_id: 5, location: "Brooklyn", bio: "An expert in PPE, highly rated, always courteous. Let's work together!", price: 60)
+mask4 = Masker.create!(user_id: 8, location: "Brooklyn", bio: "I have been doing odd jobs for years and MaskRabbit lets me help more people out. Let's go!", price: 45)
 
 # Web
-# maskfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/drill.jpg")
-# maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/tv.jpg")
+# maskfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/yellow2.jpg")
+# maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/woman2.jpg")
+# maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/green.jpg")
+# maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/suit.jpg")
 
 # Local
 maskfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg")
 maskfile2 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman2.jpg")
+maskfile3 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/green.jpg")
+maskfile4 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/suit.jpg")
 
 # Web
-# cat1.photo.attach(io: catfile1, filename: "drill.jpg")
-# cat2.photo.attach(io: catfile2, filename: "tv.jpg")
+# mask1.photo.attach(io: maskfile1, filename: "yellow2.jpg")
+# mask2.photo.attach(io: maskfile2, filename: "woman2.jpg")
+# mask2.photo.attach(io: maskfile3, filename: "green.jpg")
+# mask2.photo.attach(io: maskfile4, filename: "suit.jpg")
 
 # Local
 mask1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg"), filename: "yellow2.jpg")
 mask2.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/woman2.jpg"), filename: "woman2.jpg")
+mask3.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/green.jpg"), filename: "green.jpg")
+mask4.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/suit.jpg"), filename: "suit.jpg")
 
 
 # file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
