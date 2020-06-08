@@ -28,7 +28,7 @@ class TasksIndex extends React.Component {
                     {ownTasks.map((task) => (
                         <TaskItem key={task.id} deleteTask={this.deleteTask} 
                             fetchMasker={this.props.fetchMasker} task={task}
-                            props={this.props} masker={this.props.maskers}/>
+                            masker={this.props.maskers}/>
                     ))}
                 </>
         )

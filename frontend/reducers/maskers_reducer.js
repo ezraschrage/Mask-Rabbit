@@ -9,7 +9,7 @@ const maskersReducer = (state = {}, action) => {
         case RECEIVE_MASKERS:
             return Object.assign({}, state, action.maskers)
         case RECEIVE_MASKER:
-            return Object.assign({}, state, { [action.masker.id]: action.masker })
+            return Object.assign({}, state, action.masker)
         default:
             return state;
     }

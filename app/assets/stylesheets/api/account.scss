@@ -36,7 +36,7 @@
     max-width: 700px;
     flex-direction: column;
     margin: 50px 0px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .header-edit {
@@ -45,8 +45,7 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 30px;
-    padding: 16px;
-    align-items: center;
+    padding: 20px 20px 0px 20px;
     border-bottom: 2px solid #dce0e6;
 
 }
@@ -59,6 +58,7 @@
 .account-info-list {
     margin-top: 20px;
     line-height: 1.6;
+    font-size: 20px;
     // display: flex;
     // align-items: center;
     // flex-direction: column;

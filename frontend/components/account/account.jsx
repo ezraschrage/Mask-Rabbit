@@ -45,7 +45,7 @@ class Account extends React.Component {
 
     componentWillUnmount() {
         this.setState({ updated: false, errors: []})
-
+        
         return this.props.clearErrors();
     }
 
@@ -127,11 +127,11 @@ class Account extends React.Component {
                 <>
                     <div className="account-info-container">
                         <div className="header-edit">
-                            <div>Account</div>
-                            <div>
+                            Account
+                            
                                 <button className="account-btn" 
                                 onClick={(e) => this.editButton(e)}>Edit</button>
-                            </div>
+                            
                         </div>
                         <ul className="account-info-list">
                             <li>Name: {this.state.first_name + " " + this.state.last_name}</li>
