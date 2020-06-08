@@ -6,14 +6,15 @@ import { fetchMasker } from "../../actions/masker_actions"
 const mSTP = (state) => {
     return {
         tasks: Object.values(state.entities.tasks),
-        currentUser: state.entities.users
+        currentUser: state.entities.users,
+        maskers: state.entities.maskers
     };
 };
 
 const mDTP = dispatch => ({
     fetchTasks: () => dispatch(fetchTasks()),
     deleteTask: taskId => dispatch(deleteTask(taskId)),
-    fetchMasker: () => dispatch(fetchMasker())
+    fetchMasker: userId => dispatch(fetchMasker(userId))
 });
 
 export default connect(mSTP, mDTP)(TasksIndex);

@@ -139,7 +139,8 @@ class Account extends React.Component {
                             <li>Zip: {this.state.zip}</li>
                         </ul>
                     </div>
-                    <TasksContainer />
+                    <div className="header-tasks">Your tasks</div>
+                    <TasksContainer state={this.state}/>
                 </>
             )
         }
@@ -199,7 +200,7 @@ class Account extends React.Component {
         }
 
  
-
+        
         return (
             <>
                 <NavContainer />

@@ -20,8 +20,8 @@ export const fetchMaskers = () => dispatch => (
     ))
 );
 
-export const fetchMasker = (userId) => dispatch => (
-    APIUtil.fetchMasker(userId).then(masker => (
+export const fetchMasker = (maskerId) => dispatch => (
+    APIUtil.fetchMasker(maskerId).then(masker => (
         dispatch(receiveMasker(masker))
     ))
 );
