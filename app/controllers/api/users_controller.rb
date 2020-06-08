@@ -23,8 +23,8 @@ class Api::UsersController < ApplicationController
     # debugger
     @user = User.find(user_params[:id])
     # if @user.is_password?(user_params[:old_password])
-        if @user.update(email: user_params[:email]) && @user.update(first_name: user_params[:first_name]) &&
-        @user.update(last_name: user_params[:last_name]) && @user.update(zip: user_params[:zip])
+        if @user.update(email: user_params[:email], first_name: user_params[:first_name],
+            last_name: user_params[:last_name], zip: user_params[:zip])
             render :show
         else
             render json: @user.errors.full_messages, status: 422

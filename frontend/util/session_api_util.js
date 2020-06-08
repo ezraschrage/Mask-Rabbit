@@ -22,7 +22,6 @@ export const logout = () => (
 );
 
 export const updateUser = user => {
-    console.log(user)
     return (
     $.ajax({
         method: "PATCH",

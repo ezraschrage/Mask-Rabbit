@@ -2,7 +2,6 @@
     font-size: 16px;
     cursor: pointer;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
-    width: 50%;
     padding: 13px 25px;
     border: 1px solid #51af33;
     margin: 0px 0px 20px;
@@ -36,7 +35,8 @@
     display: flex;
     max-width: 700px;
     flex-direction: column;
-    margin-top: 50px;
+    margin: 50px 0px;
+    padding-bottom: 40px;
 }
 
 .header-edit {
@@ -46,6 +46,7 @@
     justify-content: space-between;
     font-size: 30px;
     padding: 16px;
+    align-items: center;
     border-bottom: 2px solid #dce0e6;
 
 }
@@ -74,6 +75,7 @@
     display: flex;
     max-width: 700px;
     width: 45%;
+    min-width: 500px;
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -90,7 +92,6 @@
 
 .edit-box {
     align-items: center;
-    margin-left: 10%;
     margin-top: 30px;
     margin-bottom: 30px;
     max-width: 500px;
@@ -108,11 +109,17 @@
 
 .edit-btn {
     margin-top:20px;
-    width: 30%;
+    max-width: 30%;
+    min-width: 100px;
 }
 
 .edit-button-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.success {
+    margin-top: 5px;
+    color: #51af33;
 }

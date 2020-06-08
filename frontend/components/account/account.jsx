@@ -15,7 +15,8 @@ class Account extends React.Component {
             errors: [],
             old_password: "",
             password: "",
-            id: this.props.currentUser.id
+            id: this.props.currentUser.id,
+            updated: false
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,51 +33,95 @@ class Account extends React.Component {
     }
 
     addErrors(errors) {
-        this.setState({ errors: errors })
+        console.log(errors)
+        this.setState({ errors: errors})
     }
 
+    // componentDidMount() {
+    //     if (this.state.updated === true) {
+    //         this.props.history.push('/account')
+    //     }
+    // }
+
     componentWillUnmount() {
+        this.setState({ updated: false, errors: []})
+
         return this.props.clearErrors();
     }
 
     editButton(e) {
         e.preventDefault();
-        this.props.history.push('account/edit')
+        this.setState({
+            updated: false, email: this.props.currentUser.email,
+            first_name: this.props.currentUser.first_name,
+            last_name: this.props.currentUser.last_name,
+            zip: this.props.currentUser.zip, errors: [] })
+        this.props.history.push('/account/edit')
+        this.props.clearErrors();
     }
 
     cancelButton(e) {
         e.preventDefault();
-        this.props.history.push('account')
+        this.props.history.push('/account')
     }
 
     handleSubmit(e) {
         e.preventDefault();
         if (this.state.zip !== "" && this.state.first_name !== "" && 
         this.state.last_name !== "" && this.state.email !== "") {
-            this.addErrors([])
+
             const user = Object.assign({}, {first_name: this.state.first_name, last_name: this.state.last_name,
             zip: this.state.zip, email: this.state.email, id: this.state.id});
+            this.setState({ errors: []})
             this.props.processForm(user);
-            // this.props.history.push(`/account`);
+            if (Object.keys(this.props.errors.session).length === 0) {
+                
+                this.setState({ updated: true })
+                // this.props.history.push(`/account`);
+            }
+            
         } else {
+            this.props.clearErrors()
             this.addErrors(["Please fill out all fields before updating"])
         }
     }
 
     renderErrors() {
+        if (this.state.errors !== 0) {
+            const local = () => {
+                return (
+            <li key={`error-local`}>{this.state.errors[0]}</li>
+                )}}
         return (
-            <ul>
+            <ul className="errors">
                 {this.props.errors.session.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
+                <li key={`error-local`}>{this.state.errors[0]}</li>
             </ul>
         );
     }
 
     render() {
+        const noSuccess = () => {
+        return (
+            <>
+            </>
+        )
+    }
+        const success = () => {
+            return (
+                <>
+                    <div className="success">Account successfully updated!</div>
+                </>
+            )
+        }
 
+
+        const messageEdit = (this.state.updated && Object.keys(this.props.errors.session).length === 0 
+        && this.state.errors.length === 0) ? success() : noSuccess()
         const main = () => {
             return (
                 <>
@@ -134,16 +179,17 @@ class Account extends React.Component {
                                 className="edit"
                             />
                             {this.renderErrors()}
+                            {messageEdit}
                             <div className="edit-button-container">
                                 <button
                                     className="account-btn edit-btn"
                                     type="submit"
-                                >Edit Account
+                                >Update
                                 </button>
                                 <button
                                     className="account-btn edit-btn"
                                     onClick={(e) => this.cancelButton(e)}
-                                >Cancel
+                                >Back
                                 </button>
                             </div>
                         </form>
@@ -152,12 +198,7 @@ class Account extends React.Component {
             )
         }
 
-        const sucess = () => {
-            return (
-                <>
-                </>
-            )
-        }
+ 
 
         return (
             <>
