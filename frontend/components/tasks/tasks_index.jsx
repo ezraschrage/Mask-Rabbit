@@ -42,7 +42,7 @@ class TasksIndex extends React.Component {
         }
 
         return (
-            <div className='user-task-index-container'>
+            <div className='task-index-container'>
                 <div>Your tasks</div>
                 <ul className = 'user-task-list'>
                     {ownTasks.map((task) => (

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Account from './account';
+import { withRouter } from 'react-router-dom'
 import { updateUser, receiveSessionErrors, logout } from '../../actions/session_actions';
 
 const mSTP = ({ session, errors, entities: { users } }) => {
@@ -16,4 +17,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(Account);
+export default withRouter(connect(mSTP, mDTP)(Account))

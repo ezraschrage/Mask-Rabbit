@@ -2,17 +2,21 @@ import React from 'react';
 import TasksContainer from '../tasks/tasks_index_container';
 import NavContainer from '../nav/nav_container';
 import Footer from '../footer/footer_component';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
 class Account extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            email: '',
-            first_name: '',
-            last_name: '',
-            zip: '',
+            email: this.props.currentUser.email,
+            first_name: this.props.currentUser.first_name,
+            last_name: this.props.currentUser.last_name,
+            zip: this.props.currentUser.zip,
             errors: []
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.editButton = this.editButton.bind(this);
     }
 
     update(field) {
@@ -26,10 +30,16 @@ class Account extends React.Component {
         return this.props.clearErrors();
     }
 
+    editButton(e) {
+        e.preventDefault();
+        this.props.history.push('account/edit')
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+        this.props.history.push(`/account`);
     }
 
     renderErrors() {
@@ -54,57 +64,91 @@ class Account extends React.Component {
 
     render() {
 
+        const main = () => {
+            return (
+                <>
+                    <div className="account-info-container">
+                        <div className="header-edit">
+                            <div>Account</div>
+                            <div>
+                                <button className="account-btn" 
+                                onClick={(e) => this.editButton(e)}>Edit</button>
+                            </div>
+                        </div>
+                        <ul className="account-info-list">
+                            <li>Name: {this.state.first_name + " " + this.state.last_name}</li>
+                            <li>Email: {this.state.email}</li>
+                            <li>Zip: {this.state.zip}</li>
+                        </ul>
+                    </div>
+                    <TasksContainer />
+                </>
+            )
+        }
+
+        const edit = () => {
+            return (
+                <>
+                    <div className="account-form">
+                        <form onSubmit={this.handleSubmit} className="form-box">
+
+                            <span className="text">First Name</span>
+                            <input
+                                type="text"
+                                value={this.state.first_name}
+                                onChange={this.update('first_name')}
+                                className="input"
+                            />
+                            <span className="text">Last Name</span>
+                            <input
+                                type="text"
+                                value={this.state.last_name}
+                                onChange={this.update('last_name')}
+                                className="input"
+                            />
+                            <span className="text">Email Address</span>
+                            <input
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                className="input"
+                            />
+                            <span className="text">Password</span>
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                className="input"
+                            />
+                            <span className="text">Zip Code</span>
+                            <input
+                                type="password"
+                                value={this.state.zip}
+                                onChange={this.update('zip')}
+                                className="input"
+                            />
+                            {this.renderErrors()}
+                            <button
+                                className="btn submit"
+                                type="submit"
+                            >Edit Account
+                            </button>
+                        </form>
+                    </div>
+                </>
+            )
+        }
+
         return (
             <>
                 <NavContainer />
-                    <div>
-                        {this.renderErrors()}
+                    <div className="account-container">
+                        <Switch >
+                            <Route exact path='/account/' render={main} />
+                            <Route exact path='/account/edit' render={edit} />
+                        </Switch>
                     </div>
-                    <form onSubmit={this.handleSubmit} className="form-box">
-
-                        <span className="text">First Name</span>
-                        <input
-                            type="text"
-                            value={this.state.first_name}
-                            onChange={this.update('first_name')}
-                            className="input"
-                        />
-                        <span className="text">Last Name</span>
-                        <input
-                            type="text"
-                            value={this.state.last_name}
-                            onChange={this.update('last_name')}
-                            className="input"
-                        />
-                        <span className="text">Email Address</span>
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            className="input"
-                        />
-                        <span className="text">Password</span>
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            className="input"
-                        />
-                        <span className="text">Zip Code</span>
-                        <input
-                            type="password"
-                            value={this.state.zip}
-                            onChange={this.update('zip')}
-                            className="input"
-                        />
-                        <button
-                            className="btn submit"
-                            type="submit"
-                        >Create Account
-                        </button>
-                    </form>
-                    <TasksContainer />
-                    <Footer />
+                <Footer />
                 </>
         )
 
@@ -125,4 +169,4 @@ class Account extends React.Component {
 
 }
 
-export default Account;
+export default withRouter(Account);

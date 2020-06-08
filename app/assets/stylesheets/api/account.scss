@@ -1,4 +1,4 @@
-.account > .btn {
+.account-btn {
     font-size: 16px;
     cursor: pointer;
     font-family: "Proxima", Arial, Helvetica, sans-serif;
@@ -11,14 +11,60 @@
     border-radius: 4px;
 }
 
+.account-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9fafb;
+}
 
-// .account > .btn {
-//     margin-top: 10px;
-//     background-color: #51af33;
-//     color: white;
-// }
+.account-container * {
+    background-color: white;
+}
 
-.account > .btn:hover {
+.account-container > div {
+    
+    box-shadow: 0px 2px 2px 2px rgba(36, 42, 48, 0.15);
+
+}
+
+.account-info-container {
+    align-items: center;
+    width: 60%;
+    display: flex;
+    max-width: 700px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.header-edit {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 16px;
+    border-bottom: 2px solid #dce0e6;
+
+}
+
+.header-edit > div {
+    // background-color: white;
+}
+
+
+.account-info-list {
+    margin-top: 20px;
+    line-height: 1.6;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+}
+
+.account-btn:hover {
     background-color: #438e29;
     color: white;
+    cursor: pointer;
 }
