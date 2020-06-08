@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
             password: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this)
     }
 
     update(field) {
@@ -29,7 +30,7 @@ class LoginForm extends React.Component {
     renderErrors() {
         return (
             <ul>
-                {this.props.errors.map((error, i) => (
+                {this.props.errors.session.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>

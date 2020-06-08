@@ -6,7 +6,7 @@ import { updateUser, receiveSessionErrors, logout } from '../../actions/session_
 const mSTP = ({ session, errors, entities: { users } }) => {
     return {
         currentUser: users[session.id],
-        errors: errors.session
+        errors: errors
     }
 };
 const mDTP = dispatch => {
@@ -17,4 +17,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default withRouter(connect(mSTP, mDTP)(Account))
+export default withRouter(connect(mSTP, mDTP)(Account));

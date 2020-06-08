@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { login, receiveSessionErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 
-const mSTP = ({ errors }) => {
+const mSTP = state => {
     return {
-        errors: errors.session,
+        errors: state.errors,
     };
 };
 

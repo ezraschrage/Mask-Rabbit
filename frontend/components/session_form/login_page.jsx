@@ -15,7 +15,7 @@ class LoginPage extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let user = { email: "guest@guest.com", password: "abcdef" }
+        let user = { email: "guest@guest.com", password: "abcdef1" }
         this.props.processForm(user);
     }
 

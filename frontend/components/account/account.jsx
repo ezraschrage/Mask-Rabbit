@@ -20,6 +20,8 @@ class Account extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.editButton = this.editButton.bind(this);
+        this.addErrors = this.addErrors.bind(this);
+        this.cancelButton = this.cancelButton.bind(this);
     }
 
     update(field) {
@@ -27,6 +29,10 @@ class Account extends React.Component {
             [field]: e.currentTarget.value
         });
 
+    }
+
+    addErrors(errors) {
+        this.setState({ errors: errors })
     }
 
     componentWillUnmount() {
@@ -38,31 +44,35 @@ class Account extends React.Component {
         this.props.history.push('account/edit')
     }
 
+    cancelButton(e) {
+        e.preventDefault();
+        this.props.history.push('account')
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-        this.props.history.push(`/account`);
+        if (this.state.zip !== "" && this.state.first_name !== "" && 
+        this.state.last_name !== "" && this.state.email !== "") {
+            this.addErrors([])
+            const user = Object.assign({}, {first_name: this.state.first_name, last_name: this.state.last_name,
+            zip: this.state.zip, email: this.state.email, id: this.state.id});
+            this.props.processForm(user);
+            // this.props.history.push(`/account`);
+        } else {
+            this.addErrors(["Please fill out all fields before updating"])
+        }
     }
 
     renderErrors() {
-        const errors = this.state.errors;
-        const errorList = errors.map((error, i) =>
-            <li key={`error-${i}`}>
-                {error}
-            </li>
+        return (
+            <ul>
+                {this.props.errors.session.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
         );
-
-        const none = () => (
-            <>
-            </>
-        )
-
-        const some = () => (
-            <ul className="form-errors">{errorList}</ul>
-        )
-
-        return (this.state.errors.length > 0) ? some() : none()
     }
 
     render() {
@@ -93,66 +103,58 @@ class Account extends React.Component {
             return (
                 <>
                     <div className="account-form">
-                        <form onSubmit={this.handleSubmit} className="form-box">
-                            <div className="edit-names">
-                                <span className="text">First Name</span>
-                                <input
-                                    type="text"
-                                    defaultValue={this.state.first_name}
-                                    onChange={this.update('first_name')}
-                                    className="input"
-                                />
-                                <span className="text">Last Name</span>
-                                <input
-                                    type="text"
-                                    defaultValue={this.state.last_name}
-                                    onChange={this.update('last_name')}
-                                    className="input"
-                                />
-                            </div>
-                            <div className="edit-email">
-                                <span className="text">Email Address</span>
-                                <input
-                                    type="text"
-                                    defaultValue={this.state.email}
-                                    
-                                    onChange={this.update('email')}
-                                    className="input"
-                                />
-                            </div>
-                            <div className="edit-passwords">
-                                <span className="text">Old Password</span>
-                                <input
-                                    type="password"
-                                    defaultValue={this.state.old_password}
-                                    onChange={this.update('old_password')}
-                                    className="input"
-                                />
-                                <span className="text">New Password</span>
-                                <input
-                                    type="password"
-                                    defaultValue={this.state.password}
-                                    onChange={this.update('password')}
-                                    className="input"
-                                />
-                            </div>
-                            <div className="edit-zip">
-                                <span className="text">Zip Code</span>
-                                <input
-                                    type="text"
-                                    defaultValue={this.state.zip}
-                                    onChange={this.update('zip')}
-                                    className="input"
-                                />
-                            </div>
+                        <div>Account Edit</div>
+                        <form onSubmit={this.handleSubmit} className="form-box edit-box">
+                            <div className="text">First Name</div>
+                            <input
+                                type="text"
+                                defaultValue={this.state.first_name}
+                                onChange={this.update('first_name')}
+                                className="edit"
+                            />
+                            <div className="text">Last Name</div>
+                            <input
+                                type="text"
+                                defaultValue={this.state.last_name}
+                                onChange={this.update('last_name')}
+                                className="edit"
+                            />
+                            <div className="text">Email Address</div>
+                            <input
+                                type="text"
+                                defaultValue={this.state.email}
+                                onChange={this.update('email')}
+                                className="edit"
+                            />
+                            <div className="text">Zip Code</div>
+                            <input
+                                type="text"
+                                defaultValue={this.state.zip}
+                                onChange={this.update('zip')}
+                                className="edit"
+                            />
                             {this.renderErrors()}
-                            <button
-                                className="btn submit"
-                                type="submit"
-                            >Edit Account
-                            </button>
+                            <div className="edit-button-container">
+                                <button
+                                    className="account-btn edit-btn"
+                                    type="submit"
+                                >Edit Account
+                                </button>
+                                <button
+                                    className="account-btn edit-btn"
+                                    onClick={(e) => this.cancelButton(e)}
+                                >Cancel
+                                </button>
+                            </div>
                         </form>
                     </div>
+                </>
+            )
+        }
+
+        const sucess = () => {
+            return (
+                <>
                 </>
             )
         }
