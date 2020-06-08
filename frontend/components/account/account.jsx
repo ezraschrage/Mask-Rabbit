@@ -12,7 +12,10 @@ class Account extends React.Component {
             first_name: this.props.currentUser.first_name,
             last_name: this.props.currentUser.last_name,
             zip: this.props.currentUser.zip,
-            errors: []
+            errors: [],
+            old_password: "",
+            password: "",
+            id: this.props.currentUser.id
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -91,42 +94,57 @@ class Account extends React.Component {
                 <>
                     <div className="account-form">
                         <form onSubmit={this.handleSubmit} className="form-box">
-
-                            <span className="text">First Name</span>
-                            <input
-                                type="text"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
-                                className="input"
-                            />
-                            <span className="text">Last Name</span>
-                            <input
-                                type="text"
-                                value={this.state.last_name}
-                                onChange={this.update('last_name')}
-                                className="input"
-                            />
-                            <span className="text">Email Address</span>
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="input"
-                            />
-                            <span className="text">Password</span>
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="input"
-                            />
-                            <span className="text">Zip Code</span>
-                            <input
-                                type="password"
-                                value={this.state.zip}
-                                onChange={this.update('zip')}
-                                className="input"
-                            />
+                            <div className="edit-names">
+                                <span className="text">First Name</span>
+                                <input
+                                    type="text"
+                                    defaultValue={this.state.first_name}
+                                    onChange={this.update('first_name')}
+                                    className="input"
+                                />
+                                <span className="text">Last Name</span>
+                                <input
+                                    type="text"
+                                    defaultValue={this.state.last_name}
+                                    onChange={this.update('last_name')}
+                                    className="input"
+                                />
+                            </div>
+                            <div className="edit-email">
+                                <span className="text">Email Address</span>
+                                <input
+                                    type="text"
+                                    defaultValue={this.state.email}
+                                    
+                                    onChange={this.update('email')}
+                                    className="input"
+                                />
+                            </div>
+                            <div className="edit-passwords">
+                                <span className="text">Old Password</span>
+                                <input
+                                    type="password"
+                                    defaultValue={this.state.old_password}
+                                    onChange={this.update('old_password')}
+                                    className="input"
+                                />
+                                <span className="text">New Password</span>
+                                <input
+                                    type="password"
+                                    defaultValue={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="input"
+                                />
+                            </div>
+                            <div className="edit-zip">
+                                <span className="text">Zip Code</span>
+                                <input
+                                    type="text"
+                                    defaultValue={this.state.zip}
+                                    onChange={this.update('zip')}
+                                    className="input"
+                                />
+                            </div>
                             {this.renderErrors()}
                             <button
                                 className="btn submit"

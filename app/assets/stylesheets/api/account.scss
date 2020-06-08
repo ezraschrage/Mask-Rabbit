@@ -50,9 +50,9 @@
 
 }
 
-.header-edit > div {
-    // background-color: white;
-}
+// .header-edit > div {
+//     // background-color: white;
+// }
 
 
 .account-info-list {
@@ -67,4 +67,13 @@
     background-color: #438e29;
     color: white;
     cursor: pointer;
+}
+
+.account-form {
+    align-items: center;
+    width: 60%;
+    display: flex;
+    max-width: 700px;
+    flex-direction: column;
+    margin-top: 50px;
 }

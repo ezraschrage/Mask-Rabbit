@@ -82,7 +82,7 @@ class SignupForm extends React.Component {
                         />
                         <span className="text">Zip Code</span>
                         <input 
-                            type="password"
+                            type="text"
                             value={this.state.zip}
                             onChange={this.update('zip')}
                             className="input"

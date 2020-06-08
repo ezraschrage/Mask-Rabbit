@@ -19,12 +19,17 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
-  def edit
-    @user = User.find(params[:id])
-    if current_user.id === @user.id && @user.update(user_params)
-        render :show
+  def update
+    @user = User.find(user_params[:id])
+    if @user.is_password?(user_params[:old_password])
+        if @user.update(email: user_params[:email], password: user_params[:password], first_name: user_params[:first_name],
+        last_name: user_params[:last_name], zip: user_params[:zip])
+            render :show
+        else
+            render json: @user.errors.full_messages, status: 422
+        end
     else
-        render json: @user.errors.full_messages, status: 422
+         return (render json: ["Please enter correct password"], status: 422)
     end
 
   end
@@ -32,7 +37,7 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password, :first_name, :last_name, :zip)
+        params.require(:user).permit(:email, :password, :first_name, :last_name, :zip, :old_password, :id)
     end
 
 end
