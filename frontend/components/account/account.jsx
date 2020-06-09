@@ -33,7 +33,6 @@ class Account extends React.Component {
     }
 
     addErrors(errors) {
-        console.log(errors)
         this.setState({ errors: errors})
     }
 

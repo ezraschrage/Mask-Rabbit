@@ -4,7 +4,6 @@ import { fetchTasks, deleteTask } from "../../actions/task_actions"
 import { fetchMasker } from "../../actions/masker_actions"
 
 const mSTP = (state) => {
-    // console.log(state)
     return {
         tasks: Object.values(state.entities.tasks),
         currentUser: state.entities.users,
