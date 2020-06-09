@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect, Link, Switch, withRouter } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 import TaskFormFirstPage from './task_form_first_page';
 import TaskFormSecondPage from './task_form_second_page';
 import TaskFormConfirmationPage from './task_form_confirmation_page';

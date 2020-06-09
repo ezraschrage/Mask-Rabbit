@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import TaskItem from './tasks_item';
 
 class TasksIndex extends React.Component {

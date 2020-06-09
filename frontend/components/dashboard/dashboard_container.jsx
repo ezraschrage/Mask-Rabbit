@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import Dashboard from './dashboard';
 
 const mSTP = ({ session, entities: { users } }) => {
