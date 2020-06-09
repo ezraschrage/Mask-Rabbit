@@ -4,7 +4,6 @@ import {
 } from '../actions/masker_actions';
 
 const maskersReducer = (state = {}, action) => {
-    console.log(action)
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_MASKERS:
