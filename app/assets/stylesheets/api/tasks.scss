@@ -25,12 +25,13 @@
 }
 
 .task-li-container > div {
-    font-size: 21px;
+    font-size: 19px;
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
     border-bottom: 2px solid #dce0e6;
     justify-content: space-between;
     padding: 20px;
+    line-height: 1.6;
  
 }
 
@@ -43,17 +44,32 @@
     border-bottom: 2px solid #dce0e6;
 }
 
-u {
+.underline {
     text-decoration: underline;
 }
 
 .Masker-pic-task {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     display: block;
     box-shadow: none;
-    overflow: hidden;
     background-size: cover;
     padding: 0px 15px;
     align-self: center;
+}
+
+.task-addresses {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.task-masker {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-masker-info {
+    display: flex;
+    flex-direction: column;
 }
