@@ -98,8 +98,8 @@ mask4 = Masker.create!(user_id: 8, location: "Brooklyn", bio: "I have been doing
 # Web
 maskfile1 = open("https://mask-rabbit-seed.s3.amazonaws.com/yellow2.jpg")
 maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/woman2.jpg")
-maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/green.jpg")
-maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/suit.jpg")
+maskfile3 = open("https://mask-rabbit-seed.s3.amazonaws.com/green.jpg")
+maskfile4 = open("https://mask-rabbit-seed.s3.amazonaws.com/suit.jpg")
 
 # Local
 # maskfile1 = open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg")
@@ -110,8 +110,8 @@ maskfile2 = open("https://mask-rabbit-seed.s3.amazonaws.com/suit.jpg")
 # Web
 mask1.photo.attach(io: maskfile1, filename: "yellow2.jpg")
 mask2.photo.attach(io: maskfile2, filename: "woman2.jpg")
-mask2.photo.attach(io: maskfile3, filename: "green.jpg")
-mask2.photo.attach(io: maskfile4, filename: "suit.jpg")
+mask3.photo.attach(io: maskfile3, filename: "green.jpg")
+mask4.photo.attach(io: maskfile4, filename: "suit.jpg")
 
 # Local
 # mask1.photo.attach(io: File.open("/Users/Mona/BC/Mask-Rabbit/app/assets/images/yellow2.jpg"), filename: "yellow2.jpg")
