@@ -19,11 +19,9 @@ class TasksIndex extends React.Component {
 
     render(){
         const ownTasks = this.props.tasks;
-        // console.log(ownTasks)
         if(ownTasks.length === 0){
             return <div className='header-tasks none'>You currently have no tasks.</div>
         }
-        // console.log(this.props)
         return (
                 <>
                     {ownTasks.map((task) => (

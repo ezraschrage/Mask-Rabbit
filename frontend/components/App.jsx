@@ -6,11 +6,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginPageContainer from './session_form/login_page_container';
 import TaskFormContainer from './task_form/task_form_container';
 import AccountContainer from './account/account_container';
-// import NavContainer from "./nav/nav_container";
-// import DashboardContainer from "./dashboard/dashboard_container";
 import SplashContainer from "./splash/splash_container";
-// Protected: Are you logged in? Go to this. Else to / page
-// AuthRoute: Are you not logged in? Go to this. Else to / page.
 
 const App = () => (
     <div>

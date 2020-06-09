@@ -42,7 +42,7 @@
 .form-interest {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+
     align-items: flex-start;
 
 }
@@ -59,13 +59,6 @@
         font-size: 15px;
 
 }
-
-
-// .form-box > .btn {
-//     margin-top: 10px;
-//     background-color: #51af33;
-//     color: white;
-// }
 
 .form-save-btn:hover {
     background-color: #438e29;
@@ -95,10 +88,7 @@
     align-self: center;
     font-weight: bold;
     font-size: 19px;
-
 }
-
-
 
 .form-start {
     display: flex;
@@ -153,7 +143,6 @@
 .form-options > div {
     margin-top: 8px;
     margin-bottom: 8px;
-
 }
 
 .form-save {
@@ -218,13 +207,6 @@
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
 .task-form-second {
     width: 80%;
     display: flex;
@@ -233,35 +215,14 @@
     margin-top: 35px;
 }
 
-// .task-form-second > div {
-//     background-color: white;
-//     // width: 74%;
-//     margin-top: 8px;
-//     margin-bottom: 8px;
-//     box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
-//     padding: 22px;
-// }
-
 .form-date {
     width:30%;
     min-width: 300px;
-    // text-align: center;
-//   background-image: image-url('mask_large.jpg');
-//   padding: 10px;
   margin: 10px;
 }
 
 .form-date > div {
-    // background-color: white;
-    // width: 74%;
-    // margin-top: 8px;
-    // margin-bottom: 8px;
-    // box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
-    // padding: 22px;
-    // max-width: 1000px;
-        background-color: white;
-    // width: 74%;
-    // margin-top: 8px;
+    background-color: white;
     margin-bottom: 16px;
     box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
     padding: 22px;
@@ -269,18 +230,7 @@
 
 .form-masker {
     width: 60%;
-    
-    // min-width: 400px;
-        // text-align: center;
-//   background-image: image-url('mask_large.jpg');
-//   padding: 10px;
   margin: 10px;
-    // background-color: white;
-    // width: 74%;
-    // margin-top: 8px;
-    // margin-bottom: 8px;
-    // box-shadow: 0px 2px 2px 2px rgba(36,42,48,0.15);
-    // padding: 22px;
 }
 
 .form-date-message {
@@ -350,7 +300,6 @@
     font-weight: bold;
 }
 .time-pick-text {
-    // width: 45px;
     font-weight: bold;
 }
 

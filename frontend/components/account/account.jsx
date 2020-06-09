@@ -36,12 +36,6 @@ class Account extends React.Component {
         this.setState({ errors: errors})
     }
 
-    // componentDidMount() {
-    //     if (this.state.updated === true) {
-    //         this.props.history.push('/account')
-    //     }
-    // }
-
     componentWillUnmount() {
         this.setState({ updated: false, errors: []})
         
@@ -76,7 +70,7 @@ class Account extends React.Component {
             if (Object.keys(this.props.errors.session).length === 0) {
                 
                 this.setState({ updated: true })
-                // this.props.history.push(`/account`);
+                
             }
             
         } else {
@@ -198,8 +192,6 @@ class Account extends React.Component {
             )
         }
 
- 
-        
         return (
             <>
                 <NavContainer />
@@ -212,20 +204,6 @@ class Account extends React.Component {
                 <Footer />
                 </>
         )
-
-
-    // render() {
-
-    //     return (
-    //         <>
-    //             <NavContainer />
-    //             <div>
-
-    //             </div>
-    //             <TasksContainer />
-    //             <Footer />
-    //         </>
-    //     )
     }
 
 }

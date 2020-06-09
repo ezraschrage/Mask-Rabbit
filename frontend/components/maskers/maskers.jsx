@@ -8,7 +8,6 @@ class Maskers extends React.Component {
         super(props)
 
         this.maskerButton = this.maskerButton.bind(this);
-
     }
 
     componentDidMount() {
@@ -50,4 +49,3 @@ class Maskers extends React.Component {
 };
 
 export default withRouter(Maskers);
-

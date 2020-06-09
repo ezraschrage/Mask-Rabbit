@@ -1,5 +1,4 @@
 import React from 'react';
-// import { withRouter } from "react-router";
 import { Route, Redirect, Link, Switch, withRouter } from 'react-router-dom'
 import TaskFormFirstPage from './task_form_first_page';
 import TaskFormSecondPage from './task_form_second_page';
@@ -88,7 +87,6 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // const dateForm = new Date(this.state.date)
         const taskItems = { category_id: this.state.category_id, length_of_task: this.state.length_of_task,
             date: this.state.date, time: this.state.time, per_hr: this.state.per_hr, user_id: this.state.user_id,
             masker_id: this.state.masker_id, description: this.state.description, start_address: this.state.start_address,
@@ -141,11 +139,9 @@ class TaskForm extends React.Component {
                         <TaskFormNav state={this.state}
                             changeStep={this.changeStep} />
                         <Switch>
-                        <Route exact path='/task/new' render={firstPageComp} />
-                        <Route exact path='/task/price' render={secondPageComp} />
-                        <Route exact path='/task/confirm' render={thirdPageComp} />
-                        {/* {(this.state.step < 6) ? <Route exact path='/task/new' render={firstPageComp} /> : 
-                            (this.state.step === 6) ? <Route exact path='/task/price' render={secondPageComp} /> : <Route exact path='/task/confirm' render={thirdPageComp} />} */}
+                            <Route exact path='/task/new' render={firstPageComp} />
+                            <Route exact path='/task/price' render={secondPageComp} />
+                            <Route exact path='/task/confirm' render={thirdPageComp} />
                         </Switch>
                    </form>
                 

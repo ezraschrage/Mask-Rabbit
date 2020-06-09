@@ -2,12 +2,10 @@ import React from 'react';
 import MaskersContainer from '../maskers/maskers_container';
 import { withRouter } from 'react-router-dom';
 
-
 class TaskFormSecondPage extends React.Component {
 
     constructor(props) {
         super(props)
-
     }
 
     render () {
@@ -31,7 +29,6 @@ class TaskFormSecondPage extends React.Component {
                             <div className="form-date-text">TASK DATE</div>
                             <input type="date" className="date-picker"
                                 min={date}
-                                // defaultValue = {date}
                                 value={this.props.state.date}
                                 onChange={this.props.update('date')} />
                         </div>
