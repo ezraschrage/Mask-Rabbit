@@ -48,7 +48,7 @@ const Nav = ({ currentUser, logout }) => {
                 <Link to="/account">
                     <button className="nav-text btn">My Tasks</button>
                 </Link>
-                <Link to="/account">
+                <Link to="/account/edit">
                     <button className="nav-text btn">Account</button>
                 </Link>
                 
