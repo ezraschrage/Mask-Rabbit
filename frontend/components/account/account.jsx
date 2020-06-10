@@ -132,7 +132,6 @@ class Account extends React.Component {
                             <li>Zip: {this.state.zip}</li>
                         </ul>
                     </div>
-                    <div className="header-tasks">Your tasks</div>
                     <TasksContainer state={this.state}/>
                 </>
             )
