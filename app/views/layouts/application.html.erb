@@ -4,7 +4,10 @@
     <title>MaskRabbit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta property='og:title' content="MaskRabbit"/>
+    <meta property='og:image' content="<%= image_url('screenshot_splash.png') %>"/>
+    <meta property='og:description' content="A clone of TaskRabbit utilizing React, Redux, Rails, and PostgreSQL"/>
+    <meta property='og:url' content="https://maskrabbit.herokuapp.com/#"/>
 
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
