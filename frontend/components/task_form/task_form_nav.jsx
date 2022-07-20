@@ -7,7 +7,6 @@ class TaskFormNav extends React.Component {
         super(props)
         this.firstPageButton = this.firstPageButton.bind(this);
         this.secondPageButton = this.secondPageButton.bind(this);
-
     }
 
     firstPageButton(e) {
@@ -35,7 +34,6 @@ class TaskFormNav extends React.Component {
                         </div>
                     </Link>
                     </div>
-                    {/* <div className="spacer"></div> */}
                     <div className="form-nav-progress">
                         <div className="form-nav-step">
                             <div className="form-nav-step-top">
@@ -94,7 +92,6 @@ class TaskFormNav extends React.Component {
                         </div>
                     </Link>
                     <div className="form-nav-progress">
-                        {/* Insert return to step 1 click */}
                         <div className="form-nav-step active" onClick={(e) => this.firstPageButton(e)}>
                             <div className="form-nav-step-top">
                                 <div className="form-nav-empty"></div>
@@ -161,7 +158,6 @@ class TaskFormNav extends React.Component {
                         </div>
                     </Link>
                     <div className="form-nav-progress">
-                        {/* Insert return to step 1 click */}
                         <div className="form-nav-step active" onClick={(e) => this.firstPageButton(e)}>
 
                             <div className="form-nav-step-top">
@@ -175,7 +171,6 @@ class TaskFormNav extends React.Component {
                                 <span> Describe your task</span>
                             </div>
                         </div>
-                        {/* Insert return to step 6 click */}
                         <div className="form-nav-step active" onClick={(e) => this.secondPageButton(e)}>
 
                             <div className="form-nav-step-top">
@@ -214,7 +209,6 @@ class TaskFormNav extends React.Component {
             </div>
         );
         
-
         switch (this.props.state.step) {
             case 6:
                 return secondPage();

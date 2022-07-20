@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-// import { withRouter } from "react-router";
 
 class TaskFormFirstPage extends React.Component {
     constructor(props) {
@@ -13,9 +12,7 @@ class TaskFormFirstPage extends React.Component {
         this.descriptionButton = this.descriptionButton.bind(this);
 
     }
-
     
-
     interestButton(e) {
         e.preventDefault();
         if (this.props.state.interest !== "") {
@@ -50,9 +47,7 @@ class TaskFormFirstPage extends React.Component {
         } else {
             let errors = [];
             if (this.props.state.length_of_task === "") { errors.push("Please select a length of task") }
-            // if (this.props.state.length_of_task === "") { this.props.addErrors(["Please select a length of task"]) }
             if (this.props.state.vehicle_requirements === "") { errors.push("Please select a vehicle requirement") }
-            // if (this.props.state.vehicle_requirements === "") { this.props.addErrors(["Please select a vehicle requirement"])}
             this.props.addErrors(errors);
         }
     }
@@ -155,10 +150,6 @@ class TaskFormFirstPage extends React.Component {
                                 value={this.props.state.start_address}
                                 onChange={this.props.update('start_address')}
                             />
-                            {/* <input className="address-apt"
-                                type="text"
-                                placeholder="Unit or Apt #"
-                            /> */}
                         </div>
                         {this.props.renderErrors()}
                         <div className="form-save">
@@ -206,10 +197,6 @@ class TaskFormFirstPage extends React.Component {
                                 value={this.props.state.end_address}
                                 onChange={this.props.update('end_address')}
                             />
-                            {/* <input className="address-apt"
-                                type="text"
-                                placeholder="Unit or Apt #"
-                            /> */}
                         </div>
                         <div className="form-save">
                             <button className="form-save-btn" type="submit"

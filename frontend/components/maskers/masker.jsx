@@ -10,9 +10,6 @@ const Masker = props => (
                         props.masker.price, props.masker.photoUrl,
                         props.masker.first_name, props.masker.last_name)}>Select & Continue</button>
             </div>
-            {/* <div className="Masker-text">
-                You can chat with your Masker, adjust task details, or change task time after booking.
-            </div> */}
         </div>
         <div className="Masker-right">
             <div className="Masker-right-top">

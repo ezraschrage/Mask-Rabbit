@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import TaskItem from './tasks_item';
 
 class TasksIndex extends React.Component {
@@ -19,14 +18,14 @@ class TasksIndex extends React.Component {
 
     render(){
         const ownTasks = this.props.tasks;
-        // console.log(ownTasks)
         if(ownTasks.length === 0){
             return <div className='header-tasks none'>You currently have no tasks.</div>
         }
-        // console.log(this.props)
         return (
                 <>
-                    {ownTasks.map((task) => (
+                <div className="header-tasks">Your tasks</div>
+
+                    {ownTasks.reverse().map((task) => (
                         <TaskItem key={task.id} deleteTask={this.deleteTask} 
                             fetchMasker={this.props.fetchMasker} task={task}
                             masker={this.props.maskers}/>

@@ -23,7 +23,7 @@ const Nav = ({ currentUser, logout }) => {
                 <Link to="/login">
                     <button className="nav-text">Log in</button>
                 </Link>
-                <button className="nav big-btn">Become a Masker (coming soon!</button>
+                <button className="nav big-btn">Become a Masker (coming soon!)</button>
             </div>
         </nav>
     );
@@ -48,7 +48,7 @@ const Nav = ({ currentUser, logout }) => {
                 <Link to="/account">
                     <button className="nav-text btn">My Tasks</button>
                 </Link>
-                <Link to="/account">
+                <Link to="/account/edit">
                     <button className="nav-text btn">Account</button>
                 </Link>
                 
